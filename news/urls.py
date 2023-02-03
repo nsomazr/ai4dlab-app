@@ -1,0 +1,8 @@
+from django.urls import path
+from .views import NewsAPIView
+from django.conf import settings
+from django.conf.urls.static import static
+app_name = "news"  
+
+urlpatterns = [path('', NewsAPIView.news, name="news"),
+               path('api/news', NewsAPIView.as_view(), name="news-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

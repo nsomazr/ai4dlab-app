@@ -1,0 +1,15 @@
+{% extends "../includes/master.html" %}
+{% load static %}
+{% block title %}AI4D Lab - Login{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <form method="post" action="{% url 'users:login' %}" style="margin-top:150px;">
+    {% csrf_token %}
+    {{ login_form|crispy }}
+    <button type="submit" class="btn btn-primary">Login</button>
+    <a href="{% url 'users:password_reset' %}" class="btn btn-primary">Forget Password</a>
+    <a href="{% url 'users:register' %}" class="btn btn-primary">Create Account</a>
+  </form>
+{% endblock %}
