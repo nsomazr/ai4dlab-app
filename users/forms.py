@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.models import User
 from django_countries.data import COUNTRIES
 
@@ -27,7 +27,7 @@ class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True, max_length=100, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Type Email', 'id':'email'})))
     country = forms.ChoiceField(choices=sorted(COUNTRIES.items()), widget=(forms.Select(attrs={'class':'form-control','placeholder':'Select Country', 'id':'country'})))
     password1 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'password'})))
-    password2 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'cpassword'})))
+    password2 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Re-Type Password', 'id':'cpassword'})))
 
     class Meta:
 
@@ -43,3 +43,15 @@ class NewUserForm(UserCreationForm):
         if commit:
             user.save()
         return user
+
+class ResetPasswordForm(PasswordResetForm):
+
+    def __init__(self, *args, **kwargs):
+        super(PasswordResetForm, self).__init__(*args, **kwargs)
+
+    email = forms.EmailField(required=True, max_length=100, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Type Email', 'id':'email'})))
+
+class ConfirmResetForm(SetPasswordForm):
+
+    new_password1 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type New Password', 'id':'password1'})))
+    new_password2 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Confirm New Password', 'id':'password2'})))

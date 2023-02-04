@@ -22,7 +22,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 from django.core.mail import EmailMultiAlternatives
 from django import template
-from .forms import UserLoginForm
+from .forms import UserLoginForm, ResetPasswordForm
 
 
 
@@ -127,7 +127,7 @@ def logout_request(request):
 # send email multi alternative
 def password_reset_request(request):
 	if request.method == "POST":
-		password_reset_form = PasswordResetForm(request.POST)
+		password_reset_form = ResetPasswordForm(request.POST)
 		if password_reset_form.is_valid():
 			data = password_reset_form.cleaned_data['email']
 			associated_users = User.objects.filter(Q(email=data)|Q(username=data))
@@ -154,7 +154,7 @@ def password_reset_request(request):
 					except BadHeaderError:
 						return HttpResponse('Invalid header found.')
 					messages.info(request, "Password reset instructions have been sent to the email address entered.")
-					return redirect ("users:dashoard")
-	password_reset_form = PasswordResetForm()
+					return redirect ("password_reset_done")
+	password_reset_form = ResetPasswordForm()
 	return render(request=request, template_name="users/password/password_reset.html", context={"password_reset_form":password_reset_form})
 
