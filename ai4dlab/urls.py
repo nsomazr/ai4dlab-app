@@ -38,7 +38,7 @@ from responsibleai import urls as responsibleai_urls
 from initiative import urls as initiative_urls
 from learning import urls as learning_urls
 from package import urls as package_urls
-
+from users.forms import ConfirmResetForm
 urlpatterns = [
     path('admin/', admin.site.urls),
     # include django browserable 
@@ -68,7 +68,7 @@ urlpatterns = [
     path('package/', include(package_urls)),
     # we can mention them this way
     path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='users/password/password_reset_done.html'), name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="users/password/password_reset_confirm.html"), name='password_reset_confirm'),
+    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(form_class=ConfirmResetForm, template_name="users/password/password_reset_confirm.html"), name='password_reset_confirm'),
     path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='users/password/password_reset_complete.html'), name='password_reset_complete'),   
     # for social media authentication
     path('accounts/', include('allauth.urls')),   

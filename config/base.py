@@ -13,7 +13,8 @@ class Config:
     # MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     # MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     SSL_REDIRECT = False
-
+    FROM_EMAIL_ADDRESS=os.environ.get('FROM_EMAIL_ADDRESS')
+    FROM_EMAIL_ADDRESS_PASSWORD=os.environ.get('FROM_EMAIL_ADDRESS_PASSWORD')
 
     @staticmethod
     def init_app(app):
