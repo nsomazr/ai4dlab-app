@@ -22,6 +22,7 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils.encoding import force_bytes
 from django.core.mail import EmailMultiAlternatives
 from django import template
+from .forms import UserLoginForm
 
 
 
@@ -46,21 +47,21 @@ class MyTokenObtainPairView(TokenObtainPairView):
 
 def register_request(request):
     if request.method == 'POST':
-        form = NewUserForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            # login(request, user)
-            messages.success(request, "Registration successful.")
-            username = form.cleaned_data.get('username')
-            messages.success(request, f"New account created: {username}")
-            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return redirect("users:login")
-        else:
-            messages.error(request,"Account creation failed")
-            # messages.error(request, "Unsuccessful registration. Invalid information.")
+       register_form = NewUserForm(request.POST)
+       if register_form.is_valid():
+          user = register_form.save()
+          username = register_form.cleaned_data.get('username')
+          messages.success(request, "Registration successful." )
+        #   login(request, user)
+          login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+          return redirect("users:dashboard")
+       else:
+          messages.error(request,"Account creation failed")
+          print(register_form.errors.as_data()) # here you print errors to terminal
+          return redirect("users:register")
 
-    form = NewUserForm()
-    return render (request=request, template_name="users/register.html", context={"register_form":form})
+    register_form = NewUserForm()
+    return render (request=request, template_name="users/register.html", context={"register_form":register_form})
 
 
 def login_request(request):
@@ -78,17 +79,17 @@ def login_request(request):
 				messages.error(request,"Invalid username or password.")
 		else:
 			messages.error(request,"Invalid username or password.")
-	form = AuthenticationForm()
-	return render(request=request, template_name="users/login.html", context={"login_form":form})
+	login_form = UserLoginForm()
+	return render(request=request, template_name="users/login.html", context={"login_form":login_form})
 
 def dashboard(request):
 
-    return render(request, template_name = 'users/dashboard.html', context={})
+    return render(request, template_name = 'dashboards/admin.html', context={})
 
 def logout_request(request):
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
-	return redirect("users:dashboard")
+	return redirect("home:home")
 
 #email sms single alternative
 

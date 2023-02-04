@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist",
     "corsheaders",
     'crispy_forms',
+    "django_countries",
     # allauth apps
     'django.contrib.sites',
     'allauth',
