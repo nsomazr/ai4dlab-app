@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'dashboards/assets/css/bootstrap.css' %}">
+
+    <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/chartjs/Chart.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboards/assets/css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'dashoards/assets/images/favicon.png' %}" type="image/x-icon">
+</head>
+<div id="app">
+    <div id="sidebar" class='active'>
+         <div class="sidebar-wrapper active">
+              <div class="sidebar-header text-center">
+           <img src="{% static 'dashboards/assets/images/logo.png' %}" alt="" srcset="" height="300">
+              </div>
+           <div class="sidebar-menu">
+           <ul class="menu">
+               
+                   <li class="sidebar-item active ">
+                       <a href="{% url 'users:dashboard' %}" class='sidebar-link'>
+                           <i data-feather="home" width="20"></i> 
+                           <span>Dashboard</span>
+                       </a>
+                       
+                   </li>
+   
+                   <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="user" width="20"></i> 
+                        <span>Account</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="ui-chatbox.html">My Profile</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Update Profile</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-todolist.html">Change Password</a>
+                        </li>
+                        
+                    </ul>
+                    
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="info" width="20"></i> 
+                        <span>About</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="{% url 'team:members' %}">People</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Collaborators</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-todolist.html">Sponsors</a>
+                        </li>
+
+                        <li>
+                            <a href="ui-todolist.html">Partners</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="book" width="20"></i> 
+                        <span>Research</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="ui-chatbox.html">Projects</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Publication</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-todolist.html">Responsible AI</a>
+                        </li>
+
+                        <li>
+                            <a href="ui-todolist.html">Other Initiatives</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="settings" width="20"></i> 
+                        <span>Tools</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="ui-chatbox.html">Data Portal</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Notebook</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+                  
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="folder" width="20"></i> 
+                        <span>Resources</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="ui-chatbox.html">Learning</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Packages</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="star" width="20"></i> 
+                        <span>Updates</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="ui-chatbox.html">News</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Blogs</a>
+                        </li>
+
+                        <li>
+                            <a href="ui-chatbox.html">Events</a>
+                        </li>
+                        
+                        <li>
+                            <a href="ui-pricing.html">Calls</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+               
+            
+           </ul>
+       </div>
+       <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+    </div>
+   </div>
+{% block content %}
+
+{% endblock %}
+</div>
+</div>
+<script src="{% static 'dashboards/assets/js/feather-icons/feather.min.js' %}"></script>
+<script src="{% static 'dashboards/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+<script src="{% static 'dashboards/assets/js/app.js' %}"></script>
+
+<script src="{% static 'dashboards/assets/vendors/chartjs/Chart.min.js' %}"></script>
+<script src="{% static 'dashboards/assets/vendors/apexcharts/apexcharts.min.js' %}"></script>
+<script src="{% static 'dashboards/assets/js/pages/dashboard.js' %}"></script>
+
+<script src="{% static 'dashboards/assets/js/main.js' %}"></script>
+</body>
+</html>

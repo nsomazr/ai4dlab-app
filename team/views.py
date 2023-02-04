@@ -22,3 +22,11 @@ class TeamAPIView(APIView):
     def team(request):
 
         return render(request, template_name='about/our-team.html', context={})
+
+    def add_member(request):
+
+        return render(request, template_name='about/add_member.html', context={})
+
+    def members(request):
+
+        return render(request, template_name='about/members.html', context={})
