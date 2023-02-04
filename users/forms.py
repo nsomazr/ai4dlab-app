@@ -16,8 +16,6 @@ class UserLoginForm(AuthenticationForm):
 
 # Create your forms here.
 
-
-
 class NewUserForm(UserCreationForm):
 
     def __init__(self, *args, **kwargs):
@@ -33,7 +31,9 @@ class NewUserForm(UserCreationForm):
     password2 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'cpassword'})))
 
     class Meta:
+
         model = User
+
         fields = ('first_name', 'last_name', 'username', 'company', 'country', 'email', 'password1', 'password2')
 
     def save(self, commit=True):
