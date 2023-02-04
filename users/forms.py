@@ -14,7 +14,6 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(max_length=200, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Type Username', 'id':'username'})))
     password = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'password'})))
 
-# Create your forms here.
 
 class NewUserForm(UserCreationForm):
 
