@@ -7,10 +7,7 @@
             <div class="col-12 col-md-8 col-lg-4  footer-col "><img class="img-fluid footer-logo" loading="lazy" src="{% static 'assets/images/logo/logo-colored.png' %}" alt="logo"/>
               <div class="footer-col-content-wrapper">        
                 <p class="footer-text-about-us ">
-                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Voluptatibus facere modi possimus dignissimos, 
-                  aliquam nobis eaque? Voluptatem magnam quisquam rem.
-                  
+                  AI4D Africa's Anglophone Multidisciplinary Research Lab
                 </p>
               </div>
               <div class="form-area ">
@@ -31,28 +28,32 @@
               <h2 class=" footer-col-title    ">useful links</h2>
               <div class="footer-col-content-wrapper">
                 <ul class="footer-menu ">
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">Google</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="{% url 'lab:lab' %}">About</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">Dribbble</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="{% url 'contact:contact' %}">Contacts</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">linkedIn</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="{% url 'project:project' %}">Projects</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">wikipedia</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="{% url 'blog:blog' %}">Blogs</a>
+                  </li>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="{% url 'news:news' %}">News</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-6 col-lg-2 footer-col ">
-              <h2 class=" footer-col-title    ">Resources</h2>
+              <h2 class=" footer-col-title    ">Useul Links</h2>
               <div class="footer-col-content-wrapper">
                 <ul class="footer-menu">
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">support</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="https://africa.ai4d.ai/">AI4D-Africa</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">dashboard</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="https://www.idrc.ca/en">IDRC-CRDI</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">drivers</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="https://www.sida.se/en">Sida</a>
                   </li>
-                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="#0">projects</a>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="https://www.udom.ac.tz/">UDOM</a>
+                  </li>
+                  <li class="footer-menu-item"><i class="bi bi-arrow-right icon "></i><a class="footer-menu-link" href="https://nm-aist.ac.tz/">NM-AIST</a>
                   </li>
                 </ul>
               </div>
@@ -60,17 +61,17 @@
             <div class="col-12     col-lg-4 footer-col ">
               <h2 class=" footer-col-title    ">contact information</h2>
               <div class="footer-col-content-wrapper">       
-                <div class="contact-info-card"><i class="bi bi-envelope icon"></i><a class="text-lowercase  info" href="mailto:example@support.com">example@support.com</a></div>
-                <div class="contact-info-card"><i class="bi bi-geo-alt icon"></i><span class="text-lowercase  info">5 Xyz st., Abc, alexandria, egypt.</span></div>
-                <div class="contact-info-card"><i class="bi bi-phone icon"></i><a class="info" href="tel:+20123456789">+20123456789  </a></div>
+                <div class="contact-info-card"><i class="bi bi-envelope icon"></i><a class="text-lowercase  info" href="mailto:example@support.com">info@ai4dlab.or.tz</a></div>
+                <!-- <div class="contact-info-card"><i class="bi bi-geo-alt icon"></i><span class="text-lowercase  info">5 Xyz st., Abc, alexandria, egypt.</span></div> -->
+                <div class="contact-info-card"><i class="bi bi-phone icon"></i><a class="info" href="tel:+20123456789">+255 715 016 580</a></div>
                 <div class="contact-info-card">
                   <div class="social-icons">
                     <div class="sc-wrapper dir-row sc-size-32">
                       <ul class="sc-list">
-                        <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
-                        <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li>
-                        <li class="sc-item " title="instagram"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-instagram sc-icon"></i></a></li>
-                        <li class="sc-item " title="twitter"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
+                        <!-- <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li> -->
+                        <!-- <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li> -->
+                        <li class="sc-item " title="linkedin"><a class="sc-link" href="https://www.linkedin.com/company/ai4d-anglophone/mycompany/" title="social media icon"><i class="fab fa-linkedin sc-icon"></i></a></li>
+                        <li class="sc-item " title="twitter"><a class="sc-link" href="https://twitter.com/ai4dlab_Tz" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
                       </ul>
                     </div>
                   </div>

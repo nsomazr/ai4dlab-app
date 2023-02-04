@@ -63,6 +63,11 @@ def register_request(request):
     register_form = NewUserForm()
     return render (request=request, template_name="users/register.html", context={"register_form":register_form})
 
+def update_user(request,id):
+		user= User.objects.get(id=id)
+		update_form = NewUserForm(instance=user)# prepopulate the form with an existing band
+		return render(request, 'users/update_user.html',{'update_form': update_form})
+
 
 def login_request(request):
 	if request.method == "POST":
@@ -74,7 +79,10 @@ def login_request(request):
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
-				return redirect("users:dashboard")
+				if user.is_superuser or user.is_staff:
+					return redirect("users:dashboard")
+				else:
+					return redirect("home:home")
 			else:
 				messages.error(request,"Invalid username or password.")
 		else:
