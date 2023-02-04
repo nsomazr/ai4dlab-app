@@ -49,27 +49,16 @@ def register_request(request):
     if request.method == 'POST':
        register_form = NewUserForm(request.POST)
        if register_form.is_valid():
-            data = register_form.cleaned_data
-            password1 = data.pop('password1')
-            password2 = data.pop('password2')
-            print("Password 1: ", password1)
-            print("Password 2: ", password2)
-            if password1 != password2:
-               register_form.add_error('Password do not match')
-               return self.form_valid(register_form)
-            user = User.objects.create_user(**data)
-            user.set_password(password1)
-            user = form.save()
-			# login(request, user)
-            messages.success(request, "Registration successful.")
-            username = register_form.cleaned_data.get('username')
-            messages.success(request, f"New account created: {username}")
-            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-            return redirect("users:login")
+          user = register_form.save()
+          username = register_form.cleaned_data.get('username')
+          messages.success(request, "Registration successful." )
+        #   login(request, user)
+          login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+          return redirect("users:dashboard")
        else:
-            messages.error(request,"Account creation failed")
-            print(register_form .errors.as_data()) # here you print errors to terminal
-            # messages.error(request, "Unsuccessful registration. Invalid information.")
+          messages.error(request,"Account creation failed")
+          print(register_form.errors.as_data()) # here you print errors to terminal
+          return redirect("users:register")
 
     register_form = NewUserForm()
     return render (request=request, template_name="users/register.html", context={"register_form":register_form})
