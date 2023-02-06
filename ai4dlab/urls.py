@@ -34,8 +34,7 @@ from publication import urls as publication_urls
 from lab import urls as lab_urls
 from contact import urls as contact_urls
 from sponsor import urls as sponsor_urls
-from responsibleai import urls as responsibleai_urls
-from initiative import urls as initiative_urls
+from community import urls as community_urls
 from learning import urls as learning_urls
 from package import urls as package_urls
 from users.forms import ConfirmResetForm
@@ -54,7 +53,7 @@ urlpatterns = [
     path('colab/', include(colab_urls)),
     path('conference/', include(conference_urls)),
     path('dportal/', include(dportal_urls)),
-    path('event', include(event_urls)),
+    path('event/', include(event_urls)),
     path('jupyinter/', include(jupyinter_urls)),
     path('partner/', include(partner_urls)),
     path('project/', include(project_urls)),
@@ -62,8 +61,7 @@ urlpatterns = [
     path('lab/', include(lab_urls)),
     path('contact/', include(contact_urls)),
     path('sponsor/', include(sponsor_urls)),
-    path('responsibleai/', include(responsibleai_urls)),
-    path('initiative/', include(initiative_urls)),
+    path('community/', include(community_urls)),
     path('learning/', include(learning_urls)),
     path('package/', include(package_urls)),
     # we can mention them this way

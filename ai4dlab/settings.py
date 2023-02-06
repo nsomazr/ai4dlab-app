@@ -62,8 +62,7 @@ INSTALLED_APPS = [
     'package',
     'home',
     'sponsor',
-    'initiative',
-    'responsibleai',
+    'community',
     # third part apps
     'rest_framework',
     "rest_framework_simplejwt.token_blacklist",
@@ -124,12 +123,7 @@ WSGI_APPLICATION = 'ai4dlab.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#development
 
 # DATABASES = {  
 #     'default': {  
@@ -140,11 +134,28 @@ DATABASES = {
 #         'HOST': dev.DevConfig.DB_HOST,  
 #         'PORT': dev.DevConfig.DB_PORT,  
 #         'OPTIONS': {  
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,
+#             'charset': 'utf8mb4',
 #         }  
 #     }  
 # }  
 
+#production
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': prod.ProdConfig.DB_NAME,  
+        'USER': prod.ProdConfig.DB_USER,  
+        'PASSWORD': prod.ProdConfig.DB_PASSWORD,
+        'HOST': prod.ProdConfig.DB_HOST,  
+        'PORT': prod.ProdConfig.DB_PORT,  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }  
+    }  
+}  
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators

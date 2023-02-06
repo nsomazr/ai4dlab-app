@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="{% static 'dashboards/assets/css/bootstrap.css' %}">
 
     <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/chartjs/Chart.min.css' %}">
-
+    <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/quill/quill.bubble.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/quill/quill.snow.css' %}">
     <link rel="stylesheet" href="{% static 'dashboards/assets/vendors/perfect-scrollbar/perfect-scrollbar.css' %}">
     <link rel="stylesheet" href="{% static 'dashboards/assets/css/app.css' %}">
     <link rel="shortcut icon" href="{% static 'dashoards/assets/images/favicon.png' %}" type="image/x-icon">
@@ -68,15 +69,15 @@
                         </li>
                         
                         <li>
-                            <a href="ui-pricing.html">Collaborators</a>
+                            <a href="{% url 'colab:colabs'%}">Collaborators</a>
                         </li>
                         
                         <li>
-                            <a href="ui-todolist.html">Sponsors</a>
+                            <a href="{% url 'sponsor:sponsors'%}">Sponsors</a>
                         </li>
 
                         <li>
-                            <a href="ui-todolist.html">Partners</a>
+                            <a href="{% url 'partner:partners'%}">Partners</a>
                         </li>
                         
                         
@@ -94,21 +95,12 @@
                     <ul class="submenu ">
                         
                         <li>
-                            <a href="ui-chatbox.html">Projects</a>
+                            <a href="{% url 'project:projects' %}">Projects</a>
                         </li>
                         
                         <li>
-                            <a href="ui-pricing.html">Publication</a>
-                        </li>
-                        
-                        <li>
-                            <a href="ui-todolist.html">Responsible AI</a>
-                        </li>
-
-                        <li>
-                            <a href="ui-todolist.html">Other Initiatives</a>
-                        </li>
-                        
+                            <a href="{% url 'publication:publications'%}">Publication</a>
+                        </li> 
                         
                     </ul>
                     
@@ -166,19 +158,40 @@
                     <ul class="submenu ">
                         
                         <li>
-                            <a href="ui-chatbox.html">News</a>
+                            <a href="{% url 'news:news'%}">News</a>
                         </li>
                         
                         <li>
-                            <a href="ui-pricing.html">Blogs</a>
+                            <a href="{% url 'blog:blogs'%}">Blogs</a>
                         </li>
 
                         <li>
-                            <a href="ui-chatbox.html">Events</a>
+                            <a href="{% url 'event:events' %}">Events</a>
                         </li>
                         
                         <li>
-                            <a href="ui-pricing.html">Calls</a>
+                            <a href="{% url 'call:calls' %}">Calls</a>
+                        </li>
+                        
+                        
+                    </ul>
+                    
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
+                        <i data-feather="users" width="20"></i> 
+                        <span>Communities</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+                        
+                        <li>
+                            <a href="{% url 'community:ai4d-members' %}">AI4D Community</a>
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'community:girlsinai-members'%}">Girls in AI</a>
                         </li>
                         
                         
@@ -204,6 +217,9 @@
 <script src="{% static 'dashboards/assets/vendors/chartjs/Chart.min.js' %}"></script>
 <script src="{% static 'dashboards/assets/vendors/apexcharts/apexcharts.min.js' %}"></script>
 <script src="{% static 'dashboards/assets/js/pages/dashboard.js' %}"></script>
+
+<script src="{% static 'dashboards/assets/vendors/quill/quill.min.js' %}"></script>
+<script src="{% static 'dashboards/assets/js/pages/form-editor.js' %}"></script>
 
 <script src="{% static 'dashboards/assets/js/main.js' %}"></script>
 </body>

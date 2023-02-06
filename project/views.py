@@ -22,3 +22,11 @@ class ProjectAPIView(APIView):
     def project(request):
 
         return render(request, template_name='research/project.html', context={})
+    
+    def add_project(request):
+
+        return render(request, template_name='research/add_project.html', context={})
+
+    def projects(request):
+
+        return render(request, template_name='research/project_list.html', context={})
