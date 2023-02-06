@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-class prodConfig(Config):
+class ProdConfig(Config):
     DB_HOST = os.getenv('DB_HOST_PROD')
     DB_NAME = os.getenv('DB_NAME_PROD')
     DB_USER = os.getenv('DB_USER_PROD')
