@@ -22,3 +22,11 @@ class PartnerAPIView(APIView):
     def partner(request):
 
         return render(request, template_name='about/partner.html', context={})
+
+    def add_partner(request):
+
+        return render(request, template_name='about/add_partner.html', context={})
+
+    def partners(request):
+
+        return render(request, template_name='about/partners.html', context={})

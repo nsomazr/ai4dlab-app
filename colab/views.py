@@ -22,3 +22,11 @@ class ColabAPIView(APIView):
     def colab(request):
 
         return render(request, template_name='about/colab.html', context={})
+
+    def add_colab(request):
+
+        return render(request, template_name='about/add_colab.html', context={})
+
+    def colabs(request):
+
+        return render(request, template_name='about/colabs.html', context={})

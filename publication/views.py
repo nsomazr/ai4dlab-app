@@ -22,3 +22,11 @@ class PublicationAPIView(APIView):
     def publication(request):
 
         return render(request, template_name='research/publication.html', context={})
+
+    def add_publication(request):
+
+        return render(request, template_name='research/add_publication.html', context={})
+
+    def publications(request):
+
+        return render(request, template_name='research/publications.html', context={})

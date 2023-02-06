@@ -1,1 +1,13 @@
 from config.base import Config
+import os
+basedir = os.path.abspath(os.path.dirname(__file__))
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class prodConfig(Config):
+    DB_HOST = os.getenv('DB_HOST_PROD')
+    DB_NAME = os.getenv('DB_NAME_PROD')
+    DB_USER = os.getenv('DB_USER_PROD')
+    DB_PASSWORD = os.getenv('DB_PASSWORD_PROD')
+    DB_PORT = os.getenv('DB_PORT_PROD')

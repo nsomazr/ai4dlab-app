@@ -22,3 +22,11 @@ class CallAPIView(APIView):
     def call(request):
 
         return render(request, template_name='updates/call.html', context={})
+
+    def add_call(request):
+
+        return render(request, template_name='updates/add_cllas.html', context={})
+
+    def calls(request):
+
+        return render(request, template_name='updates/call_list.html', context={})

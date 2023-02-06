@@ -22,3 +22,11 @@ class EventAPIView(APIView):
     def event(request):
 
         return render(request, template_name='updates/event.html', context={})
+
+    def add_event(request):
+
+        return render(request, template_name='updates/add_event.html', context={})
+
+    def events(request):
+
+        return render(request, template_name='updates/event_list.html', context={})

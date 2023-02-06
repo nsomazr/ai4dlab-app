@@ -22,3 +22,12 @@ class BlogAPIView(APIView):
     def blog(request):
 
         return render(request, template_name='updates/blog.html', context={})
+
+    
+    def add_blog(request):
+
+        return render(request, template_name='updates/add_blog.html', context={})
+
+    def blogs(request):
+
+        return render(request, template_name='updates/blog_list.html', context={})

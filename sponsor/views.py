@@ -22,3 +22,12 @@ class SponsorAPIView(APIView):
     def sponsor(request):
 
         return render(request, template_name='about/sponsor.html', context={})
+
+
+    def add_sponsor(request):
+
+        return render(request, template_name='about/add_sponsor.html', context={})
+
+    def sponsors(request):
+
+        return render(request, template_name='about/sponsors.html', context={})

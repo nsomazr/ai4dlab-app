@@ -22,3 +22,11 @@ class NewsAPIView(APIView):
     def news(request):
 
         return render(request, template_name='updates/news.html', context={})
+
+    def add_news(request):
+
+        return render(request, template_name='updates/add_news.html', context={})
+
+    def news(request):
+
+        return render(request, template_name='updates/news_list.html', context={})
