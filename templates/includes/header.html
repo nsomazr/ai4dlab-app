@@ -117,8 +117,8 @@
               </li>
               <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Community<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
-                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">AI4D Community</a></li>
-                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Girls in AI</a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:ai4d-community' %}">AI4D Community</a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:girlsinai-community'%}">Girls in AI</a></li>
                 </ul>
               </li>
               {% if user.is_authenticated %}

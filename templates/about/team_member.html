@@ -1,0 +1,109 @@
+{% extends "../includes/master.html" %}
+{% load static %}
+{% block title %}Team Member{% endblock %}
+{% block content %}
+    <!-- Start inner Page hero-->
+    <section class="d-flex align-items-center page-hero  inner-page-hero " id="page-hero">
+      <div class="overlay-photo-image-bg parallax" data-bg-img="assets/images/hero/inner-page-hero.jpg" data-bg-opacity="1"></div>
+      <div class="overlay-color" data-bg-opacity=".75"></div>
+      <div class="container">
+        <div class="hero-text-area centerd">
+          <h1 class="hero-title  wow fadeInUp" data-wow-delay=".2s">team member</h1>
+          <nav aria-label="breadcrumb ">
+            <ul class="breadcrumb wow fadeInUp" data-wow-delay=".6s">
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#0"><i class="bi bi-house icon "></i>home</a></li>
+              <li class="breadcrumb-item active">team member</li>
+              <li class="breadcrumb-item active">{{ member.first_name }}</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+    <!-- End inner Page hero-->
+    <!-- Start inner Page hero-->
+    <section class="team-member mega-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-9">
+            <div class="tm-description">
+              <h3 class="tm-title">Biography Overview.</h3>
+              <p class="tm-text">{{ member.bio }}</p>
+              <!-- <h3 class="tm-title">my certificates!  </h3> -->
+              <!-- <div class="certificates"> 
+                <div class="row">
+                  <div class="col-12 col-md-6 mx-auto mb-3 mb-lg-0"><img class="img-fluid" loading="lazy" src="" alt="cert"></div> 
+                   <div class="col-12 col-md-6 mx-auto"><img class="img-fluid" loading="lazy" src="assets/images/our-team/cert-2.jpg" alt="cert"></div> 
+                </div>
+              </div> -->
+              <!-- <h3 class="tm-title">my skills</h3> -->
+              <!-- <div class="skills">
+                <div class="skill">
+                  <div class="skill-data"><span class="skill-name"> web development</span><span class="skill-value">85% </span></div>
+                  <div class="skill-bar"> 
+                    <div class="bar" data-skill-val="85"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-data"><span class="skill-name"> ecommerce </span><span class="skill-value">70% </span></div>
+                  <div class="skill-bar"> 
+                    <div class="bar" data-skill-val="70"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-data"><span class="skill-name"> mobile apps</span><span class="skill-value">90% </span></div>
+                  <div class="skill-bar"> 
+                    <div class="bar" data-skill-val="90"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-data"><span class="skill-name"> data analysis</span><span class="skill-value">100% </span></div>
+                  <div class="skill-bar"> 
+                    <div class="bar" data-skill-val="100"></div>
+                  </div>
+                </div>
+                <div class="skill">
+                  <div class="skill-data"><span class="skill-name"> cloud computing</span><span class="skill-value">75% </span></div>
+                  <div class="skill-bar"> 
+                    <div class="bar" data-skill-val="75"></div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <h3 class="tm-title">Work &amp; speciality  fields </h3>
+              <ul class="tm-list  ">
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>amet consectetur adipisicin geius nihil </span></li>
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>Lorem ipsum dolor sit amet</span></li>
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>eius nihil expedita. Repudiandae quidem </span></li>
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>Lorem, ipsum dolor.Repudiandae quidem expedita.</span></li>
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>Lorem, ipsum dolor. </span></li>
+                <li class="list-item "><i class="bi bi-check2-circle icon"></i><span>Lorem ipsum dolor sit amet.quidem</span></li>
+              </ul>
+              <p class="tm-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero iusto perspiciatis a modi nisi magnam maiores dolores aspernatur eveniet possimus, natus sed impedit quam eligendi velit sunt recusandae dolorum corrupti!</p>
+              <p class="tm-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ipsa et voluptatibus possimus, recusandae tempore consequatur necessitatibus vitae quia suscipit quidem ex. Harum reprehenderit recusandae cumque magnam atque sunt repellat saepe eius nihil expedita. Repudiandae quidem dolore rerum soluta id?</p> -->
+                        <div class=" cta-area  cta-area  wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid   cta-btn btn-solid  " href="{% url 'team:team'%}"><i class="bi bi-arrow-left icon "></i>Back to Team</a></div>
+            </div>
+          </div>
+          <div class="col-12  col-lg-3 mx-auto ">
+            <div class="profile ">
+              <div class="tm-img  "><img class=" img-fluid " loading="lazy" src="{{ member.photo.url }}" alt="Team Member"></div>
+              <div class="tm-details">
+                <h6 class="name">{{ member.first_name}} {{ member.last_name }}</h6><span class="role">{{ member.title}}</span>
+              </div>
+              <div class="tm-social">
+                <div class="sc-wrapper dir-row sc-size-40">
+                  <ul class="sc-list">
+                    <!-- <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
+                    <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li> -->
+                    <li class="sc-item " title="instagram"><a class="sc-link" href="{{ member.linkedin_url }}" title="social media icon"><i class="fab fa-linkedin sc-icon"></i></a></li>
+                    <li class="sc-item " title="twitter"><a class="sc-link" href="{{ member.twitter_url }}" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!--Start see-more-area-->
+              <!-- <div class="see-more-area  "><a class=" btn-solid" href="#0">download resume</a></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End inner Page hero-->
+    {% endblock %}
