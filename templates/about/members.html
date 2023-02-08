@@ -47,47 +47,51 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-                Simple Datatable
+                
             </div>
             <div class="card-body">
                 <table class='table table-responsive table-hover table-striped' id="table1">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>City</th>
+                            <th>No.</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Title</th>
+                            <!-- <th>Affiliation</th> -->
+                            <!-- <th>Email</th> -->
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for member in members %}
                         <tr>
-                            <td>Kermit</td>
-                            <td>diam.Sed.diam@anteVivamusnon.org</td>
-                            <td>(01653) 27844</td>
-                            <td>Patna</td>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ member.first_name }}</td>
+                            <td>{{ member.last_name }}</td>
+                            <td>{{ member.title }}</td>
+                            <!-- <td>{{ member.affiliation }}</td> -->
+                            <!-- <td>{{ member.email }}</td> -->
                             <td>
+                                {% if member.status == 1%}
                                 <span class="badge bg-success">Active</span>
+                                {% endif %}
+                                {% if member.status == 0 %}
+                                <span class="badge bg-danger">Not Active</span>
+                                {% endif %}
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Jermaine</td>
-                            <td>sodales@nuncsit.org</td>
-                            <td>0800 528324</td>
-                            <td>Mold</td>
                             <td>
-                                <span class="badge bg-success">Active</span>
+                                <a class="btn btn-primary btn-xs" href="">View</a>
+                                <a class="btn btn-success btn-xs" href="">Edit</a>
+                                {% if member.status == 1 %}
+                                <a class="btn btn-warning btn-xs" href="deactivate-member/{{member.id}}">Deactivate</a>
+                                {% endif %}
+                                {% if member.status == 0 %}
+                                <a class="btn btn-danger btn-xs" href="delete-member/{{member.id}}">Delete</a>
+                                {%  endif%}
                             </td>
                         </tr>
-                        <tr>
-                            <td>Ferdinand</td>
-                            <td>gravida.molestie@tinciduntadipiscing.org</td>
-                            <td>(016977) 4107</td>
-                            <td>Marlborough</td>
-                            <td>
-                                <span class="badge bg-danger">Inactive</span>
-                            </td>
-                        </tr>
+                        {% endfor%}
                     </tbody>
                 </table>
             </div>

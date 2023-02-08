@@ -20,10 +20,13 @@ class CommunityAPIView(APIView):
         return Response(serializer.errors, status = 400)
 
 
-    def community(request):
+    def ai4d_community(request):
 
-        return render(request, template_name='community/community.html', context={})
+        return render(request, template_name='community/ai4d_community.html', context={})
 
+    def girlsinai_community(request):
+
+        return render(request, template_name='community/girlsinai_community.html', context={})
 
     def ai4d_members(request):
 
