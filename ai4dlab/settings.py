@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = prod.Config.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -125,37 +125,37 @@ WSGI_APPLICATION = 'ai4dlab.wsgi.application'
 
 #development
 
-DATABASES = {  
-    'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': dev.DevConfig.DB_NAME,  
-        'USER': dev.DevConfig.DB_USER,  
-        'PASSWORD': dev.DevConfig.DB_PASSWORD,
-        'HOST': dev.DevConfig.DB_HOST,  
-        'PORT': dev.DevConfig.DB_PORT,  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,
-            'charset': 'utf8mb4',
-        }  
-    }  
-}  
-
-#production
-
 # DATABASES = {  
 #     'default': {  
 #         'ENGINE': 'django.db.backends.mysql',  
-#         'NAME': prod.ProdConfig.DB_NAME,  
-#         'USER': prod.ProdConfig.DB_USER,  
-#         'PASSWORD': prod.ProdConfig.DB_PASSWORD,
-#         'HOST': prod.ProdConfig.DB_HOST,  
-#         'PORT': prod.ProdConfig.DB_PORT,  
+#         'NAME': dev.DevConfig.DB_NAME,  
+#         'USER': dev.DevConfig.DB_USER,  
+#         'PASSWORD': dev.DevConfig.DB_PASSWORD,
+#         'HOST': dev.DevConfig.DB_HOST,  
+#         'PORT': dev.DevConfig.DB_PORT,  
 #         'OPTIONS': {  
-#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'" ,
 #             'charset': 'utf8mb4',
 #         }  
 #     }  
 # }  
+
+#production
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': prod.ProdConfig.DB_NAME,  
+        'USER': prod.ProdConfig.DB_USER,  
+        'PASSWORD': prod.ProdConfig.DB_PASSWORD,
+        'HOST': prod.ProdConfig.DB_HOST,  
+        'PORT': prod.ProdConfig.DB_PORT,  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        }  
+    }  
+}  
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
