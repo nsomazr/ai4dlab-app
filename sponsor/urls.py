@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 app_name = "sponsor"  
 
 urlpatterns = [path('', SponsorAPIView.sponsor, name="sponsor"),
+               path('sponsors/deactivate-sponsor/<int:id>', SponsorAPIView.deactivate_sponsor, name="deactivate-sponsor"),
+               path('sponsors/delete-sponsor/<int:id>', SponsorAPIView.delete_sponsor, name="delete-sponsor"),
                path('add-sponsor/', SponsorAPIView.add_sponsor, name="add-sponsor"),
                path('sponsors/', SponsorAPIView.sponsors, name="sponsors"),
-              path('sponsor-api', SponsorAPIView.as_view(), name="sponsor-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+               path('sponsor-api', SponsorAPIView.as_view(), name="sponsor-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

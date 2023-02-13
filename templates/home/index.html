@@ -330,7 +330,7 @@
       <div class="container">
         <div class="sec-heading   centered ">
           <div class="content-area">
-            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">Sponsors and<span class='hollow-text'> Collaborators</span></h2>
+            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">Partners, Sponsors and<span class='hollow-text'> Collaborators</span></h2>
           </div>
         </div>
         <div class=" clients-logos d-flex align-items-center justify-content-around flex-wrap">
@@ -342,27 +342,21 @@
               
               
               -->
+              {% for partner in partners %}
               <div class="swiper-slide">
-                <div class="client-logo  "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/1-white.png' %}" alt=" "></a></div>
+                <div class="client-logo "><a href="{{ partner.website_url }}"><img class="img-fluid logo " loading="lazy" src="{{ partner.logo.url }}" alt=" "></a></div>
               </div>
+              {% endfor %}
+              {% for sponsor in sponsors %}
               <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/2-white.png' %}" alt=" "></a></div>
+                <div class="client-logo "><a href="{{ sponsor.website_url }}"><img class="img-fluid logo " loading="lazy" src="{{ sponsor.logo.url }}" alt=" "></a></div>
               </div>
+              {% endfor %}
+              {% for colab in colabs %}
               <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/3-white.png' %}" alt=" "></a></div>
+                <div class="client-logo "><a href="{{ colab.website_url }}"><img class="img-fluid logo " loading="lazy" src="{{ colab.logo.url }}" alt=" "></a></div>
               </div>
-              <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/4-white.png' %}" alt=" "></a></div>
-              </div>
-              <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/5-white.png' %}" alt=" "></a></div>
-              </div>
-              <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/6-white.png' %}" alt=" "></a></div>
-              </div>
-              <div class="swiper-slide">
-                <div class="client-logo "><a href="#0"><img class="img-fluid logo " loading="lazy" src="{% static 'assets/images/clients-logos/7-white.png' %}" alt=" "></a></div>
-              </div>
+              {% endfor %}
             </div>
           </div>
         </div>
