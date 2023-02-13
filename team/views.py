@@ -87,12 +87,8 @@ class TeamAPIView(APIView):
         member = Team.objects.filter(id=id)
         if member:
             member.delete()
-            members = Team.objects.all()
-            context = {'members':members}
             messages.success(request, "Member deleted." )
             return redirect('team:members')
-        members = Team.objects.all()
-        context = {'members':members}
         messages.success(request, "Member doesn't exist." )
         return redirect('team:members')
 

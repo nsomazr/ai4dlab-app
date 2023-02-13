@@ -33,7 +33,7 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Colaborators</h3>
+                <h3>Lab Partners</h3>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class='breadcrumb-header'>
@@ -47,47 +47,45 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-                <!-- Simple Datatable -->
+                
             </div>
             <div class="card-body">
                 <table class='table table-responsive table-hover table-striped' id="table1">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>City</th>
+                            <th>No.</th>
+                            <th>Partner Name</th>
+                            <th>Website URL</th>
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for partner in partners %}
                         <tr>
-                            <td>Kermit</td>
-                            <td>diam.Sed.diam@anteVivamusnon.org</td>
-                            <td>(01653) 27844</td>
-                            <td>Patna</td>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ partner.partner_name }}</td>
+                            <td>{{ partner.website_url }}</td>
                             <td>
+                                {% if partner.status == 1%}
                                 <span class="badge bg-success">Active</span>
+                                {% endif %}
+                                {% if partner.status == 0 %}
+                                <span class="badge bg-danger">Not Active</span>
+                                {% endif %}
                             </td>
-                        </tr>
-                        <tr>
-                            <td>Jermaine</td>
-                            <td>sodales@nuncsit.org</td>
-                            <td>0800 528324</td>
-                            <td>Mold</td>
                             <td>
-                                <span class="badge bg-success">Active</span>
+                                <a class="btn btn-primary btn-xs" href="">View</a>
+                                <a class="btn btn-success btn-xs" href="">Edit</a>
+                                {% if partner.status == 1 %}
+                                <a class="btn btn-warning btn-xs" href="deactivate-partner/{{partner.id}}">Deactivate</a>
+                                {% endif %}
+                                {% if partner.status == 0 %}
+                                <a class="btn btn-danger btn-xs" href="delete-partner/{{partner.id}}">Delete</a>
+                                {%  endif%}
                             </td>
                         </tr>
-                        <tr>
-                            <td>Ferdinand</td>
-                            <td>gravida.molestie@tinciduntadipiscing.org</td>
-                            <td>(016977) 4107</td>
-                            <td>Marlborough</td>
-                            <td>
-                                <span class="badge bg-danger">Inactive</span>
-                            </td>
-                        </tr>
+                        {% endfor%}
                     </tbody>
                 </table>
             </div>

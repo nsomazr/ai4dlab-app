@@ -1,6 +1,6 @@
 {% extends "../includes/master.html" %}
 {% load static %}
-{% block title %}AI4D Lab - About{% endblock %}
+{% block title %}AI4D Lab - Sponsors{% endblock %}
 {% block content %}
     <!-- Start inner Page hero-->
     <section class="d-flex align-items-center page-hero  inner-page-hero " id="page-hero">
@@ -8,11 +8,11 @@
       <div class="overlay-color" data-bg-opacity=".75"></div>
       <div class="container">
         <div class="hero-text-area centerd">
-          <h1 class="hero-title  wow fadeInUp" data-wow-delay=".2s">Our Partners</h1>
+          <h1 class="hero-title  wow fadeInUp" data-wow-delay=".2s">Sponsors</h1>
           <nav aria-label="breadcrumb ">
             <ul class="breadcrumb wow fadeInUp" data-wow-delay=".6s">
               <li class="breadcrumb-item"><a class="breadcrumb-link" href="{% url 'home:home' %}"><i class="bi bi-house icon "></i>home</a></li>
-              <li class="breadcrumb-item active">Our Partners</li>
+              <li class="breadcrumb-item active">Sponsors</li>
             </ul>
           </nav>
         </div>
@@ -23,56 +23,23 @@
     <section class="portfolio portfolio-slider    mega-section" id="portfolio">
       <div class="container">
         <div class="sec-heading  ">
-          <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">portfolio</span>
-            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">Awesome <span class='hollow-text'>portfolio</span></h2>
+          <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Sponsors</span>
+            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">MEET <span class='hollow-text'>LAB SPONSORS</span></h2>
           </div>
-          <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid    " href="portfolio-slider.html">see more <i class="bi bi-arrow-right icon "></i></a></div>
+          {% comment %} <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid    " href="portfolio-slider.html">see more <i class="bi bi-arrow-right icon "></i></a></div> {% endcomment %}
         </div>
         <!--Swiper-->
         <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
           <div class="swiper-wrapper ">
+        {% for sponsor in sponsors %}
             <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/1.jpg' %}" alt="portfolio item photo"/></a>
+              <div class="item   "><a class="portfolio-img-link" href="{{ sponsor.website_url }}"><img class="portfolio-img   img-fluid " loading="lazy" src="{{ sponsor.logo.url }}" alt="{{ sponsor.sponsor_name }}"/></a>
                 <div class="item-info ">
-                  <h3 class="item-title">mobile apps</h3><i class="bi bi-arrow-right icon "></i>
+                  <h3 class="item-title">{{ sponsor.sponsor_name }}</h3><i class="bi bi-arrow-right icon "></i>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/2.jpg' %}" alt="portfolio item photo"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">cloud</h3><i class="bi bi-arrow-right icon "></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/3.jpg' %}" alt="portfolio item photo"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">data analaysis</h3><i class="bi bi-arrow-right icon "></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/4.jpg' %}" alt="portfolio item photo"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">hosting</h3><i class="bi bi-arrow-right icon "></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/5.jpg' %}" alt="portfolio item photo"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">SEO</h3><i class="bi bi-arrow-right icon "></i>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="portfolio-single.html"><img class="portfolio-img   img-fluid " loading="lazy" src="{% static 'assets/images/portfolio/6.jpg' %}" alt="portfolio item photo"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">other category</h3><i class="bi bi-arrow-right icon "></i>
-                </div>
-              </div>
-            </div>
+            {% endfor %}
           </div>
           <!--navigation buttons-->
           <div class="swiper-button-prev">
