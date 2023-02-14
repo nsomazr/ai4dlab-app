@@ -7,7 +7,7 @@ class Sponsor(models.Model):
     id = models.AutoField(primary_key=True)
     sponsor_name = models.CharField(max_length=100)
     website_url = models.CharField(max_length=100)
-    logo = models.ImageField(max_length=100, blank=True,upload_to=os.path.join(BASE_DIR,'colab'))
+    logo = models.ImageField(max_length=100, blank=True,upload_to=os.path.join(BASE_DIR,'sponsor'))
     status = models.IntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
