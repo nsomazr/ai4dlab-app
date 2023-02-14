@@ -24,6 +24,26 @@
     <section class="team-member mega-section">
       <div class="container">
         <div class="row">
+          <div class="col-12  col-lg-3 mx-auto ">
+            <div class="profile ">
+              <div class="tm-img  "><img class=" img-fluid " loading="lazy" src="{{ member.photo.url }}" alt="Team Member"></div>
+              <div class="tm-details">
+                <h6 class="name">{{ member.first_name}} {{ member.last_name }}</h6><span class="role">{{ member.title}}</span>
+              </div>
+              <div class="tm-social">
+                <div class="sc-wrapper dir-row sc-size-40">
+                  <ul class="sc-list">
+                    <!-- <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
+                    <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li> -->
+                    <li class="sc-item " title="instagram"><a class="sc-link" href="{{ member.linkedin_url }}" title="social media icon"><i class="fab fa-linkedin sc-icon"></i></a></li>
+                    <li class="sc-item " title="twitter"><a class="sc-link" href="{{ member.twitter_url }}" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <!--Start see-more-area-->
+              <!-- <div class="see-more-area  "><a class=" btn-solid" href="#0">download resume</a></div> -->
+            </div>
+          </div>
           <div class="col-12 col-lg-9">
             <div class="tm-description">
               <h3 class="tm-title">Biography Overview.</h3>
@@ -82,26 +102,7 @@
                         <div class=" cta-area  cta-area  wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid   cta-btn btn-solid  " href="{% url 'team:team'%}"><i class="bi bi-arrow-left icon "></i>Back to Team</a></div>
             </div>
           </div>
-          <div class="col-12  col-lg-3 mx-auto ">
-            <div class="profile ">
-              <div class="tm-img  "><img class=" img-fluid " loading="lazy" src="{{ member.photo.url }}" alt="Team Member"></div>
-              <div class="tm-details">
-                <h6 class="name">{{ member.first_name}} {{ member.last_name }}</h6><span class="role">{{ member.title}}</span>
-              </div>
-              <div class="tm-social">
-                <div class="sc-wrapper dir-row sc-size-40">
-                  <ul class="sc-list">
-                    <!-- <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
-                    <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li> -->
-                    <li class="sc-item " title="instagram"><a class="sc-link" href="{{ member.linkedin_url }}" title="social media icon"><i class="fab fa-linkedin sc-icon"></i></a></li>
-                    <li class="sc-item " title="twitter"><a class="sc-link" href="{{ member.twitter_url }}" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <!--Start see-more-area-->
-              <!-- <div class="see-more-area  "><a class=" btn-solid" href="#0">download resume</a></div> -->
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
