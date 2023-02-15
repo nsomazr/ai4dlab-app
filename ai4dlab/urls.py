@@ -27,7 +27,6 @@ from call import urls as call_urls
 from colab import urls as colab_urls
 from conference import urls as conference_urls
 from dportal import urls as dportal_urls
-from event import urls as event_urls
 from jupyinter import urls as jupyinter_urls
 from partner import urls as partner_urls
 from project import urls as project_urls
@@ -54,7 +53,6 @@ urlpatterns = [
     path('colab/', include(colab_urls)),
     path('conference/', include(conference_urls)),
     path('dportal/', include(dportal_urls)),
-    path('event/', include(event_urls)),
     path('jupyinter/', include(jupyinter_urls)),
     path('partner/', include(partner_urls)),
     path('project/', include(project_urls)),
