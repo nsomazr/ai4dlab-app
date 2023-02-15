@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'publication',
     'dportal',
     'colab',
-    'event',
     'lab',
     'contact',
     'learning',

@@ -90,6 +90,8 @@
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'project:project' %}">Projects</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'publication:publication' %}">Publications</a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="">Workshops</a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="">Conferences</a></li>
                 </ul>
               </li>
 
@@ -100,24 +102,24 @@
                 </ul>
               </li>
 
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Resources<i class="fas fa-plus  plus-icon"> </i></a>
+              {% comment %} <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Resources<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'learning:learning' %}">Learning</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'package:package' %}">Packages</a></li>
                 </ul>
-              </li>
+              </li> {% endcomment %}
 
               <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Updates <i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'news:news' %}">News</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'blog:blog' %}">Blogs</a></li>
-                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'event:event' %}">Events</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'call:call' %}">Calls</a></li>
                 </ul>
               </li>
               <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Community<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:ai4d-community' %}">AI4D Community</a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="">UDOM AI Community</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:girlsinai-community'%}">Girls in AI</a></li>
                 </ul>
               </li>

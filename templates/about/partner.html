@@ -19,39 +19,50 @@
       </div>
     </section>
     <!-- End inner Page hero-->
-    <!-- Start  portfolio Section-->
-    <section class="portfolio portfolio-slider    mega-section" id="portfolio">
-      <div class="container">
-        <div class="sec-heading  ">
-          <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">PARTNERS</span>
-            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">MEET <span class='hollow-text'>LAB PARTNERS</span></h2>
-          </div>
-          {% comment %} <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid    " href="portfolio-slider.html">see more <i class="bi bi-arrow-right icon "></i></a></div> {% endcomment %}
-        </div>
-        <!--Swiper-->
-        <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
-          <div class="swiper-wrapper ">
-        {% for partner in partners %}
-            <div class="swiper-slide">
-              <div class="item   "><a class="portfolio-img-link" href="{{ partner.website_url }}"><img class="portfolio-img   img-fluid " loading="lazy" src="{{ partner.logo.url }}" alt="{{ partner.partner_name }}"/></a>
-                <div class="item-info ">
-                  <h3 class="item-title">{{ partner.partner_name }}</h3><i class="bi bi-arrow-right icon "></i>
+    </section>
+    <!-- End  portfolio Section-->
+        <!-- Start  testimonials Section-->
+        <section class="testimonials testimonials-1-col   has-dark-bg  mega-section " id="testimonials-img-bg">
+          <div class="overlay-photo-image-bg parallax " data-bg-img="{% static 'assets/images/sections-bg-images/1.jpg' %}" data-bg-opacity=".25"> </div>
+          <div class="container">
+            <div class="row d-flex align-items-center">
+              <div class="col-12 col-md-10  mx-auto">
+                <div class="swiper-container  wow fadeInUp  " data-wow-delay="0.2s">
+                  <div class="swiper-wrapper">
+                    <!--First Slide-->
+                    {% for partner in partners %}
+                    <div class="swiper-slide">
+                      <div class="testmonial-card d-flex align-items-center justify-content-center">
+                        <div class="testimonial-content">
+                          <div class="customer-img "><img class="img-fluid " loading="lazy" src="{{ partner.logo.url }}" alt="First Slide "></div>
+                          <div class="customer-testimonial">
+                            <div class="content">
+                              <a href="{{ partner.website_url}}"class="testimonial-text " target="_blank"> {{ partner.partner_name }}</a>
+                            </div>
+                          </div>
+                          <div class="customer-info ">
+                            <div class="customer-details">
+                              <p class="customer-name">description</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                  <!--navigation buttons-->
+                  <div class="swiper-button-prev">
+                    <div class="left-arrow"><i class="bi bi-chevron-left icon "></i>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <div class="right-arrow"><i class="bi bi-chevron-right icon "></i>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            {% endfor %}
           </div>
-          <!--navigation buttons-->
-          <div class="swiper-button-prev">
-            <div class="left-arrow"><i class="bi bi-chevron-left icon "></i>
-            </div>
-          </div>
-          <div class="swiper-button-next">
-            <div class="right-arrow"><i class="bi bi-chevron-right icon "></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End  portfolio Section-->
+          <div class="loading-screen" id="loading-screen"><span class="bar top-bar"></span><span class="bar down-bar"></span></span></div>
+        </section>
 {% endblock %}
