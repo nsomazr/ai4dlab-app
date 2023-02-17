@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'team',
     'call',
     'conference',
+    'workshop',
     'partner',
     'project',
     'news',
