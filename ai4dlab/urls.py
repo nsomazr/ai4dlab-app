@@ -32,6 +32,7 @@ from partner import urls as partner_urls
 from project import urls as project_urls
 from publication import urls as publication_urls
 from lab import urls as lab_urls
+from workshop import urls as workshop_urls
 from contact import urls as contact_urls
 from sponsor import urls as sponsor_urls
 from community import urls as community_urls
@@ -52,6 +53,7 @@ urlpatterns = [
     path('call/', include(call_urls)),
     path('colab/', include(colab_urls)),
     path('conference/', include(conference_urls)),
+    path('workshop/', include(workshop_urls)),
     path('dportal/', include(dportal_urls)),
     path('jupyinter/', include(jupyinter_urls)),
     path('partner/', include(partner_urls)),

@@ -1,10 +1,10 @@
 {% extends "../includes/master.html" %}
 {% load static %}
-{% block title %}AI4D Lab - About{% endblock %}
+{% block title %}AI4D Lab - Calls{% endblock %}
 {% block content %}
     <!-- Start inner Page hero-->
     <section class="d-flex align-items-center page-hero  inner-page-hero " id="page-hero">
-      <div class="overlay-photo-image-bg parallax" data-bg-img="{% static 'assets/images/hero/inner-page-hero.jpg' %]" data-bg-opacity="1"></div>
+      <div class="overlay-photo-image-bg parallax" data-bg-img="{% static 'assets/images/hero/inner-page-hero.jpg' %}" data-bg-opacity="1"></div>
       <div class="overlay-color" data-bg-opacity=".75"></div>
       <div class="container">
         <div class="hero-text-area centerd">
@@ -23,7 +23,7 @@
     <section class="blog blog-home mega-section">
       <div class="container ">
         <div class="row ">
-          <div class="col-12 col-xl-8 "> 
+          <div class="col-12 col-xl-12 "> 
             <div class="posts-grid horizontal">
               <div class="row">
                 <div class="col-12 ">
@@ -112,86 +112,6 @@
                       <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>
                     </ul>
                   </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-xl-4 ">
-            <div class="blog-sidebar">
-              <!--search box-->
-              <div class="search sidebar-box">
-                <form class="search-form" action="#">
-                  <input class="search-input" type="search" name="seach_form" placeholder="Search Posts...">
-                  <button class="search-btn" type="submit"><i class="bi bi-search icon"></i></button>
-                </form>
-              </div>
-              <!--categories box-->
-              <div class="cats sidebar-box">
-                <h6 class="sidebar-box-title">
-                   Categories:</h6>
-                <ul class="sidebar-list cats-list  ">
-                  <li class="cat-item"><a class="cat-link" href="#">data<span class="cat-count">17</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">web dev <span class="cat-count">25</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">hosting<span class="cat-count">14</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">domain names<span class="cat-count">73</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">apps<span class="cat-count">36</span></a></li>
-                </ul>
-              </div>
-              <!--Recent posts  -->
-              <div class="recent-posts sidebar-box">
-                <h6 class="sidebar-box-title">
-                   recent posts:   </h6>
-                <ul class="sidebar-list r-posts-list ">
-                  <li class="r-post-item"><a class="r-post-link" href="#">
-                      <div class="r-post-img-wrapper"><img class="r-post-img" loading="lazy" src="{% static 'assets/images/blog/recent-posts/1.jpg' %}" alt="recent post image"></div>
-                      <div class="content">
-                        <h6 class="r-post-title">this is the article title</h6><span class="r-post-date">jun, 15 2022 </span>
-                      </div></a></li>
-                  <li class="r-post-item"><a class="r-post-link" href="#">
-                      <div class="r-post-img-wrapper"><img class="r-post-img" loading="lazy" src="{% static 'assets/images/blog/recent-posts/2.jpg' %}" alt="recent post image"></div>
-                      <div class="content">
-                        <h6 class="r-post-title">this is the article title</h6><span class="r-post-date">may, 10 2022 </span>
-                      </div></a></li>
-                  <li class="r-post-item"><a class="r-post-link" href="#">
-                      <div class="r-post-img-wrapper"><img class="r-post-img" loading="lazy" src="{% static 'assets/images/blog/recent-posts/3.jpg' %}" alt="recent post image"></div>
-                      <div class="content">
-                        <h6 class="r-post-title">this is the article title</h6><span class="r-post-date">feb, 28 2022 </span>
-                      </div></a></li>
-                  <li class="r-post-item"><a class="r-post-link" href="#">
-                      <div class="r-post-img-wrapper"><img class="r-post-img" loading="lazy" src="{% static 'assets/images/blog/recent-posts/4.jpg' %}" alt="recent post image"></div>
-                      <div class="content">
-                        <h6 class="r-post-title">this is the article title</h6><span class="r-post-date">jun, 07 2022 </span>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="tags sidebar-box">
-                <h6 class="sidebar-box-title">
-                   tags:</h6>
-                <ul class="sidebar-list tags-list ">
-                  <li class="tag-item"><a class="tag-link" href="#">wordpress</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">data analysis</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">hosting</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">design</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">developing</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">consulting</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">design</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">concept</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">features</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">services</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">portfolio</a></li>
-                  <li class="tag-item"><a class="tag-link" href="#">testmonials</a></li>
-                </ul>
-              </div>
-              <div class="follow-us sidebar-box">
-                <h6 class="sidebar-box-title">
-                   follow us on:</h6>
-                <div class="sc-wrapper dir-row sc-size-32">
-                  <ul class="sc-list">
-                    <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
-                    <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li>
-                    <li class="sc-item " title="instagram"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-instagram sc-icon"></i></a></li>
-                    <li class="sc-item " title="twitter"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
-                  </ul>
                 </div>
               </div>
             </div>

@@ -6,5 +6,5 @@ app_name = "news"
 
 urlpatterns = [path('', NewsAPIView.news, name="news"),
                path('add-news/', NewsAPIView.add_news, name="add-news"),
-               path('news/', NewsAPIView.news, name="news"),
+               path('news_list/', NewsAPIView.news_list, name="news_list"),
                path('api/news', NewsAPIView.as_view(), name="news-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

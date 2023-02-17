@@ -28,14 +28,14 @@
                   <!-- <div class="pre-title ">IT solutions             </div> -->
                   <h1 class="hero-title  ">AI4D AFRICA'S ANGLOPHONE  MULTIDISCIPLINARY RESEARCH LAB    <span class="featured-text">AI4DLAB <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none"><path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7"></path></svg>  </span><span class="design-element rounded-shape stripes"></span></h1>
                 </div>
-                <div class="col-10       ">
-                  <p class="hero-subtitle ">
+                <div class="col-10">
+                  <p class="hero-subtitle">
                     Artificial Intelligence for Development AI4D - Lab
                     A unique collaboration between UDOM & NM-AIST to foster Research, Training and Innovation in AI
                   </p>
                 </div>
                 <div class="col-12">
-                  <div class="cta-links-area "><a class=" btn-outline cta-link cta-link-primary " href="#0">More Info</a>
+                  <div class="cta-links-area "><a class=" btn-outline cta-link cta-link-primary " href="{% url 'lab:lab' %}">More Info</a>
                     <div class="play-btn-row-dir "><a class="video-link" href="https://www.youtube.com/watch?v=QI4_dGvZ5yE&amp;ab_channel=JUtah" role="button" title="play" data-fancybox="data-fancybox">
                         <div class="play-video-btn">
                           <div class="play-btn"> <i class="fas fa-play icon"></i></div>
@@ -48,7 +48,7 @@
           <!--start of image-area -->
           <div class="col-12   mx-md-auto col-lg-6 text-center " data-tilt>  
             <div class="hero-image-area mb-5 mb-lg-0">
-              <div class="hero-img-wraper  "><img class="img-fluid " src="{% static 'assets/images/hero/illustration-1.png' %}" alt="" draggable="false"></div>
+              {% comment %} <div class="hero-img-wraper  "><img class="img-fluid " src="{% static 'assets/images/hero/illustration-1.png' %}" alt="" draggable="false"></div> {% endcomment %}
             </div>
           </div>
         </div>
@@ -61,8 +61,8 @@
     <section class="blog blog-home mega-section  " id="blog">
       <div class="container ">
         <div class="sec-heading  ">
-          <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">News</span>
-            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">latest <span class='hollow-text'>news</span></h2>
+          <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Latest</span>
+            <h2 class=" title    wow fadeInUp" data-wow-delay=".4s">News & <span class='hollow-text'>Blogs</span></h2>
           </div>
           <div class=" cta-area  cta-area  wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid   cta-btn btn-solid  " href="blog-home-3-col.html">see all posts<i class="bi bi-arrow-right icon "></i></a></div>
         </div>
@@ -140,7 +140,7 @@
                       <div class="info-item"><i class="flaticon-medal  info-icon"></i>
                         <div class="info-content">
                           <h5 class="info-title">Infrastructure and Data Ecosystem</h5>
-                          <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          {% comment %} <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p> {% endcomment %}
                         </div>
                       </div>
                     </div>
@@ -148,7 +148,7 @@
                       <div class="info-item"><i class="flaticon-game-console info-icon"></i>
                         <div class="info-content">
                           <h5 class="info-title">Health Care</h5>
-                          <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          {% comment %} <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p> {% endcomment %}
                         </div>
                       </div>
                     </div>
@@ -156,7 +156,7 @@
                       <div class="info-item"><i class="flaticon-map info-icon"></i>
                         <div class="info-content">
                           <h5 class="info-title">Environmental Conservation and Agriculture  </h5>
-                          <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          {% comment %} <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p> {% endcomment %}
                         </div>
                       </div>
                     </div>
@@ -164,7 +164,7 @@
                       <div class="info-item"><i class="flaticon-technical-support-1  info-icon"></i>
                         <div class="info-content">
                           <h5 class="info-title">Digital  Economy and Small Scale Industry</h5>
-                          <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p>
+                          {% comment %} <p class="info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, iste</p> {% endcomment %}
                         </div>
                       </div>
                     </div>

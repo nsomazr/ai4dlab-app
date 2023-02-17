@@ -6,6 +6,7 @@ app_name = "community"
 
 urlpatterns = [
                 path('ai4d-community', CommunityAPIView.ai4d_community, name = 'ai4d-community'),
+                path('udomai-community', CommunityAPIView.udomai_community, name = 'udomai-community'),
                 path('girlsinai-community', CommunityAPIView.girlsinai_community, name = 'girlsinai-community'),
                 path('ai4d-members/', CommunityAPIView.ai4d_members, name="ai4d-members"),
                 path('girlsinai-members/', CommunityAPIView.girslinai_members, name="girlsinai-members"),

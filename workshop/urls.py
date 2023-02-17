@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import ConferenceAPIView
+from .views import WorkshopAPIView
 from django.conf import settings
 from django.conf.urls.static import static
-app_name = "conference"  
+app_name = "workshop"  
 
-urlpatterns = [path('', ConferenceAPIView.conference, name="conference"),
+urlpatterns = [path('', WorkshopAPIView.workshop, name="workshop"),
             #    path('workshops/deactivate-workshop/<int:id>', PartnerAPIView.deactivate_partner, name="deactivate-workshop"),
             #    path('workshops/delete-workshop/<int:id>', PartnerAPIView.delete_partner, name="delete-workshop"),
             #    path('add-workshop/', PartnerAPIView.add_partner, name="add-workshop"),

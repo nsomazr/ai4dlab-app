@@ -23,6 +23,10 @@ class CommunityAPIView(APIView):
     def ai4d_community(request):
 
         return render(request, template_name='community/ai4d_community.html', context={})
+    
+    def udomai_community(request):
+
+        return render(request, template_name='community/udomai_community.html', context={})
 
     def girlsinai_community(request):
 
