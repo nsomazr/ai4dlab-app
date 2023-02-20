@@ -100,7 +100,15 @@
                         </li>
                         
                         <li>
-                            <a href="{% url 'publication:publications'%}">Publication</a>
+                            <a href="{% url 'publication:publications' %}">Publications</a>
+                        </li> 
+
+                        <li>
+                            <a href="">Workshops</a>
+                        </li>
+                        
+                        <li>
+                            <a href="">Conferences</a>
                         </li> 
                         
                     </ul>
@@ -128,7 +136,7 @@
                     
                 </li>
                   
-                <li class="sidebar-item  has-sub">
+                {% comment %} <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="folder" width="20"></i> 
                         <span>Resources</span>
@@ -147,7 +155,7 @@
                         
                     </ul>
                     
-                </li>
+                </li> {% endcomment %}
 
 
                 <li class="sidebar-item  has-sub">
@@ -159,7 +167,7 @@
                     <ul class="submenu ">
                         
                         <li>
-                            <a href="{% url 'news:news'%}">News</a>
+                            <a href="{% url 'news:news-list'%}">News</a>
                         </li>
                         
                         <li>
@@ -184,14 +192,17 @@
                     <ul class="submenu ">
                         
                         <li>
-                            <a href="{% url 'community:ai4d-members' %}">AI4D Community</a>
+                            <a href="{% url 'community:ai4d-members' %}">AI4D Members</a>
                         </li>
                         
                         <li>
-                            <a href="{% url 'community:girlsinai-members'%}">Girls in AI</a>
+                            <a href="">UDOM AI Members</a>
                         </li>
                         
-                        
+                        <li>
+                            <a href="{% url 'community:girlsinai-members'%}">Girls in AI Members</a>
+                        </li>
+
                     </ul>
                     
                 </li>

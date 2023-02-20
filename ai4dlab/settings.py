@@ -123,7 +123,7 @@ WSGI_APPLICATION = 'ai4dlab.wsgi.application'
 #     }
 # }
 
-#development
+# development
 
 # DATABASES = {  
 #     'default': {  
@@ -140,7 +140,7 @@ WSGI_APPLICATION = 'ai4dlab.wsgi.application'
 #     }  
 # }  
 
-#production
+# production
 
 DATABASES = {  
     'default': {  
