@@ -82,7 +82,7 @@
                                 <a class="btn btn-success btn-xs" href="">Edit</a>
                                 {% if new.publish == 1 %}
                                 <a class="btn btn-primary btn-xs" href="view-news/{{new.id}}">View</a>
-                                <a class="btn btn-danger btn-xs" href="">Delete</a>
+                                <a class="btn btn-danger btn-xs" href="delete-news/{{new.id}}">Delete</a>
                                 {% endif %}
                                 {% if new.publish == 0 %}
                                 <a class="btn btn-primary btn-xs" href="review-news/{{new.id}}">Review</a>

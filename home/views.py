@@ -6,6 +6,7 @@ from .serializers import HomeModelSerializer
 from colab.models import Colab
 from sponsor.models import Sponsor
 from partner.models import Partner
+from news.models import News
 # Create your views here.
 
 class HomeAPIView(APIView):
@@ -26,5 +27,6 @@ class HomeAPIView(APIView):
         colabs = Colab.objects.filter(status=1)
         partners = Partner.objects.filter(status=1)
         sponsors = Sponsor.objects.filter(status=1)
-        context = {'partners': partners, 'sponsors':sponsors, 'colabs': colabs}
+        news =  News.objects.filter(publish=1, status=1)
+        context = {'partners': partners, 'sponsors':sponsors, 'colabs': colabs, 'news':news[:3]}
         return render(request, template_name='home/index.html', context=context)

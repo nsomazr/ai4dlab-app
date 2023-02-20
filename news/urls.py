@@ -6,10 +6,11 @@ app_name = "news"
 
 urlpatterns = [path('', NewsAPIView.news, name="news"),
                path('add-news/', NewsAPIView.add_news, name="add-news"),
-               path('<str:slug>/', NewsAPIView.read_news, name="read-news"),
+               path('<str:slug>/', NewsAPIView.read_news, name="index-read-news"),
                path('news/<str:slug>/', NewsAPIView.read_news, name="read-news"),
-               path('news_list/review-news/publish-news/<int:id>', NewsAPIView.publish_news, name="publish-news"),
-               path('news_list/review-news/<int:id>', NewsAPIView.review_news, name="review-news"),
-               path('news_list/view-news/<int:id>', NewsAPIView.view_news, name="view-news"),
-               path('news_list/', NewsAPIView.news_list, name="news-list"),
+               path('news-list/review-news/publish-news/<int:id>', NewsAPIView.publish_news, name="publish-news"),
+               path('news-list/review-news/<int:id>', NewsAPIView.review_news, name="review-news"),
+               path('news-list/view-news/<int:id>', NewsAPIView.view_news, name="view-news"),
+               path('news-list/delete-news/<int:id>', NewsAPIView.delete_news, name="delete-news"),
+               path('news-list/', NewsAPIView.news_list, name="news-list"),
                path('api/news', NewsAPIView.as_view(), name="news-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
