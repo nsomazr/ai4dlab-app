@@ -21,6 +21,11 @@ class NewsAPIView(APIView):
             return Response(serializer.data, status = 201)
         return Response(serializer.errors, status = 400)
 
+    def news_list(request):
+        news = News.objects.all()
+        context = {'news':news}
+        return render(request, template_name='updates/news_list.html', context=context)
+
     def news(request):
         news = News.objects.filter(publish=1, status=1)
         context = {"news": news}
@@ -53,7 +58,7 @@ class NewsAPIView(APIView):
                     news = News.objects.filter(status=1)
                     context = {'news':news}
                     messages.success(request, "News successful added." )
-                    return render(request,'updates/news_list.html', context=context)
+                    return redirect('news:news-list')
 
             else:
                 print(news_form.errors.as_data())
@@ -85,8 +90,12 @@ class NewsAPIView(APIView):
             new.save()
             return redirect('news:news-list')
             
-
-    def news_list(request):
-        news = News.objects.all()
-        context = {'news':news}
-        return render(request, template_name='updates/news_list.html', context=context)
+    
+    def delete_news(request,id):
+        new = News.objects.filter(id=id)
+        if new:
+            new.delete()
+            messages.success(request, "News deleted." )
+            return redirect('news:news-list')
+        messages.success(request, "News doesn't exist." )
+        return redirect('news:news-list')
