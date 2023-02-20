@@ -9,14 +9,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.relpath(__file__)))
 class News(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
-    banner = models.ImageField(max_length=100, blank=True,upload_to=os.path.join(BASE_DIR,'media/news'))
-    content_photo_one = models.ImageField(max_length=100, blank=True,upload_to=os.path.join(BASE_DIR,'media/news'))
-    content_photo_two = models.ImageField(max_length=100, blank=True,upload_to=os.path.join(BASE_DIR,'media/news'))
-    description = models.TextField()
+    banner = models.ImageField(max_length=100,null=False, blank=True,upload_to=os.path.join(BASE_DIR,'news'))
     body = models.TextField()
+    content_photo_one = models.ImageField(max_length=100,null=True, blank=True,upload_to=os.path.join(BASE_DIR,'news'))
+    content_photo_two = models.ImageField(max_length=100,null=True, blank=True,upload_to=os.path.join(BASE_DIR,'news'))
+    content_photo_three = models.ImageField(max_length=100,null=True, blank=True,upload_to=os.path.join(BASE_DIR,'news'))
     status = models.IntegerField(default=0)
+    publish = models.IntegerField(default=0)
+    reject = models.IntegerField(default=0)
     slug = models.SlugField(null=False, unique=True)
-    publisher = models.ForeignKey(User, on_delete=models.CASCADE)
+    publisher = models.CharField(max_length=100)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
 
@@ -26,4 +28,4 @@ class News(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("blog_detail", kwargs={"slug": self.slug}) 
+        return reverse("news_detail", kwargs={"slug": self.slug}) 

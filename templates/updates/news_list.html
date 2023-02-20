@@ -38,7 +38,7 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class='breadcrumb-header'>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="btn btn-primary" href="{% url 'news:add-news' %}">Add Project</a></li>
+                        <li class="breadcrumb-item"><a class="btn btn-primary" href="{% url 'news:add-news' %}">Add News</a></li>
                     </ol>
                 </nav>
             </div>
@@ -47,47 +47,49 @@
     <section class="section">
         <div class="card">
             <div class="card-header">
-                Simple Datatable
+                
             </div>
             <div class="card-body">
                 <table class='table table-responsive table-hover table-striped' id="table1">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>City</th>
+                            <th>No.</th>
+                            <th>Publisher</th>
+                            <th>Title</th>
+                            <th>Slug</th>
+                            <!-- <th>Affiliation</th> -->
+                            <!-- <th>Email</th> -->
                             <th>Status</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for new in news %}
                         <tr>
-                            <td>Kermit</td>
-                            <td>diam.Sed.diam@anteVivamusnon.org</td>
-                            <td>(01653) 27844</td>
-                            <td>Patna</td>
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{ new.publisher }}</td>
+                            <td>{{ new.title }}</td>
+                            <td>{{ new.slug }}</td>
                             <td>
-                                <span class="badge bg-success">Active</span>
+                                {% if new.publish == 1%}
+                                <span class="badge bg-success">Published</span>
+                                {% endif %}
+                                {% if new.publish == 0 %}
+                                <span class="badge bg-danger">Not published</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <a class="btn btn-success btn-xs" href="">Edit</a>
+                                {% if new.publish == 1 %}
+                                <a class="btn btn-primary btn-xs" href="view-news/{{new.id}}">View</a>
+                                <a class="btn btn-danger btn-xs" href="">Delete</a>
+                                {% endif %}
+                                {% if new.publish == 0 %}
+                                <a class="btn btn-primary btn-xs" href="review-news/{{new.id}}">Review</a>
+                                {%  endif%}
                             </td>
                         </tr>
-                        <tr>
-                            <td>Jermaine</td>
-                            <td>sodales@nuncsit.org</td>
-                            <td>0800 528324</td>
-                            <td>Mold</td>
-                            <td>
-                                <span class="badge bg-success">Active</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ferdinand</td>
-                            <td>gravida.molestie@tinciduntadipiscing.org</td>
-                            <td>(016977) 4107</td>
-                            <td>Marlborough</td>
-                            <td>
-                                <span class="badge bg-danger">Inactive</span>
-                            </td>
-                        </tr>
+                        {% endfor%}
                     </tbody>
                 </table>
             </div>
