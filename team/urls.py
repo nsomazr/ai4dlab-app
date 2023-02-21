@@ -13,5 +13,5 @@ urlpatterns = [path('', TeamAPIView.team, name="team"),
                path('members/', TeamAPIView.members, name="members")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
-if settings.DEBUG:
+if not settings.DEBUG:
    urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
