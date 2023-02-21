@@ -10,3 +10,6 @@ urlpatterns = [path('', PartnerAPIView.partner, name="partner"),
                path('add-partner/', PartnerAPIView.add_partner, name="add-partner"),
                path('partners/', PartnerAPIView.partners, name="partners"),
                path('api/partner/', PartnerAPIView.as_view(), name="partner-api")] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if not settings.DEBUG:
+   urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
