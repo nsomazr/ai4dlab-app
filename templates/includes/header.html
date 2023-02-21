@@ -126,7 +126,10 @@
               {% if user.is_authenticated %}
               <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Account <i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
-                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link" href="{% url 'home:home' %}"><span class="text-capitalize">{{user.first_name}} {{user.last_name}}</span></a></li>
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link" href="{% url 'home:home' %}"><span class="text-capitalize">{{user.username}}</span></a></li>
+                  {% if user.is_superuser or user.is_staff %}
+                  <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link" href="{% url 'users:dashboard' %}"><span>Dashboard</span></a></li>
+                  {% endif %}
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link" href="{% url 'users:logout' %}"><span class="text-danger">Logout</span></a></li>
                 </ul>
               </li>
