@@ -76,7 +76,7 @@
                   <div class="post-box">     <a class="post-link" href="news/{{ new.slug }}" title="{{ new.title }}"> 
                       <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{{ new.banner.url }}" alt="{{ new.title }}"/><span class="post-date"><span class="day">{{ new.created_at | date}}</span></span></div></a>
                     <div class="post-summary">
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
+                      <div class="post-text"><a class="post-link" href="news/{{ new.slug }}"> 
                           <h2 class="post-title"> {{ new.title }}</h2></a>
                           <p class="post-excerpt">{{ new.body }}</p><a class="read-more" href="news/{{ new.slug }}" title="{{ new.title }}">read more<i class="bi bi-arrow-right icon "></i></a>
                       </div>
