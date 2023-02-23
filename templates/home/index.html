@@ -95,7 +95,7 @@
 
 
     <!-- Start  news Section-->
-    <section class="blog blog-home mega-section  " id="blog">
+    {% comment %} <section class="blog blog-home mega-section  " id="blog">
 
       <div class="container ">
         <div class="sec-heading  ">
@@ -108,18 +108,7 @@
           <div class="col-12 "> 
             <div class="posts-grid ">
               <div class="row">
-                <div class="col-12 col-lg-4 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="give your website a new look and feel with themes"> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/2.jpg' %}" alt=""/><span class="post-date"><span class="day">15 </span>sep 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>web dev</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>mhmd amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> give your website a new look and feel with themes</h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="give your website a new look and feel with themes">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
                 <div class="col-12 col-lg-4 ">         
                   <div class="post-box">     <a class="post-link" href="post-single.html" title="the role of domain names in SEO world explained "> 
                       <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/3.jpg' %}" alt=""/><span class="post-date"><span class="day">27 </span>aug 2022     </span></div></a>
@@ -132,24 +121,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-4 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="the role of domain names in SEO world explained "> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/3.jpg' %}" alt=""/><span class="post-date"><span class="day">27 </span>aug 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>SEO</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>yusuf amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> the role of domain names in SEO world explained </h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="the role of domain names in SEO world explained ">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> {% endcomment %}
 <!-- End latest news -->
 
     <!-- Start  about Section-->
@@ -228,9 +206,9 @@
         <section class="services services-boxed mega-section  " id="services">
           <div class="container">
             <div class="sec-heading  ">
-              <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">What We Do</span>
-                <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Explore</span> Lab Activities</h2>
-                <p class="subtitle   wow fadeInUp " data-wow-delay=".6s">We work and support different activities, <br>find activities highlight below:-.</p>
+              <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Lab Pillars</span>
+               <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Core Function</span> Innovation Space</h2>
+                {% comment %}  <p class="subtitle   wow fadeInUp " data-wow-delay=".6s">We work and support different activities, <br>find activities highlight below:-.</p> {% endcomment %}
               </div>
               {% comment %} <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid    ">see all services <i class="bi bi-arrow-right icon "></i></a></div> {% endcomment %}
             </div>
@@ -238,14 +216,16 @@
               <div class="col-12 col-md-6  col-lg-4 mx-auto ">
                 <!--Start First service box-->
                 <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".1s">
-                  <div class="service-icon"><i class="flaticon-web-development font-icon"></i></div><span class="service-num hollow-text">1    </span>
+                  <div class="service-icon"><i class="flaticon-strategy font-icon" ></i></div><span class="service-num hollow-text">1    </span>
                   <div class="service-content">
-                    <h3 class="service-title">Awareness Training</h3>
-                    <p class="service-text">
-                      We collaborate with other organizations and institutions in creating 
-                      AI awareness to different group of people such as students.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
+                    <h3 class="service-title">Conducting Exploratory Research</h3>
+                    {% comment %} <p class="service-text">
+                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
+                      perfe rendis
+                      explicabo.
+                    </p> {% endcomment %}
+                  </div>
+                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
                 </div>
                 <!-- End First service box   -->
               </div>
@@ -254,13 +234,15 @@
                 <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".2s">
                   <div class="service-icon"><i class="flaticon-medal  font-icon"></i></div><span class="service-num hollow-text">2    </span>
                   <div class="service-content">
-                    <h3 class="service-title">Seeding Fund</h3>
-                    <p class="service-text">
-                      We support AI innovators in turning great ideas into reality by providing funding, mentorship, 
-                      and infrastructure support.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
-                </div>
+                    <h3 class="service-title">Strethening Research and Teaching Capacity</h3>
+                    {% comment %} <p class="service-text">
+                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
+                      perfe rendis
+                      explicabo.
+                    </p> {% endcomment %}
+                  </div>
+                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %} 
+                </div> 
                 <!-- End Second service box-->
               </div>
               <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
@@ -268,59 +250,63 @@
                 <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".3s">
                   <div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span class="service-num hollow-text">3    </span>
                   <div class="service-content">
-                    <h3 class="service-title">Scholarship</h3>
-                    <p class="service-text">
+                    <h3 class="service-title">Supporting AI Innovation and Commercialization</h3>
+                    {% comment %} <p class="service-text">
                       Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
                       perfe rendis
                       explicabo.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
+                    </p> {% endcomment %}
+                   </div>
+                   {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
                 </div>
                 <!-- End Third service box-->
               </div>
               <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
                 <!--Start fourth service box-->
-                {% comment %} <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".4s">
+               <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".4s">
                   <div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span class="service-num hollow-text">4    </span>
                   <div class="service-content">
-                    <h3 class="service-title">Apps development</h3>
-                    <p class="service-text">
+                    <h3 class="service-title">Mentorship and Community Building</h3>
+                    {% comment %} <p class="service-text">
                       Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
                       perfe rendis
                       explicabo.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
-                </div> {% endcomment %}
+                    </p> {% endcomment %}
+                  </div>
+                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a>  {% endcomment %}
+                </div> 
                 <!-- End fourth service box   -->
               </div>
               <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
                 <!--Start 5th service box-->
-                {% comment %} <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".5s">
+                 <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".5s">
                   <div class="service-icon"><i class="flaticon-search font-icon"></i></div><span class="service-num hollow-text">5    </span>
                   <div class="service-content">
-                    <h3 class="service-title">SEO services</h3>
-                    <p class="service-text">
+                    <h3 class="service-title">Supporting Gender Inclusive and Repsonsible AI</h3>
+                    {% comment %} <p class="service-text">
                       Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
                       perfe rendis
                       explicabo.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
-                </div> {% endcomment %}
+                    </p> {% endcomment %}
+                  </div> 
+                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a>  {% endcomment %}
+                </div> 
                 <!-- End 5th service box-->
               </div>
               <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
                 <!--Start 6th service box-->
-                {% comment %} <div class="box service-box  wow fadeInUp  reveal-start" data-wow-offset="0" data-wow-delay=".6s">
-                  <div class="service-icon"><i class="flaticon-strategy font-icon"></i></div><span class="service-num hollow-text">6    </span>
+                 <div class="box service-box  wow fadeInUp  reveal-start" data-wow-offset="0" data-wow-delay=".6s">
+                  <div class="service-icon"><i class="flaticon-web-development font-icon"></i></div><span class="service-num hollow-text">6    </span>
                   <div class="service-content">
-                    <h3 class="service-title">data analysis</h3>
-                    <p class="service-text">
+                    <h3 class="service-title">Equitable Didstribution of AI High-Quality Teaching and Leaning Materials</h3>
+                    {% comment %} <p class="service-text">
                       Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
                       perfe rendis
                       explicabo.
-                    </p>
-                  </div><a class="read-more" href="service-single.html">read more<i class="bi bi-arrow-right icon "> </i></a>
-                </div> {% endcomment %}
+                    </p> {% endcomment %}
+                  </div> 
+                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
+                </div> 
                 <!-- End 6th service box-->
               </div>
             </div>

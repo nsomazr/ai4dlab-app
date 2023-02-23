@@ -41,9 +41,9 @@ class NewsAPIView(APIView):
                 title  = request.POST['title']
                 body = request.POST['body']
                 banner = request.FILES['banner']
-                content_photo_one = request.FILES['content_photo_one']
-                content_photo_two = request.FILES['content_photo_two']
-                content_photo_three = request.FILES['content_photo_three']
+                content_photo_one = None
+                content_photo_two = None
+                content_photo_three = None
                 publisher = request.POST['publisher']
                 status = 1
                 slug = title.replace(' ','-').lower()
@@ -55,11 +55,8 @@ class NewsAPIView(APIView):
                     return render(request, template_name='updates/add_news.html', context={'news_form':news_form})
                 else:
                     new_news.save()
-                    news = News.objects.filter(status=1)
-                    context = {'news':news}
                     messages.success(request, "News successful added." )
                     return redirect('news:news-list')
-
             else:
                 print(news_form.errors.as_data())
                 
@@ -75,7 +72,7 @@ class NewsAPIView(APIView):
     def read_news(request,slug):
         new = News.objects.get(slug=slug)
         # news = News.objects.filter(publish=1, status=1).exclude(slug=slug)
-        photos = [new.content_photo_one.url, new.content_photo_two.url, new.content_photo_three.url]
+        photos = [new.content_photo_one, new.content_photo_two, new.content_photo_three]
         context = {'new':new, 'photos':photos}
         return render(request, template_name='updates/news_single.html', context=context)
     
