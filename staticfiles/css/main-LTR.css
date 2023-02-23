@@ -2659,7 +2659,7 @@ body.rounded-btns .read-more {
   margin-bottom: 3rem;
 }
 .portfolio-single .project-featured-img {
-  max-height: 450px;
+  max-height: 100%; 
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -2667,7 +2667,7 @@ body.rounded-btns .read-more {
   width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: 600px;
+  max-height:100%;
   object-fit: cover;
 }
 .portfolio-single .info-area {
