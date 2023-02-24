@@ -7,6 +7,7 @@ from colab.models import Colab
 from sponsor.models import Sponsor
 from partner.models import Partner
 from news.models import News
+from blog.models import Blog
 # Create your views here.
 
 class HomeAPIView(APIView):
@@ -28,5 +29,6 @@ class HomeAPIView(APIView):
         partners = Partner.objects.filter(status=1)
         sponsors = Sponsor.objects.filter(status=1)
         news =  News.objects.filter(publish=1, status=1)
-        context = {'partners': partners, 'sponsors':sponsors, 'colabs': colabs, 'news':news[:3]}
+        blogs =  Blog.objects.filter(publish=1, status=1)
+        context = {'partners': partners, 'sponsors':sponsors, 'colabs': colabs, 'news':news[:3], 'blogs': blogs[:3]}
         return render(request, template_name='home/index.html', context=context)

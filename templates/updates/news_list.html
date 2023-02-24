@@ -56,7 +56,7 @@
                             <th>No.</th>
                             <th>Publisher</th>
                             <th>Title</th>
-                            <th>Slug</th>
+                            {% comment %} <th>Slug</th> {% endcomment %}
                             <!-- <th>Affiliation</th> -->
                             <!-- <th>Email</th> -->
                             <th>Status</th>
@@ -69,7 +69,7 @@
                             <td>{{ forloop.counter }}</td>
                             <td>{{ new.publisher }}</td>
                             <td>{{ new.title }}</td>
-                            <td>{{ new.slug }}</td>
+                            {% comment %} <td>{{ new.slug }}</td> {% endcomment %}
                             <td>
                                 {% if new.publish == 1%}
                                 <span class="badge bg-success">Published</span>
