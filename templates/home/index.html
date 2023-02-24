@@ -95,7 +95,7 @@
 
 
     <!-- Start  news Section-->
-    {% comment %} <section class="blog blog-home mega-section  " id="blog">
+    <section class="blog blog-home mega-section  " id="blog">
 
       <div class="container ">
         <div class="sec-heading  ">
@@ -108,26 +108,26 @@
           <div class="col-12 "> 
             <div class="posts-grid ">
               <div class="row">
-
+                {% for blog in blogs %}
                 <div class="col-12 col-lg-4 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="the role of domain names in SEO world explained "> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/3.jpg' %}" alt=""/><span class="post-date"><span class="day">27 </span>aug 2022     </span></div></a>
+                  <div class="post-box">     <a class="post-link" href="#" title="{{ blog.title }}"> 
+                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{{ blog.thumbnail.url }}" alt=""/><span class="post-date"><span class="day">{{ blog.created_at | date }} </span></span></div></a>
                     <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>SEO</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>yusuf amin</a></div>
+                      <div class="post-info">Author: <a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>{{ blog.author}}</a></div>
                       <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> the role of domain names in SEO world explained </h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="the role of domain names in SEO world explained ">read more<i class="bi bi-arrow-right icon "></i></a>
+                          <h2 class="post-title"> {{ blog.title }}</h2></a>
+                        <p class="post-excerpt">{{ blog.description }}</p><a class="read-more" href="#" title="{{ blog.title }}">read more<i class="bi bi-arrow-right icon "></i></a>
                       </div>
                     </div>
                   </div>
                 </div>
-
+                {% endfor %}
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> {% endcomment %}
+    </section>
 <!-- End latest news -->
 
     <!-- Start  about Section-->
