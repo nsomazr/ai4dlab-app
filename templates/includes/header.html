@@ -73,9 +73,9 @@
           <div class="header-logo"><a class="logo-link" href="#"><img class="logo-img light-logo" loading="lazy" src="{% static 'assets/images/logo/logo-light.png' %}" alt="logo"/><img class="logo-img  dark-logo" loading="lazy" src="{% static 'assets/images/logo/logo-colored.png' %}" alt="logo"/></a></div>
           <div class="links menu-wrapper ">
             <ul class="list-js links-list">
-              <li class="menu-item"><a class="menu-link   active" href="{% url 'home:home'%}">Home  </a></li>
+              <li class="menu-item"><a class="menu-link   active" href="{% url 'home:home'%}">HOME  </a></li>
               
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#">About Us<i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#">ABOUT US<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'lab:lab' %}">The Lab</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'team:team' %}">Our People</a></li>
@@ -86,7 +86,7 @@
                 </ul>
               </li>
 
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Research<i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">RESEARCH<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   {% comment %} <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'project:project' %}">Projects</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'publication:publication' %}">Publications</a></li>
@@ -100,7 +100,7 @@
                 </ul>
               </li>
 
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Tools<i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">TOOLS<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   {% comment %} <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'dportal:dportal' %}">Data Portal</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'jupyinter:jupyinter' %}">Interactive Notebook</a></li> {% endcomment %}
@@ -116,7 +116,7 @@
                 </ul>
               </li> {% endcomment %}
 
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Updates <i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">UPDATES<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'news:news' %}">News</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'blog:blog' %}">Blogs</a></li>
@@ -124,7 +124,7 @@
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="#">Calls</a></li>
                 </ul>
               </li>
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Community<i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">COMMUNITY<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   {% comment %} <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:ai4d-community' %}">AI4D Community</a></li>
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link  " href="{% url 'community:udomai-community' %}">UDOM AI Community</a></li>
@@ -135,7 +135,7 @@
                 </ul>
               </li>
               {% if user.is_authenticated %}
-              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">Account <i class="fas fa-plus  plus-icon"> </i></a>
+              <li class="menu-item has-sub-menu"><a class="menu-link  " href="#0">ACCOUNT<i class="fas fa-plus  plus-icon"> </i></a>
                 <ul class="sub-menu ">
                   <li class="menu-item sub-menu-item"><a class="menu-link sub-menu-link" href="{% url 'home:home' %}"><span class="text-capitalize">{{user.username}}</span></a></li>
                   {% if user.is_superuser or user.is_staff %}
@@ -145,7 +145,7 @@
                 </ul>
               </li>
               {% else %}
-              <li class="menu-item"><a class="menu-link" href="{% url 'users:login' %}">Login</a></li>
+              <li class="menu-item"><a class="menu-link" href="{% url 'users:login' %}">LOGIN</a></li>
               {% endif %}
             </ul>
           </div>
