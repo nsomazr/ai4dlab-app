@@ -50,7 +50,7 @@
     <!-- // Basic multiple Column Form section start -->
     <section id="multiple-column-form">
         <div class="row match-height">
-            <div class="col-12">
+            <div class="col-8">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Add News </h4>
@@ -78,42 +78,21 @@
                                             {{ news_form.banner }}
                                         </div>
                                     </div>
+
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
-                                            <label for="city-column">Body</label>
-                                            {{ news_form.body }}
+                                            <label for="city-column">Description</label>
+                                            {{ news_form.description }}
                                         </div>
                                     </div>
-                                    {% comment %} <div class="col-md-12 col-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">Add News Details</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <div id="full">
-                                                    {{ news_form.body }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> {% endcomment %}
-                                    {% comment %} <div class="col-md-12 col-12">
-                                        <div class="form-group">
-                                            <label for="country-floating">Additional Image 1 (Optional)</label>
-                                            {{ news_form.content_photo_one }}
-                                        </div>
-                                    </div>
+
                                     <div class="col-md-12 col-12">
+                                        <label for="city-column">Body</label>
                                         <div class="form-group">
-                                            <label for="country-floating">Additional Image 2 (Optional)</label>
-                                            {{ news_form.content_photo_two }}
+                                            {{news_form.media}}
+                                            {{ news_form.body | safe }}
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-12">
-                                        <div class="form-group">
-                                            <label for="country-floating">Additional Image 3 (Optional)</label>
-                                            {{ news_form.content_photo_three }}
-                                        </div>
-                                    </div> {% endcomment %}
                                     <div class="form-group col-12">
 
                                     </div>
