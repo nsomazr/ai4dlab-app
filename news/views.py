@@ -36,18 +36,17 @@ class NewsAPIView(APIView):
         if request.method == 'POST' and request.FILES['banner']:
 
             news_form = NewsForm(request.POST,request.FILES)
-
+            print(f"Body content: {request.POST['body']}")
             if news_form.is_valid():
                 title  = request.POST['title']
-                body = request.POST['body']
+                body = news_form.cleaned_data['body']
                 banner = request.FILES['banner']
-                content_photo_one = None
-                content_photo_two = None
-                content_photo_three = None
+                description = request.POST['description']
                 publisher = request.POST['publisher']
                 status = 1
+                # print(f"Body content: {body}")
                 slug = title.replace(' ','-').lower()
-                new_news = News(title=title, body=body, banner=banner, content_photo_one=content_photo_one, content_photo_two=content_photo_two, content_photo_three=content_photo_three,publisher=publisher, status=status, slug=slug)
+                new_news = News(title=title, body=body, banner=banner,description=description, publisher=publisher, status=status, slug=slug)
                 get_objects = News.objects.filter(title=title, status=1)
                 if get_objects:
                     messages.success(request, "News already exist." )
@@ -71,9 +70,8 @@ class NewsAPIView(APIView):
     
     def read_news(request,slug):
         new = News.objects.get(slug=slug)
-        # news = News.objects.filter(publish=1, status=1).exclude(slug=slug)
-        photos = [new.content_photo_one, new.content_photo_two, new.content_photo_three]
-        context = {'new':new, 'photos':photos}
+        news = News.objects.filter(publish=1, status=1).exclude(slug=slug)
+        context = {'new':new, 'news':news}
         return render(request, template_name='updates/news_single.html', context=context)
     
     def view_news(request,id):

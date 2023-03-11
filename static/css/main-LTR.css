@@ -215,6 +215,11 @@ a:hover {
   fill: transparent;
 }
 
+/* .django-ckeditor-widget{
+  width: 100%;
+} */
+
+
 .init-text {
   position: relative;
   z-index: 0;

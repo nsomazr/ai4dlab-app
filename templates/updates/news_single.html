@@ -46,18 +46,18 @@
               </div>
               <hr>
               <p class="project-text">
-                {{ new.body }}
+                {{ new.body | safe }}
               </p>
               {% comment %} <hr> {% endcomment %}
               </div>
               <div class="portfolio  portfolio-slider">
                 <!--Swiper-->
-                {% for photo in photos %}
-                {% if photo %}
+                {% for new in news %}
+                {% if new %}
                 <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
                   <div class="swiper-wrapper ">
                     <div class="swiper-slide">
-                      <div class="item   "><a class="portfolio-img-link" href="#"><img class="portfolio-img   img-fluid " loading="lazy" src="{{ photo.url }}" alt="{{ new.title }}"/></a>
+                      <div class="item   "><a class="portfolio-img-link" href="#"><img class="portfolio-img   img-fluid " loading="lazy" src="{{ new.banner.url }}" alt="{{ new.title }}"/></a>
                       </div>
                     </div>
                   </div>
