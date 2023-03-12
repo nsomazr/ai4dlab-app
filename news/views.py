@@ -43,10 +43,11 @@ class NewsAPIView(APIView):
                 banner = request.FILES['banner']
                 description = request.POST['description']
                 publisher = request.POST['publisher']
+                thematic_area= request.POST['thematic_area']
                 status = 1
                 # print(f"Body content: {body}")
                 slug = title.replace(' ','-').lower()
-                new_news = News(title=title, body=body, banner=banner,description=description, publisher=publisher, status=status, slug=slug)
+                new_news = News(title=title, body=body, banner=banner,description=description, publisher=publisher, status=status, slug=slug, thematic_area=thematic_area)
                 get_objects = News.objects.filter(title=title, status=1)
                 if get_objects:
                     messages.success(request, "News already exist." )

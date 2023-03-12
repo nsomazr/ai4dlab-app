@@ -78,7 +78,12 @@
                                             {{ news_form.banner }}
                                         </div>
                                     </div>
-
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="city-column">Thematic Area</label>
+                                            {{ news_form.thematic_area }}
+                                        </div>
+                                    </div>
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
                                             <label for="city-column">Description</label>
@@ -87,7 +92,7 @@
                                     </div>
 
                                     <div class="col-md-12 col-12">
-                                        <label for="city-column">Body</label>
+                                        <label for="city-column">BODY</label>
                                         <div class="form-group">
                                             {{news_form.media}}
                                             {{ news_form.body | safe }}

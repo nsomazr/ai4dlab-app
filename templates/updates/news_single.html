@@ -32,7 +32,7 @@
         <div class="main-area">
           <div class="row">
             <div class="col-12 col-lg-9  ">
-              <h5 class="sub-heading text-center">{{ new.title }}</h5>
+              {% comment %} <h5 class="sub-heading text-center">{{ new.title }}</h5> {% endcomment %}
               <div class="portfolio  portfolio-slider">
                 <!--Swiper-->
                 <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
@@ -78,18 +78,32 @@
               <div class="info-area">
                 <div class="project-info">
                   <div class="row">
-                    {% comment %} <div class="col-6 col-lg-12">
+                    <div class="col-6 col-lg-12">
                       <div class="info">
                         <h5 class="title"> Publisher</h5>
                         <p class="detail">{{ new.publisher }}</p><i class="fas fa-address-card icon"></i>
                       </div>
-                    </div> {% endcomment %}
-                    {% comment %} <div class="col-6 col-lg-12">
+                    </div>
+                    <div class="col-6 col-lg-12">
                       <div class="info">
                         <h5 class="title">Category</h5>
-                        <p class="detail">News</p><i class="fas fa-tasks icon"></i>
+                        {% if new.thematic_area == 0  %}
+                        <p class="detail">General</p><i class="fas fa-tasks icon"></i>
+                        {% endif %}
+                        {% if new.thematic_area == 1  %}
+                        <p class="detail">Health Care</p><i class="fas fa-tasks icon"></i>
+                        {% endif %}
+                        {% if new.thematic_area == 2  %}
+                        <p class="detail">Agriculture and Environmental Conversation</p><i class="fas fa-tasks icon"></i>
+                        {% endif %}
+                        {% if new.thematic_area == 3  %}
+                        <p class="detail">Infrastructure and Data Ecosystem</p><i class="fas fa-tasks icon"></i>
+                        {% endif %}
+                        {% if new.thematic_area == 4  %}
+                        <p class="detail">Digital Economy and Small Scale Industry</p><i class="fas fa-tasks icon"></i>
+                        {% endif %}
                       </div>
-                    </div> {% endcomment %}
+                    </div>
                     <div class="col-6 col-lg-12">
                       <div class="info">
                         <h5 class="title">Published on</h5>
