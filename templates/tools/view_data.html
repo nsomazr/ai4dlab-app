@@ -39,30 +39,25 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">{{ blog.title }}</h4>
-                            <h6 class="card-subtitle">Author: {{ blog.author }}</h6>
+                            <h4 class="card-title">{{ new.title }}</h4>
+                            <h6 class="card-subtitle">Publisher: {{ new.publisher }}</h6>
                         </div>
                         <div class="rounded-0" role="listbox">
                             <div >
-                                <img src="{{ blog.thumbnail.url }}" class="d-block w-100" alt="{{ blog.title }}">
+                                <img src="{{ new.banner.url }}" class="d-block w-100"
+                                    alt="Third slide">
                             </div>
                         </div>
                         <div class="card-body">
                             <p class="card-text">
-                                {{blog.description }}
-                            </p>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text">
-                                {{blog.body | safe}}
+                                {{new.body | safe}}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-12">
-                <button class="btn btn-danger pull-left block">Reject</button>
-                <a class="btn btn-primary pull-right block" href="publish-blog/{{blog.id}}">Approve & Publish</a>
+                <a class="btn btn-warning pull-left block" href="{% url 'news:news-list' %}">Back</a>
             </div>
         </div>
     </section>
