@@ -50,7 +50,7 @@
     <!-- // Basic multiple Column Form section start -->
     <section id="multiple-column-form">
         <div class="row match-height">
-            <div class="col-12">
+            <div class="col-8">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Add Blog </h4>
@@ -62,20 +62,26 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="first-name-column">Author Name</label>
-                                            {{ blog_form.author }}
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
                                             <label for="first-name-column">Blog Title</label>
                                             {{ blog_form.title }}
                                         </div>
                                     </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="city-column">Thematic Area</label>
+                                            {{ blog_form.thematic_area }}
+                                        </div>
+                                    </div>
                                     <div class="col-md-12 col-12">
                                         <div class="form-group">
-                                            <label for="city-column">Banner</label>
+                                            <label for="city-column">Thumbnail</label>
                                             {{ blog_form.thumbnail }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="country-floating">Blog Header Image</label>
+                                            {{ blog_form.header_image }}
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-12">
@@ -85,29 +91,13 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-12">
+                                        <label for="city-column">BODY</label>
                                         <div class="form-group">
-                                            <label for="city-column">Body</label>
-                                            {{ blog_form.body }}
+                                            {{ blog_form.media }}
+                                            {{ blog_form.body | safe }}
                                         </div>
                                     </div>
-                                    {% comment %} <div class="col-md-12 col-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">Add News Details</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <div id="full">
-                                                    {{ news_form.body }}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> {% endcomment %}
-                                    <div class="col-md-12 col-12">
-                                        <div class="form-group">
-                                            <label for="country-floating">Header Image</label>
-                                            {{ blog_form.header_image }}
-                                        </div>
-                                    </div>
+
                                     <div class="form-group col-12">
 
                                     </div>

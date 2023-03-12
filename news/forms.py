@@ -22,7 +22,7 @@ class NewsForm(forms.ModelForm):
     description = forms.CharField(max_length=200, widget=(forms.TextInput(attrs={'class': 'form-control', 'id': 'description','placeholder': 'Description'})))
     # body  = forms.CharField(widget=TinyMCEWidget(attrs={'required': False, 'cols': 30, 'rows': 10, 'id':'body'}))
     # body = RichTextField()
-    body = forms.CharField(widget=CKEditorUploadingWidget(attrs={'required': False, 'cols': 50, 'rows': 10, 'id':'body'}))
+    body = forms.CharField(widget=CKEditorUploadingWidget(attrs={'required': False, 'cols': 100, 'rows': 10, 'id':'body'}))
     publisher  = forms.CharField(max_length=100, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'publisher-name', 'placeholder':'Full Name'})))
     
     class Meta:
