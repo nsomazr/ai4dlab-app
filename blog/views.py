@@ -5,6 +5,7 @@ from .models import Blog
 from .forms import BlogForm
 from .serializers import BlogModelSerializer
 from django.contrib import  messages
+from django.contrib.auth.models import User
 # Create your views here.
 
 class BlogAPIView(APIView):
@@ -43,10 +44,10 @@ class BlogAPIView(APIView):
                 body = request.POST['body']
                 thumbnail = request.FILES['thumbnail']
                 header_image = request.FILES['header_image']
-                author = request.POST['author']
+                thematic_area= request.POST['thematic_area']
                 status = 1
                 slug = title.replace(' ','-').lower()
-                new_blog = Blog(title=title,description=description, body=body, thumbnail=thumbnail, header_image=header_image, author=author, status=status, slug=slug)
+                new_blog = Blog(title=title, description=description, body=body, thumbnail=thumbnail,thematic_area=thematic_area, header_image=header_image, status=status,author_id=request.session['user_id'], slug=slug)
                 get_objects = Blog.objects.filter(title=title, status=1)
                 if get_objects:
                     messages.success(request, "Blog already exist." )
@@ -70,7 +71,13 @@ class BlogAPIView(APIView):
     
     def read_blog(request,slug):
         blog = Blog.objects.get(slug=slug)
-        context = {'blog':blog}
+        author = User.objects.get(id=blog.author_id)
+        author_posts = Blog.objects.filter(author_id=blog.author_id).exclude(slug=slug)
+        author_next = author_prev = None
+        if len(author_posts) > 1:
+            author_next = author_posts[0]
+            author_prev = author_posts[1]
+        context = {'blog':blog, 'author':author, 'author_posts':author_posts,'author_next':author_next, 'author_prev':author_prev}
         return render(request, template_name='updates/blog_single.html', context=context)
     
     def view_blog(request,id):

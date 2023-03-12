@@ -80,6 +80,7 @@ def login_request(request):
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
 				if user.is_superuser or user.is_staff:
+					request.session['user_id'] = user.id
 					return redirect("users:dashboard")
 				else:
 					return redirect("home:home")
