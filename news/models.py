@@ -21,6 +21,7 @@ class News(models.Model):
     status = models.IntegerField(default=0)
     publish = models.IntegerField(default=0)
     reject = models.IntegerField(default=0)
+    thematic_area = models.IntegerField(default=0)
     slug = models.SlugField(max_length=200, null=False, unique=True)
     publisher = models.CharField(max_length=100)
     created_at = models.DateTimeField(default=timezone.now)
