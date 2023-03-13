@@ -31,10 +31,15 @@
                   <div class="post-box">     <a class="post-link" href="#" title="helping others can boost you happiness"> 
                       {% comment %} <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/6.jpg' %}" alt=""/><span class="post-date"><span class="day">21 </span>jul 2022     </span></div></a> {% endcomment %}
                     <div class="post-summary">
+                      {% if user.is_authenticated %}
+                      <div class="post-info"><a class="info post-author" href="{{ d.file.url }}"> <i class=" bi bi-download icon"></i>Download</a></div>
+                      {% endif %}
+                      {% if not user.is_authenticated %}
                       <div class="post-info"><a class="info post-author" href="{% url 'users:login' %}"> <i class=" bi bi-download icon"></i>Download</a></div>
-                      <div class="post-text"><a class="post-link" href="#"> 
+                      {% endif %}
+                      <div class="post-text"><a class="post-link" href="dportal/{{ d.slug }}"> 
                           <h2 class="post-title"> {{ d.name }}</h2></a>
-                        <p class="post-excerpt">{{ d.description }}</p><a class="read-more" href="post-single.html" title="helping others can boost you happiness">Read More..<i class="bi bi-arrow-right icon "></i></a>
+                        <p class="post-excerpt">{{ d.description }}</p><a class="read-more" href="dportal/{{d.slug}}" title="helping others can boost you happiness">View Details<i class="bi bi-arrow-right icon "></i></a>
                       </div>
                     </div>
                   </div>
@@ -48,9 +53,6 @@
                       <li class="ma-page-item active"><a class="ma-page-link " href="#">1 </a></li>
                       <li class="ma-page-item  "><a class="ma-page-link " href="#">2 </a></li>
                       <li class="ma-page-item  "><a class="ma-page-link " href="#">3 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">4 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">5 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">6 </a></li>
                       <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>
                     </ul>
                   </nav>
@@ -63,7 +65,7 @@
               <!--search box-->
               <div class="search sidebar-box">
                 <form class="search-form" action="#">
-                  <input class="search-input" type="search" name="seach_form" placeholder="Search Posts...">
+                  <input class="search-input" type="search" name="seach_form" placeholder="Search Data...">
                   <button class="search-btn" type="submit"><i class="bi bi-search icon"></i></button>
                 </form>
               </div>
@@ -72,8 +74,11 @@
                 <h6 class="sidebar-box-title">
                    Categories:</h6>
                 <ul class="sidebar-list cats-list  ">
-                  <li class="cat-item"><a class="cat-link" href="#">Health<span class="cat-count">17</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">Agriculture<span class="cat-count">25</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">General<span class="cat-count">{{ general_count}}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Health Care<span class="cat-count">{{ health_count}}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Agriculture and Environmental Conversation<span class="cat-count">{{ agriculture_count }}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Infrastructure and Data Ecosystem<span class="cat-count">{{ infra_count }}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Digital Economy and Small Scale Industry<span class="cat-count">{{ digital_count }}</span></a></li>
                 </ul>
               </div>
             </div>
