@@ -40,19 +40,21 @@
                     <div class="card-content">
                         <div class="card-body">
                             <h4 class="card-title">{{ data.name }}</h4>
-                            <h6 class="card-subtitle">Publisher: {{ data.publisher }}</h6>
-                        </div>
-                        <div class="rounded-0" role="listbox">
-                            <div >
-                                {{ data_file | safe }}
-                            </div>
+                            <h6 class="card-subtitle"><b>Publisher:</b> {{ data.publisher }}</h6>
                         </div>
                         <div class="card-body">
+                            <div class="post-info"><a class="info post-author" href="{{ d.file.url }}"> <i class=" bi bi-download icon"></i>Download File</a></div>
+                            {% comment %} {{ data_file | safe }} {% endcomment %}
+                        </div>
+                        
+                        <div class="card-body">
+                            <b>Description:</b><br><br>
                             <p class="card-text">
                                 {{ data.description }}
                             </p>
                         </div>
                         <div class="card-body">
+                            <b>Body:</b> <br>
                             <p class="card-text">
                                 {{data.body | safe}}
                             </p>

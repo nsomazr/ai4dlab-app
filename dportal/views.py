@@ -6,6 +6,7 @@ from .serializers import DPortalModelSerializer
 from .forms import DataForm
 from django.contrib import messages
 import pandas as pd
+from django.contrib.auth.models import User
 # Create your views here.
 
 class DPortalAPIView(APIView):
@@ -29,7 +30,13 @@ class DPortalAPIView(APIView):
 
     def dportal(request):
         data = DPortal.objects.filter(publish=1, status=1)
-        context = {"data": data}
+        general_count = len(DPortal.objects.filter(thematic_area=0))
+        health_count = len(DPortal.objects.filter(thematic_area=1))
+        agriculture_count = len(DPortal.objects.filter(thematic_area=2))
+        infra_count = len(DPortal.objects.filter(thematic_area=3))
+        digital_count = len(DPortal.objects.filter(thematic_area=4))
+        context = {"data": data,'general_count':general_count,'health_count':health_count,
+                   'agriculture_count':agriculture_count, 'infra_count':infra_count,'digital_count':digital_count}
         return render(request, template_name='tools/data-portal.html', context=context)
 
     def add_data(request):
@@ -66,22 +73,33 @@ class DPortalAPIView(APIView):
     def review_data(request,id):
         data = DPortal.objects.get(id=id)
         data_file = None
-        if str(data.file).endswith(".xlsx"):
-            data_file = pd.read_excel(data.file)
-        if str(data.file).endswith(".csv"):
-            data_file = pd.read_excel(data.file)
-        context = {'data':data, 'data_file':data_file.head(5).to_html()}
+        # if str(data.file).endswith(".xlsx"):
+        #     data_file = pd.read_excel(data.file)
+        # if str(data.file).endswith(".csv"):
+        #     data_file = pd.read_excel(data.file)
+        context = {'data':data}
         return render(request, template_name='tools/review_data.html', context=context)
     
     def read_data(request,slug):
         data = DPortal.objects.get(slug=slug)
+        data_file = None
+        # if str(data.file).endswith(".xlsx"):
+        #     data_file = pd.read_excel(data.file)
+        # if str(data.file).endswith(".csv"):
+        #     data_file = pd.read_excel(data.file)
+        #ata_file = data_file.head(5).to_html()
         publisher = User.objects.get(id=data.publisher_id)
-        publisher_posts = DPortal.objects.filter(author_id=data.publisher_id).exclude(slug=slug)
-        context = {'data':data, 'publisher_posts':publisher_posts, 'publisher_posts':publisher_posts[:3]}
+        publisher_posts = DPortal.objects.filter(publisher_id=data.publisher_id).exclude(slug=slug)
+        context = {'data':data, 'publisher_posts':publisher_posts,'publisher':publisher, 'publisher_posts':publisher_posts[:3]}
         return render(request, template_name='tools/data_single.html', context=context)
     
     def view_data(request,id):
         data = DPortal.objects.get(id=id)
+        data_file = None
+        # if str(data.file).endswith(".xlsx"):
+        #     data_file = pd.read_excel(data.file)
+        # if str(data.file).endswith(".csv"):
+        #     data_file = pd.read_excel(data.file)
         context = {'data':data}
         return render(request, template_name='tools/view_data.html', context=context)
     
