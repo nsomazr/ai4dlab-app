@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Community
+from .models import UDOMAI
 
-class CommunityModelSerializer(serializers.ModelSerializer):
+class UDOMAIModelSerializer(serializers.ModelSerializer):
 
     class Meta:
 
-        model = Community
+        model = UDOMAI
 
         # fields = ('__all__')
