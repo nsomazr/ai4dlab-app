@@ -1,0 +1,79 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+{% block title %}AI4D Lab - Join UDOM AI{% endblock %}
+{% block content %}
+<body>
+    <div id="auth">
+        
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-sm-12 mx-auto">
+            <div class="card pt-4">
+                <div class="card-body">
+                    <div class="text-center mb-5">
+                        <img src="{% static 'dashboards/assets/images/logo.png' %}" height="100" class='mb-4'>
+                        <h3>Sign Up</h3>
+                        <p>Please fill the form to join UDOM AI Community.</p>
+                    </div>
+                    <form action="{% url 'community:register-udomai-member' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    {{ udomai_form.first_name }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    {{ udomai_form.last_name }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    {{ udomai_form.email }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="phone">
+                                    <label for="email-id-column">Phone Number</label>
+                                    {{ udomai_form.phone }}
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <div class="form-group">
+                                    <label for="college">College/School/Institute</label>
+                                    {{ udomai_form.college }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="programme">Programme</label>
+                                    {{ udomai_form.programme }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="programme">Year of Study</label>
+                                    {{ udomai_form.yos }}
+                                </div>
+                            </div>
+                        </diV>
+                        <div class="clearfix">
+                            <button class="btn btn-primary float-right" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+{% endblock %}
+
