@@ -93,7 +93,7 @@
                         {% if new.thematic_area == 4  %}
                         <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>Digital Economy and Small Scale Industry</a>
                         {% endif %}
-                        <a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>{{ new.publisher }}</a></div>
+                        <a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>{{ new.publisher.first_name }} {{ new.publisher.last_name }}</a></div>
                       <div class="post-text"><a class="post-link" href="news/{{ new.slug }}"> 
                           <h2 class="post-title"> {{ new.title | safe }}</h2></a>
                           <p class="post-excerpt">{{ new.description }}</p><a class="read-more" href="news/{{ new.slug }}" title="{{ new.title }}">read more<i class="bi bi-arrow-right icon "></i></a>
@@ -132,7 +132,7 @@
                   <div class="post-box"><a class="post-link" href="blog/blogs/{{ blog.slug }}" title="{{ blog.title }}"> 
                       <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}"/><span class="post-date"><span class="day">{{ blog.created_at | date }} </span></span></div></a>
                     <div class="post-summary">
-                      <div class="post-info"><a class="info post-author" href="blog/blogs/{{ blog.slug }}"> <i class=" bi bi-person icon"></i>{{ blog.author }}</a></div>
+                      <div class="post-info"><a class="info post-author" href="blog/blogs/{{ blog.slug }}"> <i class=" bi bi-person icon"></i>{{ blog.author.first_name }} {{ blog.author.last_name }}</a></div>
                       <div class="post-text"><a class="post-link" href="blog/blogs/{{ blog.slug }}"> 
                           <h2 class="post-title"> {{ blog.title }}</h2></a>
                         <p class="post-excerpt">{{ blog.description }}</p><a class="read-more" href="#" title="{{ blog.title }}">read more<i class="bi bi-arrow-right icon "></i></a>

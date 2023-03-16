@@ -12,7 +12,7 @@ class Blog(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
     thumbnail = ResizedImageField(size=[600, 400],scale=0.5, quality=100, crop=['middle', 'center'], null=False, blank=True, force_format='PNG',upload_to=os.path.join(BASE_DIR,'blog'))
-    header_image = ResizedImageField(size=[600, 400],scale=0.5, quality=100, crop=['middle', 'center'], null=False, blank=True, force_format='PNG',upload_to=os.path.join(BASE_DIR,'blog'))
+    header_image = ResizedImageField(size=[1400, 600],scale=0.5, quality=100, crop=['middle', 'center'], null=False, blank=True, force_format='PNG',upload_to=os.path.join(BASE_DIR,'blog'))
     description = models.TextField(max_length=500)
     body = RichTextUploadingField(blank=True,null=True)
     thematic_area = models.IntegerField(default=0)

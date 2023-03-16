@@ -33,21 +33,22 @@ class NewsAPIView(APIView):
 
     def add_news(request):
 
-        if request.method == 'POST' and request.FILES['banner']:
+        if request.method == 'POST' and request.FILES['thumbnail']:
 
             news_form = NewsForm(request.POST,request.FILES)
             print(f"Body content: {request.POST['body']}")
             if news_form.is_valid():
-                title  = request.POST['title']
+                title  = str(request.POST['title']).capitalize()
                 body = news_form.cleaned_data['body']
-                banner = request.FILES['banner']
+                thumbnail = request.FILES['thumbnail']
+                header_image = request.FILES['header_image']
                 description = request.POST['description']
                 publisher = request.POST['publisher']
                 thematic_area= request.POST['thematic_area']
                 status = 1
                 # print(f"Body content: {body}")
                 slug = title.replace(' ','-').lower()
-                new_news = News(title=title, body=body, banner=banner,description=description, publisher=publisher, status=status, slug=slug, thematic_area=thematic_area)
+                new_news = News(title=title, body=body, thumbnail=thumbnail, header_image=header_image, description=description, publisher=publisher, status=status, slug=slug, thematic_area=thematic_area)
                 get_objects = News.objects.filter(title=title, status=1)
                 if get_objects:
                     messages.success(request, "News already exist." )
