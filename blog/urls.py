@@ -7,7 +7,7 @@ app_name = "blog"
 
 urlpatterns = [path('', BlogAPIView.blog, name="blog"),
                path('add-blog/', BlogAPIView.add_blog, name="add-blog"),
-               path('blogs/<str:slug>/', BlogAPIView.read_blog, name="read-blog"),
+               path('blog/<str:slug>/', BlogAPIView.read_blog, name="read-blog"),
                path('blog-list/review-blog/publish-blog/<int:id>', BlogAPIView.publish_blog, name="publish-blog"),
                path('blog-list/review-blog/<int:id>', BlogAPIView.review_blog, name="review-blog"),
                path('blog-list/view-blog/<int:id>', BlogAPIView.view_blog, name="view-blog"),

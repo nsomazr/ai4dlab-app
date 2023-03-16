@@ -26,78 +26,36 @@
           <div class="col-12 col-lg-8 "> 
             <div class="posts-grid">
               <div class="row">
+                {% for blog in blogs %}
                 <div class="col-12 col-lg-6  ">
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="How litespeed technology works to speed up your site "> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/1.jpg' %}" alt=""/><span class="post-date"><span class="day">05 </span>oct 2022     </span></div></a>
+                  <div class="post-box">     <a class="post-link" href="blog/{{ blog.slug}}" title="How litespeed technology works to speed up your site "> 
+                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{{ blog.thumbnail.url }}" alt="{{ blog.title }}"/><span class="post-date"><span class="day"></span>{{ blog.created_at | date }}</span></div></a>
                     <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>hosting</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>Allan Moore</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> How litespeed technology works to speed up your site </h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="How litespeed technology works to speed up your site ">read more<i class="bi bi-arrow-right icon "></i></a>
+                      <div class="post-info">
+                        {% if blog.thematic_area == 0 %}
+                        <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>General</a>
+                        {% endif %}
+                        {% if blog.thematic_area == 1 %}
+                        <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>Health Care</a>
+                        {% endif %}
+                        {% if blog.thematic_area == 2 %}
+                        <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>Agriculture and Environmental Conversation</a>
+                        {% endif %}
+                        {% if blog.thematic_area == 3 %}
+                        <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>Infrastructure and Data Ecosystem</a>
+                        {% endif %}
+                        {% if blog.thematic_area == 4 %}
+                        <a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>Digital Economy and Small Scale Industry</a>
+                        {% endif %}
+                        <a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>{{ blog.author.first_name }} {{ blog.author.last_name }}</a></div>
+                      <div class="post-text"><a class="post-link" href="blog/{{ blog.slug}}"> 
+                          <h2 class="post-title">{{ blog.title }}</h2></a>
+                        <p class="post-excerpt">{{ blog.description }}</p><a class="read-more" href="blog/{{ blog.slug}}" title="{{ blog.title }}">read more<i class="bi bi-arrow-right icon "></i></a>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-6 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="give your website a new look and feel with themes"> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/2.jpg' %}" alt=""/><span class="post-date"><span class="day">15 </span>sep 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>web dev</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>mhmd amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> give your website a new look and feel with themes</h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="give your website a new look and feel with themes">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="the role of domain names in SEO world explained "> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="[% static 'assets/images/blog/post-images/3.jpg' %}" alt=""/><span class="post-date"><span class="day">27 </span>aug 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>SEO</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>yusuf amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> the role of domain names in SEO world explained </h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="the role of domain names in SEO world explained ">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="we are able to building your dream website"> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/4.jpg' %}" alt=""/><span class="post-date"><span class="day">15 </span>aug 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>design</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>mhmd amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> we are able to building your dream website</h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="we are able to building your dream website">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="data analysis and the big impact on industry"> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/5.jpg' %}" alt=""/><span class="post-date"><span class="day">02 </span>aug 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>features</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>fairouz amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> data analysis and the big impact on industry</h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="data analysis and the big impact on industry">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6 ">         
-                  <div class="post-box">     <a class="post-link" href="post-single.html" title="helping others can boost you happiness"> 
-                      <div class="post-img-wrapper  "><img class=" parallax-img   post-img" loading="lazy" src="{% static 'assets/images/blog/post-images/6.jpg' %}" alt=""/><span class="post-date"><span class="day">21 </span>jul 2022     </span></div></a>
-                    <div class="post-summary">
-                      <div class="post-info"><a class="info post-cat" href="#"> <i class="bi bi-bookmark icon"></i>cloud</a><a class="info post-author" href="#"> <i class=" bi bi-person icon"></i>yusuf amin</a></div>
-                      <div class="post-text"><a class="post-link" href="post-single.html"> 
-                          <h2 class="post-title"> helping others can boost you happiness</h2></a>
-                        <p class="post-excerpt">Lorem ipsum dolor sit, amet consectetur adipisicing elit.Iure nulla dolorem, voluptates molestiae</p><a class="read-more" href="post-single.html" title="helping others can boost you happiness">read more<i class="bi bi-arrow-right icon "></i></a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                {% endfor %}
                 <div class="col-12">
                   <!--Start pagination-->
                   <nav class="ma-pagination">
@@ -106,9 +64,6 @@
                       <li class="ma-page-item active"><a class="ma-page-link " href="#">1 </a></li>
                       <li class="ma-page-item  "><a class="ma-page-link " href="#">2 </a></li>
                       <li class="ma-page-item  "><a class="ma-page-link " href="#">3 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">4 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">5 </a></li>
-                      <li class="ma-page-item  "><a class="ma-page-link " href="#">6 </a></li>
                       <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>
                     </ul>
                   </nav>
@@ -130,15 +85,15 @@
                 <h6 class="sidebar-box-title">
                    Categories:</h6>
                 <ul class="sidebar-list cats-list  ">
-                  <li class="cat-item"><a class="cat-link" href="#">data<span class="cat-count">17</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">web dev <span class="cat-count">25</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">hosting<span class="cat-count">14</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">domain names<span class="cat-count">73</span></a></li>
-                  <li class="cat-item"><a class="cat-link" href="#">apps<span class="cat-count">36</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">General<span class="cat-count">{{ general_count}}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Health Care<span class="cat-count">{{ health_count}}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Agriculture and Environmental Conversation<span class="cat-count">{{ agriculture_count }}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Infrastructure and Data Ecosystem<span class="cat-count">{{ infra_count }}</span></a></li>
+                  <li class="cat-item"><a class="cat-link" href="#">Digital Economy and Small Scale Industry<span class="cat-count">{{ digital_count }}</span></a></li>
                 </ul>
               </div>
               <!--Recent posts  -->
-              <div class="recent-posts sidebar-box">
+              {% comment %} <div class="recent-posts sidebar-box">
                 <h6 class="sidebar-box-title">
                    recent posts:   </h6>
                 <ul class="sidebar-list r-posts-list ">
@@ -163,8 +118,8 @@
                         <h6 class="r-post-title">this is the article title</h6><span class="r-post-date">jun, 07 2022 </span>
                       </div></a></li>
                 </ul>
-              </div>
-              <div class="tags sidebar-box">
+              </div> {% endcomment %}
+              {% comment %} <div class="tags sidebar-box">
                 <h6 class="sidebar-box-title">
                    tags:</h6>
                 <ul class="sidebar-list tags-list ">
@@ -181,19 +136,7 @@
                   <li class="tag-item"><a class="tag-link" href="#">portfolio</a></li>
                   <li class="tag-item"><a class="tag-link" href="#">testmonials</a></li>
                 </ul>
-              </div>
-              <div class="follow-us sidebar-box">
-                <h6 class="sidebar-box-title">
-                   follow us on:</h6>
-                <div class="sc-wrapper dir-row sc-size-32">
-                  <ul class="sc-list">
-                    <li class="sc-item " title="Facebook"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-facebook-f sc-icon"></i></a></li>
-                    <li class="sc-item " title="youtube"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-youtube sc-icon"></i></a></li>
-                    <li class="sc-item " title="instagram"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-instagram sc-icon"></i></a></li>
-                    <li class="sc-item " title="twitter"><a class="sc-link" href="#0" title="social media icon"><i class="fab fa-twitter sc-icon"></i></a></li>
-                  </ul>
-                </div>
-              </div>
+              </div> {% endcomment %}
             </div>
           </div>
         </div>

@@ -46,7 +46,7 @@ class DPortalAPIView(APIView):
             news_form = DataForm(request.POST,request.FILES)
 
             if news_form.is_valid():
-                name  = request.POST['name']
+                name  = str(request.POST['name']).capitalize()
                 description = request.POST['description']
                 body = request.POST['body']
                 file = request.FILES['file']
