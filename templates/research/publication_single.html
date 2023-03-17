@@ -8,37 +8,37 @@
         <div class="row">
           <div class="col-12 col-lg-10 mx-auto">
             <!--post heading area2021-->
-            <h2 class="post-title">{{ data.name }}</h2>
+            <h2 class="post-title">{{ publication.title }}</h2>
           </div>
           <div class="col-12 col-lg-9 mx-auto">
             <div class="post-main-area">
               <div class="post-info">
-                <a class="info post-cat" href="{{ data.file.url }}"><i class="fas fa-download icon"></i>Download</a>
-                <a class="info post-date" href="#"><i class="fas fa-history icon"></i>{{ data.created_at | date }}</a>
+                <a class="info post-cat" href="{{ publication.file.url }}"><i class="fas fa-download icon"></i>Download</a>
+                <a class="info post-date" href="#"><i class="fas fa-history icon"></i>{{ publication.created_at | date }}</a>
                 {% comment %} <a class="info post-time" href="#"><i class="fas fa-eye icon"></i>0</a><a class="info post-comments-count" href="#"><i class="fas fa-download icon"></i>0</a> {% endcomment %}
               </div>
               <div class="post-content">
                 <p class=" first-litter post-text">
-                  {{ data.body | safe }}
+                  {{ publication.body | safe }}
                 </p>
 
               <!--tags panel-->
               <div class="tags panel">
                 <ul class="sidebar-list tags-list ">
                   <li class="tags-icon-label "><i class="fas fa-tags icon"></i></li>
-                  {% if data.thematic_area == 0%}
+                  {% if publication.thematic_area == 0%}
                   <li class="tag-item"><a class="tag-link" href="#">General</a></li>
                   {% endif %}
-                  {% if data.thematic_area == 1%}
+                  {% if publication.thematic_area == 1%}
                   <li class="tag-item"><a class="tag-link" href="#">Health Care</a></li>
                   {% endif %}
-                  {% if data.thematic_area == 2%}
+                  {% if publication.thematic_area == 2%}
                   <li class="tag-item"><a class="tag-link" href="#">Agriculture and Environmental Conversation</a></li>
                   {% endif %}
-                  {% if data.thematic_area == 3%}
+                  {% if publication.thematic_area == 3%}
                   <li class="tag-item"><a class="tag-link" href="#">Infrastructure and Data Ecosystem</a></li>
                   {% endif %}
-                  {% if data.thematic_area == 4%}
+                  {% if publication.thematic_area == 4%}
                   <li class="tag-item"><a class="tag-link" href="#">Digital Economy and Small Scale Industry</a></li>
                   {% endif %}
                 </ul>
@@ -63,7 +63,7 @@
                     </div>
                   </div>
                 </div>
-              </div> {% endcomment %}
+              </div>  {% endcomment %}
               <!--other-posts panel-->
               <div class="cta-area"><a class=" btn-solid reveal-start" href="{% url 'dportal:dportal'%}">Back</a>
 
