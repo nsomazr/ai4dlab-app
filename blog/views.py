@@ -45,7 +45,7 @@ class BlogAPIView(APIView):
             call_form = BlogForm(request.POST,request.FILES)
 
             if call_form.is_valid():
-                title  = str(request.POST['title']).capitalize()
+                title  = request.POST['title']
                 description = request.POST['description']
                 body = request.POST['body']
                 thumbnail = request.FILES['thumbnail']

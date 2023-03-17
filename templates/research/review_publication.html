@@ -39,24 +39,24 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <h4 class="card-title">{{ data.name }}</h4>
-                            <h6 class="card-subtitle"><b>Publisher:</b> {{ data.publisher }}</h6>
+                            <h4 class="card-title">{{ publication.name }}</h4>
+                            <h6 class="card-subtitle"><b>Publisher:</b> {{ publication.publisher }}</h6>
                         </div>
                         <div class="card-body">
-                            <div class="post-info"><a class="info post-author" href="{{ data.file.url }}"> <i class=" bi bi-download icon"></i>Download File</a></div>
-                            {% comment %} {{ data_file | safe }} {% endcomment %}
+                            <div class="post-info"><a class="info post-author" href="{{ publication.file.url }}"> <i class=" bi bi-download icon"></i>Download File</a></div>
+                            {% comment %} {{ publication_file | safe }} {% endcomment %}
                         </div>
                         
                         <div class="card-body">
                             <b>Description:</b><br><br>
                             <p class="card-text">
-                                {{ data.description }}
+                                {{ publication.description }}
                             </p>
                         </div>
                         <div class="card-body">
                             <b>Body:</b> <br>
                             <p class="card-text">
-                                {{data.body | safe}}
+                                {{publication.body | safe}}
                             </p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-md-12">
                 <button class="btn btn-danger pull-left block">Reject</button>
-                <a class="btn btn-primary pull-right block" href="publish-data/{{data.id}}">Approve & Publish</a>
+                <a class="btn btn-primary pull-right block" href="publish-publication/{{publication.id}}">Approve & Publish</a>
             </div>
         </div>
     </section>

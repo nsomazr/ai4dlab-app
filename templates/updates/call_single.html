@@ -42,8 +42,8 @@
                 {% if blog_form.thematic_area == 4%}
                 <a class="info post-cat" href="#"><i class="fas fa-list-alt icon"></i>Digital Economy and Small Scale Industry<</a>
                 {% endif %}
-                <a class="info post-author" href="#"><i class="fas fa-user icon"></i>{{ publisher.first_name }} {{ publisher.last_name }}</a><a class="info post-date" href="#"><i class="fas fa-history icon"></i>{{ call.created_at | date }}</a>
-                {% comment %} <a class="info post-time" href="#"><i class="fas fa-eye icon"></i>0</a><a class="info post-comments-count" href="#"><i class="fas fa-comments icon"></i>0</a> {% endcomment %}
+                <a class="info post-author" href="#"><i class="fas fa-user icon"></i>{{ publisher.first_name }} {{ publisher.last_name }}</a><a class="info post-date" href="#"><i class="fas fa-history icon"></i>{{ call.created_at | date }}</a><a class="info post-time" href="{{ call.file.url }}"><i class="fas fa-download icon"></i>Document</a>
+                {% comment %} <a class="info post-comments-count" href="#"><i class="fas fa-comments icon"></i>0</a> {% endcomment %}
               </div> 
               <div class="post-content">
                 <p class=" first-litter post-text">
@@ -92,7 +92,7 @@
                   </div>
                 </div>
               </div> {% endcomment %}
-              <div class=" cta-area  cta-area  wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-outline   cta-btn btn-outline  " href="{% url 'call:call'%}"><i class="bi bi-arrow-left icon "></i>Back</a></div>
+              <div class="cta-area"><a class=" btn-solid reveal-start" href="{% url 'call:call'%}">Back</a>
               <!--other-posts panel-->
             </div>
           </div>

@@ -39,7 +39,7 @@
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class='breadcrumb-header'>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a class="btn btn-primary" href="{% url 'project:projects' %}">View Publications</a></li>
+                        <li class="breadcrumb-item"><a class="btn btn-primary" href="{% url 'publication:publication-list' %}">View Publications</a></li>
                     </ol>
                 </nav>
             </div>
@@ -50,55 +50,51 @@
     <!-- // Basic multiple Column Form section start -->
     <section id="multiple-column-form">
         <div class="row match-height">
-            <div class="col-12">
+            <div class="col-8">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title">Add Publication </h4>
                     </div>
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form">
+                            <form class="form" method="POST" action="{% url 'publication:add-publication' %}" enctype="multipart/form-data">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="first-name-column">First Name</label>
-                                            <input type="text" id="first-name-column" class="form-control" placeholder="First Name"
-                                                name="fname-column">
+                                            <label for="first-name-column">Publication Title</label>
+                                            {{ publication_form.title }}
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="last-name-column">Last Name</label>
-                                            <input type="text" id="last-name-column" class="form-control" placeholder="Last Name"
-                                                name="lname-column">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="city-column">City</label>
-                                            <input type="text" id="city-column" class="form-control" placeholder="City" name="city-column">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-12">
-                                        <div class="form-group">
-                                            <label for="country-floating">Country</label>
-                                            <input type="text" id="country-floating" class="form-control" name="country-floating"
-                                                placeholder="Country">
+                                            <label for="city-column">Thematic Area</label>
+                                            {{ publication_form.thematic_area }}
                                         </div>
                                     </div>
                                     <div class="col-md-12 col-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4 class="card-title">Add Publication Discription</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <!-- <p>Block some text to display options in poppovers </p> -->
-                                                <div id="full">
-                                                    <p>Hello World!</p>
-                                                    <p>Some initial <strong>bold</strong> text</p>
-                                                    <p><br></p>
-                                                </div>
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="country-floating">Publication Header Image</label>
+                                            {{ publication_form.header_image }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="city-column">Publication Document</label>
+                                            {{ publication_form.file }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="city-column">Description</label>
+                                            {{ publication_form.description }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="city-column">Abstract</label>
+                                        <div class="form-group">
+                                            {{ publication_form.media }}
+                                            {{ publication_form.body | safe }}
                                         </div>
                                     </div>
                                     <div class="form-group col-12">

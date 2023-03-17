@@ -38,7 +38,7 @@ class NewsAPIView(APIView):
             news_form = NewsForm(request.POST,request.FILES)
             print(f"Body content: {request.POST['body']}")
             if news_form.is_valid():
-                title  = str(request.POST['title']).capitalize()
+                title  = request.POST['title']
                 body = news_form.cleaned_data['body']
                 thumbnail = request.FILES['thumbnail']
                 header_image = request.FILES['header_image']
