@@ -17,3 +17,33 @@ class UDOMAI(models.Model):
     status = models.IntegerField(default=0)
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
+    
+class AI4D(models.Model):
+
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    country = models.CharField(max_length=200)
+    affiliation = models.CharField(max_length=200)
+    field =models.CharField(max_length=200)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=255, null=False, blank=False)
+    status = models.IntegerField(default=0)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
+    
+
+class GirlsinAI(models.Model):
+
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    country = models.CharField(max_length=200)
+    affiliation = models.CharField(max_length=200)
+    field =models.CharField(max_length=200)
+    phone = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=255, null=False, blank=False)
+    status = models.IntegerField(default=0)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
+    

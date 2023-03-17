@@ -1,0 +1,79 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+{% block title %}AI4D Lab - Join UDOM AI{% endblock %}
+{% block content %}
+<body>
+    <div id="auth">
+        
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-sm-12 mx-auto">
+            <div class="card pt-4">
+                <div class="card-body">
+                    <div class="text-center mb-5">
+                        <img src="{% static 'dashboards/assets/images/logo.png' %}" height="100" class='mb-4'>
+                        <h3>Sign Up</h3>
+                        <p>Please fill the form to join Girls in AI.</p>
+                    </div>
+                    <form action="{% url 'community:register-girlsinai-member' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    {{ girlsinai_form.first_name }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    {{ girlsinai_form.last_name }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    {{ girlsinai_form.email }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="phone">
+                                    <label for="email-id-column">Phone Number</label>
+                                    {{ girlsinai_form.phone }}
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-12">
+                                <div class="form-group">
+                                    <label for="college">Country</label>
+                                    {{ girlsinai_form.country }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="programme">Affiliation</label>
+                                    {{ girlsinai_form.affiliation }}
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <div class="form-group">
+                                    <label for="programme">Field</label>
+                                    {{ girlsinai_form.field }}
+                                </div>
+                            </div>
+                        </diV>
+                        <div class="clearfix">
+                            <button class="btn btn-primary float-right" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+{% endblock %}
+

@@ -1,6 +1,8 @@
 from django import forms
 from django.utils import timezone
-from .models import UDOMAI
+from .models import UDOMAI, AI4D, GirlsinAI
+from django_countries.data import COUNTRIES
+
 
 col =(
     (1, "College of Business and Economics"),
@@ -15,9 +17,6 @@ col =(
     (10, "Confucius Institute"),
     (11, "Institute of Development Studies")
 )
-
-
-
 
 yo =(
     (1, 1),
@@ -42,4 +41,30 @@ class UDOMAIForm(forms.ModelForm):
         fields = ['first_name', 'last_name', 'college','yos','email','phone']
 
 
+class AI4DForm(forms.ModelForm):
+    first_name  = forms.CharField(max_length=100, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'first-name', 'placeholder':'First Name'})))
+    last_name  = forms.CharField(max_length=100, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'first-name', 'placeholder':'Last Name'})))
+    country = forms.ChoiceField(choices=sorted(COUNTRIES.items()), widget=(forms.Select(attrs={'class':'form-control','placeholder':'Select Country', 'id':'country'})))
+    affiliation = forms.CharField(required=True, max_length=30, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Company/Institution', 'id':'company'})))
+    field = forms.CharField(required=True, max_length=30, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Student/Software Developer ', 'id':'company'})))
+    phone  = forms.IntegerField(widget=(forms.NumberInput(attrs={'class': 'form-control', 'id':'phone-number', 'placeholder':'Phone Number'})))
+    email  = forms.EmailField(max_length=100, widget=(forms.EmailInput(attrs={'class': 'form-control', 'id':'email', 'placeholder':'Email Address'})))
+
     
+    class Meta:
+        model = AI4D
+        fields = ['first_name', 'last_name', 'country','affiliation','field','email','phone']
+        
+class GirlsinAIForm(forms.ModelForm):
+    first_name  = forms.CharField(max_length=100, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'first-name', 'placeholder':'First Name'})))
+    last_name  = forms.CharField(max_length=100, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'first-name', 'placeholder':'Last Name'})))
+    country = forms.ChoiceField(choices=sorted(COUNTRIES.items()), widget=(forms.Select(attrs={'class':'form-control','placeholder':'Select Country', 'id':'country'})))
+    affiliation = forms.CharField(required=True, max_length=30, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Company/Institution', 'id':'company'})))
+    field = forms.CharField(required=True, max_length=30, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Student/Software Developer ', 'id':'company'})))
+    phone  = forms.IntegerField(widget=(forms.NumberInput(attrs={'class': 'form-control', 'id':'phone-number', 'placeholder':'Phone Number'})))
+    email  = forms.EmailField(max_length=100, widget=(forms.EmailInput(attrs={'class': 'form-control', 'id':'email', 'placeholder':'Email Address'})))
+
+    
+    class Meta:
+        model = GirlsinAI
+        fields = ['first_name', 'last_name', 'country','affiliation','field','email','phone']
