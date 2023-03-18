@@ -102,14 +102,6 @@
                         <li>
                             <a href="{% url 'publication:publication-list' %}">Publications</a>
                         </li> 
-
-                        <li>
-                            <a href="">Workshops</a>
-                        </li>
-                        
-                        <li>
-                            <a href="">Conferences</a>
-                        </li> 
                         
                     </ul>
                     
@@ -185,8 +177,28 @@
 
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
+                        <i data-feather="book" width="20"></i> 
+                        <span>Events</span>
+                    </a>
+                    
+                    <ul class="submenu ">
+
+                        <li>
+                            <a href="{% url 'workshop:workshop-list' %}">Workshops</a>
+                        </li>
+                        
+                        <li>
+                            {% comment %} <a href="">Conferences</a> {% endcomment %}
+                        </li> 
+                        
+                    </ul>
+                    
+                </li>
+
+                <li class="sidebar-item  has-sub">
+                    <a href="#" class='sidebar-link'>
                         <i data-feather="users" width="20"></i> 
-                        <span>Communities</span>
+                        <span>Community</span>
                     </a>
                     
                     <ul class="submenu ">

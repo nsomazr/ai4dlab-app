@@ -38,7 +38,7 @@
                 <div class="swiper-container wow fadeIn" data-wow-delay=".5s">
                   <div class="swiper-wrapper ">
                     <div class="">
-                      <div class="item   "><a class="portfolio-img-link" href="#"><img class="portfolio-img   img-fluid featured-img" loading="lazy" src="{{ new.banner.url }}" alt="{{ new.title }}"/></a>
+                      <div class="item   "><a class="portfolio-img-link" href="#"><img class="portfolio-img   img-fluid featured-img" loading="lazy" src="{{ new.header_image.url }}" alt="{{ new.title }}"/></a>
                       </div>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                     <div class="col-6 col-lg-12">
                       <div class="info">
                         <h5 class="title"> Publisher</h5>
-                        <p class="detail">{{ new.publisher }}</p><i class="fas fa-address-card icon"></i>
+                        <p class="detail">{{ new.publisher.first_name }} {{ new.publisher.last_name }}</p><i class="fas fa-address-card icon"></i>
                       </div>
                     </div>
                     <div class="col-6 col-lg-12">
