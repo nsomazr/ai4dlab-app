@@ -40,12 +40,12 @@
                     <div class="card-content">
                         <div class="card-body">
                             <h4 class="card-title">{{ new.title }}</h4>
-                            <h6 class="card-subtitle">Publisher: {{ new.publisher }}</h6>
+                            <h6 class="card-subtitle">Publisher: {{ new.publisher.first_name }} {{ new.publisher.last_name }}</h6>
                         </div>
                         <div class="rounded-0" role="listbox">
                             <div >
-                                <img src="{{ new.banner.url }}" class="d-block w-100"
-                                    alt="Third slide">
+                                <img src="{{ new.thumbnail.url }}" class="d-block w-100"
+                                    alt="{{ new.title }}">
                             </div>
                         </div>
                         <div class="card-body">

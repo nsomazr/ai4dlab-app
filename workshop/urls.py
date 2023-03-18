@@ -5,9 +5,12 @@ from django.conf.urls.static import static
 app_name = "workshop"  
 
 urlpatterns = [path('', WorkshopAPIView.workshop, name="workshop"),
-            #    path('workshops/deactivate-workshop/<int:id>', PartnerAPIView.deactivate_partner, name="deactivate-workshop"),
-            #    path('workshops/delete-workshop/<int:id>', PartnerAPIView.delete_partner, name="delete-workshop"),
-            #    path('add-workshop/', PartnerAPIView.add_partner, name="add-workshop"),
-            #    path('workshops/', PartnerAPIView.partners, name="workshops"),
-            #    path('api/workshop/', PartnerAPIView.as_view(), name="workshop-api")
+               path('workshop-list/review-workshop/publish-workshop/<int:id>', WorkshopAPIView.publish_workshop, name="publish-workshop"),
+               path('workshop-list/review-workshop/<int:id>', WorkshopAPIView.review_workshop, name="review-workshop"),
+               path('workshop-list/view-workshop/<int:id>', WorkshopAPIView.view_workshop, name="view-workshop"),
+               path('workshop-list/deactivate-workshop/<int:id>', WorkshopAPIView.deactivate_workshop, name="deactivate-workshop"),
+               path('workshop-list/delete-workshop/<int:id>', WorkshopAPIView.delete_workshop, name="delete-workshop"),
+               path('add-workshop/', WorkshopAPIView.add_workshop, name="add-workshop"),
+               path('workshop-list/', WorkshopAPIView.workshop_list, name="workshop-list"),
+               path('api/workshop/', WorkshopAPIView.as_view(), name="workshop-api")
                ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
