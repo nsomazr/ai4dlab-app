@@ -30,7 +30,7 @@ class WorkshopAPIView(APIView):
 
         if request.method == 'POST':
 
-            workshop_form = WorkshopForm(request.POST,request.FILES)
+            workshop_form = WorkshopForm(request.POST)
 
             if workshop_form.is_valid():
                 workshop_name  = request.POST['workshop_name']
