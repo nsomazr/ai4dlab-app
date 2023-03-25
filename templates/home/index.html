@@ -36,21 +36,24 @@
                 </div>
                 <div class="col-12">
                   <div class="cta-links-area "><a class=" btn-outline cta-link cta-link-primary " href="{% url 'lab:lab' %}">More Info</a>
-                    <div class="play-btn-row-dir "><a class="video-link" href="https://www.youtube.com/watch?v=QI4_dGvZ5yE&amp;ab_channel=JUtah" role="button" title="play" data-fancybox="data-fancybox">
+                    {% comment %} <div class="play-btn-row-dir ">
+                      <a class="video-link" href="https://www.youtube.com/watch?v=QI4_dGvZ5yE&amp;ab_channel=JUtah" role="button" title="play" data-fancybox="data-fancybox">
                         <div class="play-video-btn">
                           <div class="play-btn"> <i class="fas fa-play icon"></i></div>
-                        </div></a></div>
+                        </div>
+                      </a>
+                    </div> {% endcomment %}
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!--start of image-area -->
-          {% comment %} <div class="col-12   mx-md-auto col-lg-6 text-center " data-tilt>  
+           <div class="col-12   mx-md-auto col-lg-6 text-center " data-tilt>  
             <div class="hero-image-area mb-5 mb-lg-0">
-              <div class="hero-img-wraper  "><img class="img-fluid " src="{% static 'assets/images/hero/illustration-1.png' %}" alt="" draggable="false"></div>
+              <div class="hero-img-wraper  "><img class="img-fluid " src="{% static 'assets/images/about/thematic.png' %}" alt="" draggable="false"></div>
             </div>
-          </div> {% endcomment %}
+          </div> 
         </div>
       </div>
     </section>
@@ -186,117 +189,6 @@
       </div>
     </section>
     <!-- End  about Section-->
-        <!-- Start  services Section-->
-        <section class="services services-boxed mega-section  " id="services">
-          <div class="container">
-            <div class="sec-heading  ">
-              <div class="content-area"><span class=" pre-title       wow fadeInUp " data-wow-delay=".2s">Lab Pillars</span>
-               <h2 class=" title    wow fadeInUp" data-wow-delay=".4s"><span class='hollow-text'>Core Function</span> Innovation Space</h2>
-                {% comment %}  <p class="subtitle   wow fadeInUp " data-wow-delay=".6s">We work and support different activities, <br>find activities highlight below:-.</p> {% endcomment %}
-              </div>
-              {% comment %} <div class=" cta-area   wow fadeInUp" data-wow-delay=".8s"><a class="cta-btn btn-solid    ">see all services <i class="bi bi-arrow-right icon "></i></a></div> {% endcomment %}
-            </div>
-            <div class="row gx-4 gy-4 services-row ">  
-              <div class="col-12 col-md-6  col-lg-4 mx-auto ">
-                <!--Start First service box-->
-                <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".1s">
-                  <div class="service-icon"><i class="flaticon-strategy font-icon" ></i></div><span class="service-num hollow-text">1    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Conducting Exploratory Research</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                  </div>
-                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
-                </div>
-                <!-- End First service box   -->
-              </div>
-              <div class="col-12 col-md-6  col-lg-4 mx-auto ">
-                <!--Start Second service box-->
-                <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".2s">
-                  <div class="service-icon"><i class="flaticon-medal  font-icon"></i></div><span class="service-num hollow-text">2    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Strethening Research and Teaching Capacity</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                  </div>
-                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %} 
-                </div> 
-                <!-- End Second service box-->
-              </div>
-              <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
-                <!--Start Third service box-->
-                <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".3s">
-                  <div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span class="service-num hollow-text">3    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Supporting AI Innovation and Commercialization</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                   </div>
-                   {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
-                </div>
-                <!-- End Third service box-->
-              </div>
-              <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
-                <!--Start fourth service box-->
-               <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".4s">
-                  <div class="service-icon"><i class="flaticon-profile font-icon"></i></div><span class="service-num hollow-text">4    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Mentorship and Community Building</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                  </div>
-                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a>  {% endcomment %}
-                </div> 
-                <!-- End fourth service box   -->
-              </div>
-              <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
-                <!--Start 5th service box-->
-                 <div class="box service-box  wow fadeInUp reveal-start" data-wow-offset="0" data-wow-delay=".5s">
-                  <div class="service-icon"><i class="flaticon-search font-icon"></i></div><span class="service-num hollow-text">5    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Supporting Gender Inclusive and Repsonsible AI</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                  </div> 
-                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a>  {% endcomment %}
-                </div> 
-                <!-- End 5th service box-->
-              </div>
-              <div class="col-12 col-md-6  col-lg-4 mx-auto  ">
-                <!--Start 6th service box-->
-                 <div class="box service-box  wow fadeInUp  reveal-start" data-wow-offset="0" data-wow-delay=".6s">
-                  <div class="service-icon"><i class="flaticon-web-development font-icon"></i></div><span class="service-num hollow-text">6    </span>
-                  <div class="service-content">
-                    <h3 class="service-title">Equitable Didstribution of AI High-Quality Teaching and Leaning Materials</h3>
-                    {% comment %} <p class="service-text">
-                      Lorem ipsum dolor sit amet consecltetur adipisicing elit. Omnis tempore
-                      perfe rendis
-                      explicabo.
-                    </p> {% endcomment %}
-                  </div> 
-                  {% comment %} <a class="read-more" href="#">read more<i class="bi bi-arrow-right icon "> </i></a> {% endcomment %}
-                </div> 
-                <!-- End 6th service box-->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- End  services Section-->
 
     <!-- Start  our-clients Section-->
     <section class="our-clients  mega-section   wow fadeInUp" id="our-clients" data-wow-delay="0.2s">

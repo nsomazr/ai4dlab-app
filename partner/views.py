@@ -35,9 +35,10 @@ class PartnerAPIView(APIView):
             if partner_form.is_valid():
                 partner_name  = request.POST['partner_name']
                 website_url = request.POST['website_url']
+                description = request.POST['description']
                 logo = request.FILES['logo']
                 status = 1
-                new_partner = Partner(partner_name=partner_name, website_url=website_url, logo=logo, status=status)
+                new_partner = Partner(partner_name=partner_name, website_url=website_url,description=description, logo=logo, status=status)
 
                 get_objects = Partner.objects.filter(partner_name=partner_name, status=1)
                 if get_objects:
