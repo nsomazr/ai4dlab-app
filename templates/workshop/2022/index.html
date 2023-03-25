@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en"> 
+<head>
+	<title>AI4D-Lab | Workshop</title>
+	
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Embracing AI for Africa's Sustainable Development">
+	<meta name="author" content="AI4D-Lab - Tanzania">    
+	<link rel="shortcut icon" href="favicon.png"> 
+	
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap" rel="stylesheet">
+	
+	<!-- FontAwesome JS-->
+	<script defer src="{% static 'work22/assets/fontawesome/js/all.min.js' %}"></script>
+
+	<!-- Theme CSS -->  
+	<link id="theme-style" rel="stylesheet" href="{% static 'work22/assets/css/theme.css' %}">
+
+
+</head> 
+
+<body>    
+	<header id="header" class="header fixed-top">	    
+		<div class="branding">
+			<div class="container-fluid">
+				<nav class="main-nav navbar navbar-expand-lg">
+					<div class="site-logo"><a class="scrollto" href="#hero-block"><img class="logo-icon" src="{% static 'work22/assets/images/logos/africa.png' %}" width="500px" height="500px" alt="logo"></a></div>    
+					
+					<!-- <div class="navbar-btn order-lg-2"><a class="btn btn-secondary" href="https://docs.google.com/forms/d/1MsxouOQZzshJk0tssHMqXOvk-qI7N4-4VdAWDXFGNeY/viewform" target="_blank">Register</a></div> -->
+					
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<div id="navigation" class="navbar-collapse collapse  justify-content-lg-end me-lg-3">
+						<ul class="nav navbar-nav">	
+							<li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}">Home</a></li> 
+							<li class="nav-item"><a class="nav-link scrollto" href="#about-section">About</a></li>                                             
+							<li class="nav-item"><a class="nav-link" href="{% url 'workshop:workshop-22-speakers' %}">Speakers</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'workshop:workshop-22-organizers' %}">Organizers</a></li>
+							<li class="nav-item"><a class="nav-link" href="{% url 'workshop:workshop-22-sessions' %}">Schedule</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#venue-section">Venue</a></li>
+							<li class="nav-item"><a class="nav-link scrollto" href="#sponsors-section">Sponsors</a></li>
+						</ul><!--//nav-->
+					</div><!--//navabr-collapse-->
+
+				</nav><!--//main-nav-->
+				
+			</div><!--//container-->
+		</div><!--//branding-->
+	</header><!--//header-->
+	
+	<div id="hero-block" class="hero-block">
+		<div id="hero-carousel" class="hero-carousel carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item-1 carousel-item active">
+				</div>
+				<div class="carousel-item-2 carousel-item">
+				</div>
+				<div class="carousel-item-3 carousel-item">
+				</div>
+			</div>
+		</div>
+		<div class="hero-block-mask"></div>
+		<div class="container">
+			<div class="hero-text-block">
+				<h1 class="hero-heading mb-2">AI4D-Lab Workshop</h1>
+				<div class="hero-meta mb-3"><i class="far fa-calendar-alt me-2"></i>10 - 11 Aug, 2022 <i class="fas fa-map-marker-alt mx-2"></i>Dodoma, Tanzania</div>
+				<div class="hero-intro mb-4">Embracing AI for Africa's Sustainable Development.</div>
+				<div class="hero-cta"><a class="btn btn-primary btn-lg" href="https://docs.google.com/forms/d/1MsxouOQZzshJk0tssHMqXOvk-qI7N4-4VdAWDXFGNeY/viewform" target="_blank">Register Now</a></div>
+				
+			</div><!--//hero-text-block-->
+		</div><!--//container-->
+
+	</div><!--//hero-block-->
+	
+	<div class="stats-block theme-bg-primary text-white py-4 text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number"><i class="fa fa-user"></i></div>
+						<a href="https://docs.google.com/forms/d/1MsxouOQZzshJk0tssHMqXOvk-qI7N4-4VdAWDXFGNeY/viewform">
+						<div class="unit">REGISTER HERE</div>
+					    </a>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number"><i class="fa fa-upload"></i></div>
+						<a href="https://docs.google.com/forms/d/1MsxouOQZzshJk0tssHMqXOvk-qI7N4-4VdAWDXFGNeY/viewform">
+						<div class="unit">SUBMIT ABSTRACT</div>
+					    </a>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number"><i class="fa fa-info-circle"></i></div>
+						<a href="{% static 'work22/assets/images/poster.jpg' %}">
+						<div class="unit">DOWNLOAD BROCHURE</div>
+					    </a>
+					</div><!--//item-->
+				</div><!--//col-->
+				<div class="col-6 col-md-3">
+					<div class="item">
+						<div class="number"><i class="fa fa-file"></i></div>
+						<a href="#">
+						<div class="unit">DOWNLOAD AGENDA</div>
+					    </a>
+					</div><!--//item-->
+				</div><!--//col-->
+			</div>
+		</div><!--//container-->
+	</div><!--//stats-block-->
+
+
+	<section id="about-section" class="about-section section theme-bg-light">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">About the Workshop</h3>
+			<p class="section-intro single-col-max mx-auto mb-4">
+				<p>The AI4D Multidisciplinary Research Lab is a project run in collaboration between two public academic institutions in Tanzania, 
+				The University of Dodoma (UDOM) & Nelson Mandela African Institution of Science and Technology (NM-AIST).
+				 We set forth an objective to establish the AI4D lab that fosters capacity development, research,
+				  and innovation in responsible Artificial Intelligence (AI) and its application in addressing societal and developmental problems in Africa. </p>
+
+				<p>The lab presents a two-day workshop which will take place from 10th-11th August 2022 and will be conducted in hybrid (virtual and physical at the University of Dodoma, Dodoma - Tanzania).
+				 The workshop will feature paper presentations, keynote talks, AI solutions demonstrations, and interactive panel discussions. 
+				 The workshop will explore issues around four themantic areas, namely: <b>Healthcare, Environmental Conservation and Agriculture, Digital Economy and Small-Scale Enterprises, and AI Infrastructure and Data Ecosystem</b>. Researchers, Innovators, Students, and Policymakers from across the continent are encouraged to participate. 
+				 Participants interested in showcasing their innovative AI solutions and research findings are invited to submit short abstracts describing their works that fall within the aforementioned themantic areas. </p>     
+				
+				For enquiries or details, email organizers at: <a href="mailto:info@ai4dlab.or.tz">info@ai4dlab.or.tz</a> </div>
+			<div class="benefits-list text-center mb-3"><br><br>
+				<h4 class="text-center mb-4">Objectives of the workshop</h4>
+				<ul class="list-unstyled text-start d-inline-block">
+					<li><i class="fas fa-check-circle me-2"></i>Provide a platform for participants to share their knowledge, experience and innovative AI solutions that addresses Africans' pervasive challenges;</li>
+					<li><i class="fas fa-check-circle me-2"></i>Bring together all the key stakeholders in the AI ecosystem (academia, researchers, innovators, students, private companies, policy and decision-makers); </li>
+					<li><i class="fas fa-check-circle me-2"></i>Explore the Africans' challenges and the opportunities brought by AI/ML.</li>
+					<li><i class="fas fa-check-circle me-2"></i>Address the readiness of African governments in embracing AI technology.</li>
+				</ul>
+			</div><!--//benefits-list-->
+			<div class="event-countdown text-center mb-3">		   
+				<h4 class="countdown-intro mb-2 text-center mb-3">Event Starts In:</h4>
+				<div id="countdown-box" class="countdown-box"></div>
+			</div><!--//event-countdown-->
+			<div class="about-cta text-center mb-5"><a class="btn btn-secondary btn-lg  mb-5" href="https://docs.google.com/forms/d/1MsxouOQZzshJk0tssHMqXOvk-qI7N4-4VdAWDXFGNeY/viewform" target="_blank">Register Now</a></div>
+		</div><!--//container-->
+	
+			
+			<section id="speakers-section" class="speakers-section section">
+				<div class="container">
+					<h3 class="section-heading text-center mb-3">Speakers</h3>
+					<div class="section-intro text-center single-col-max mx-auto mb-5">Workshop Speakers</div>
+					<div class="row">
+						
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1"><img src="{% static 'work22/assets/images/speakers/denis.png' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Dr. Denis Pastory Rubanga</h5>
+									<div class="card-text mb-3">
+										<div class="meta">Data Scientis and Technical Advisor</div>
+										<div class="meta">Tokyo University of Agriculture</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-1" data-bs-toggle="modal" data-bs-target="#modal-speaker-1">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/DenisPastoty"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/denispastory/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2"><img src="{% static 'work22/assets/images/speakers/jumanne.jpeg' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Jumanne Mtambalike</h5>
+									<div class="card-text mb-3">
+										<div class="meta">Co-Founder & CEO</div>
+										<div class="meta">Sahara Ventures</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-2" data-bs-toggle="modal" data-bs-target="#modal-speaker-2">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/Afruturist"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/jumannerajabu/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3"><img src="{% static 'work22/assets/images/speakers/nick.png' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Dr. Nick Bradshaw</h5>
+									<div class="card-text mb-3">
+										<div class="meta">African AI Ecosystem Builder</div>
+										<div class="meta">AI Media Group</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-3" data-bs-toggle="modal" data-bs-target="#modal-speaker-3">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<!-- <li class="list-inline-item"><a  href="https://twitter.com/MjahidMohamed"><i class="fab fa-twitter fa-fw"></i></a></li> -->
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/nickbradshaw/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4"><img src="{% static 'work22/assets/images/speakers/thomas.png' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Dr. Thomas Basikolo</h5>
+									<div class="card-text mb-3">
+										<div class="meta">Programme Officer | AI for Good</div>
+										<div class="meta">ITU</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-4" data-bs-toggle="modal" data-bs-target="#modal-speaker-4">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/thombyk"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/thomas-basikolo-752ab038/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5"><img src="{% static 'work22/assets/images/speakers/mpho.jpg' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Prof. Mpho Raborife</h5>
+									<div class="card-text mb-3">
+										<div class="meta">Computational Linguistics Researcher</div>
+										<div class="meta">University of Johannesburg</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-5" data-bs-toggle="modal" data-bs-target="#modal-speaker-5">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/mphoraborife"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/mpho-raborife-3a274116/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6"><img src="{% static 'work22/assets/images/speakers/kadeghe.png' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Dr. Kadeghe Fue</h5>
+									<div class="card-text mb-3">
+										<div class="meta">Acting Coordinator, AIMS Unit</div>
+										<div class="meta">Sokoine University of Agriculture</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-6" data-bs-toggle="modal" data-bs-target="#modal-speaker-6">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/kadefue"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/kadefue/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+						<div class="col-6 col-lg-3 mb-4">
+							<div class="card rounded-0">
+								<a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7"><img src="{% static 'work22/assets/images/speakers/alex.png' %}" class="card-img-top rounded-0" alt=""></a>
+								<div class="card-body">
+									<h5 class="card-title mb-2">Alex Berryhill</h5>
+									<div class="card-text mb-3">
+										<div class="meta"> Gender Policy Specialist</div>
+										<div class="meta">Ladysmith</div>
+									</div><!--//card-text-->
+									<a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-7">Read more &rarr;</a>
+								</div><!--//card-->
+								<div class="card-footer text-muted">
+									<ul class="social-list list-inline mb-0">
+										<li class="list-inline-item"><a  href="https://twitter.com/AlexTBerryhill"><i class="fab fa-twitter fa-fw"></i></a></li>
+										<li class="list-inline-item"><a  href="https://www.linkedin.com/in/alex-berryhill/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+										<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+									</ul><!--//social-list-->
+								</div>
+							</div><!--//card-->
+						</div><!--//col-->
+
+
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-8" data-bs-toggle="modal" data-bs-target="#modal-speaker-8"><img src="{% static 'work22/assets/images/speakers/baraka.png' %}" class="card-img-top rounded-0" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Dr. Alcardo Alex Barakabitze</h5>
+							<div class="card-text mb-3">
+								<div class="meta"> Co-Founder and CEO</div>
+								<div class="meta">SmartHEA</div>
+							</div><!--//card-text-->
+							<a href="#modal-speaker-7" data-bs-toggle="modal" data-bs-target="#modal-speaker-8">Read more &rarr;</a>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="https://twitter.com/AlcardoA"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="https://www.linkedin.com/in/alex-berryhill/"><i class="fab fa-linkedin-in fa-fw"></i></a></li> -->
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+
+
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9"><img src="{% static 'work22/assets/images/speakers/lavina.jpg' %}" class="card-img-top rounded-0" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Lavina Ramkissoon</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Conscious Creator & Chairperson</div>
+								<div class="meta">aiMOM</div>
+							</div><!--//card-text-->
+							<a href="#modal-speaker-9" data-bs-toggle="modal" data-bs-target="#modal-speaker-9">Read more &rarr;</a>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="https://twitter.com/lavina_rr/ "><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/lavina-ramkissoon/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+
+
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10"><img src="{% static 'work22/assets/images/speakers/zaipuna.png' %}" class="card-img-top rounded-0" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Eng. Dr Zaipuna Obedi Yonah</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Researcher/Expert on ICTs/Communications Sector</div>
+								<div class="meta">Applied Engineering & ByteWorks (T) Ltd</div>
+							</div><!--//card-text-->
+							<a href="#modal-speaker-10" data-bs-toggle="modal" data-bs-target="#modal-speaker-10">Read more &rarr;</a>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="https://twitter.com/yonah_o "><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/zaipuna-yonah-a0973716/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+
+
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11"><img src="{% static 'work22/assets/images/speakers/mahadia.jpg' %}" class="card-img-top rounded-0" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Mahadia Tunga </h5>
+							<div class="card-text mb-3">
+								<div class="meta">Director of Data Sciences</div>
+								<div class="meta">DLAB</div>
+							</div><!--//card-text-->
+							<a href="#modal-speaker-11" data-bs-toggle="modal" data-bs-target="#modal-speaker-11">Read more &rarr;</a>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="https://twitter.com/TungaMahadia"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/mahadiatunga/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+
+
+				<div class="col-6 col-lg-3 mb-4">
+					<div class="card rounded-0">
+						<a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12"><img src="{% static 'work22/assets/images/speakers/banzi.png' %}" class="card-img-top rounded-0" alt=""></a>
+						<div class="card-body">
+							<h5 class="card-title mb-2">Dr. Jamal Banzi</h5>
+							<div class="card-text mb-3">
+								<div class="meta">Lecturer of Computer Science specializing in Artificial Intelligence</div>
+								<div class="meta">Sokoine University of Agriculture</div>
+							</div><!--//card-text-->
+							<a href="#modal-speaker-12" data-bs-toggle="modal" data-bs-target="#modal-speaker-12">Read more &rarr;</a>
+						</div><!--//card-->
+						<div class="card-footer text-muted">
+							<ul class="social-list list-inline mb-0">
+								<li class="list-inline-item"><a  href="https://twitter.com/JamalBanzi"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/dr-jamal-banzi-04437b63/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list-->
+						</div>
+					</div><!--//card-->
+				</div><!--//col-->
+
+					</div><!--//row-->
+				</div><!--//container-->
+				
+			</section><!--//speakers-section-->
+	
+	
+	<section id="venue-section" class="venue-section section  theme-bg-primary text-white">
+		<div class="container">
+			<h3 class="section-heading text-center mb-5 text-white">Venue</h3>
+			<div class="row gx-5 py-lg-5">
+				<div class="col-12 col-lg-7 h-100">
+					<div class="desc">
+						<h4 class="text-white mb-3">About the Venue</h4>
+						<p>The workshop will be physically held at the College of Informatics and Virtual Education, The University of Dodoma (UDOM). UDOM through its well-established colleges provides a unique environment for teaching, learning, research, and public services to ensure a memorable and lifetime experience. UDOM community has been swiftly growing from 1,200 students in 2007 to 28,225 students pursuing over 142 different programs, with an ambition to host 40,000 students at full capacity.</p>
+						<p>UDOM is situated in the Chimwaga Area about 8 Kilometers from the downtown of Dodoma, Tanzania’s capital city. Dodoma City is located in the center of the country, 455 km west of the former capital, Dar es Salaam; and 441 km south of Arusha City, the cradle of the East African Community. Dodoma features a semi-arid climate with relatively warm temperatures throughout the year. However, the average maximums are consistent throughout the year, average minimums drop to 13°C in July.</p>
+						<p>Dodoma can be reached via the recently renovated Dodoma Airport and the Central Railway Line connecting it over a distance of 465 km with Dar es Salaam city. There are also major highways connecting Dodoma with Dar es Salaam (via Morogoro Region) to the east, Mwanza City (via Singida) to the west, and Arusha (via Kondoa) to the north.</p>
+						
+						<!-- <h4 class="text-white mb-4 mt-3 mt-lg-5">Facilities &amp; Accommodations</h4>
+						<p>Your venue info goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consequat magna eu accumsan mattis. Duis non augue porttitor, fringilla velit vitae, ultricies eros. Sed libero eros, tristique ac orci nec, hendrerit dictum lacus. Aenean iaculis massa felis, eget venenatis turpis lacinia sit amet. </p> -->
+						<a class="btn btn-ghost" href="{% static 'work22/assets/files/TravelAdvisory.pdf' %}" target="_blank">COVID-19 Travel Measures</a>
+					</div><!--//desc-->
+				</div><!--//col-->
+
+				<div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
+					<div class="figures-holder">
+						<div class="figure figure-1"><img class="shadow" src="{% static 'work22/assets/images/venue/venue-1.jpg' %}" alt=""></div>
+						<!-- <div class="figure figure-2"><img class="shadow" src="assets/images/venue/venue-2.jpg" alt=""></div> -->
+						<!-- <div class="figure figure-3"><img class="shadow" src="assets/images/venue/venue-3.jpg" alt=""></div> -->
+						<!-- <div class="figure figure-4"><img class="shadow" src="assets/images/venue/venue-4.jpg" alt=""></div> --> 
+					</div><!--//figures-holder-->
+				</div><!--//col-->
+			</div><!--//row-->
+		</div><!--//container-->
+	</section><!--//venue-section-->
+
+	<section id="sponsors-section" class="sponsors-section section">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">Partners</h3>
+			<div class="section-intro text-center single-col-max mx-auto mb-5"></div>
+			<div class="row logos justify-content-center">
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/dlab_no_bg.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/ihi.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/zindi.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/aitz.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/tsai.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/adanian_labs.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/belltro_logo.png' %}" alt=""></div>
+			</div><!--//row-->
+		</div><!--//container-->
+	</section><!--//sponsors-section-->
+    <hr>
+	<section id="sponsors-section" class="sponsors-section section">
+		<div class="container">
+			<h3 class="section-heading text-center mb-3">Sponsors</h3>
+			<div class="section-intro text-center single-col-max mx-auto mb-5"></div>
+			<div class="row logos justify-content-center">
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/ai4d.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/idrc.png' %}" alt=""></div>
+				<div class="logo-item col-6 col-md-4 col-lg-2"><img src="{% static 'work22/assets/images/logos/sida.png' %}" alt=""></div>
+			</div><!--//row-->
+			<!-- <div class="sponsors-cta text-center pt-5"><a class="btn-primary btn btn-lg" href="#">Become A Sponsor or A Partner</a></div> -->
+		</div><!--//container-->
+	</section><!--//sponsors-section-->
+
+	<footer class="footer py-5 theme-bg-primary">
+		<div class="container text-center">
+			
+			<ul class="social-list list-inline mb-4"> 
+				<li class="list-inline-item me-3"><a href="https://www.linkedin.com/company/ai4d-anglophone/"><i class="fab fa-linkedin fa-fw"></i></a></li>
+				<li class="list-inline-item me-3"><a href="https://twitter.com/ai4dlab_Tz"><i class="fab fa-twitter fa-fw"></i></a></li>
+				<!-- <li class="list-inline-item me-3"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li> -->
+				<!-- <li class="list-inline-item me-0"><a href="#"><i class="fab fa-youtube fa-fw"></i></a></li> -->
+			</ul><!--//social-list-->
+			
+			
+			<ul class="footer-links list-inline mx-auto mb-4">
+				<li class="list-inline-item"><a href="#">Code of Conduct</a></li>
+				<li class="list-inline-item">|</li>
+				<li class="list-inline-item"><a href="#">Terms</a></li>
+				<li class="list-inline-item">|</li>
+				<li class="list-inline-item me-0"><a href="#">Privacy</a></li>
+			</ul><!--//footer-link-->
+			
+			 <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+			<!-- <small class="copyright">Designed with <i class="fas fa-heart" style="color: #EC645E;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small> -->
+			
+		</div><!--//container-->	    
+	</footer>
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-1" id="modal-speaker-1" tabindex="-1" role="dialog" aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 id="speaker-5-ModalLabel" class="modal-title sr-only">Dr. Denis Pastory Rubanga</h4>
+</div>
+<div class="modal-body p-0">
+<div class="theme-bg-light p-5">
+	<div class="row">
+		<div class="col-12 col-md-auto text-center">
+			<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/denis.png' %}" alt="" />
+		</div>
+		
+		<div class="col text-center text-md-start mx-auto">
+			<h2 class="name mb-2">Dr. Denis Pastory Rubanga</h2>
+			<div class="meta">Data Scientist and Technical Advisor</div>
+			<!-- <div class="meta mb-2">Tokyo University</div> -->
+			<ul class="social-list list-inline mb-0">								
+				<li class="list-inline-item"><a  href="https://twitter.com/DenisPastoty"><i class="fab fa-twitter fa-fw"></i></a></li>
+				<li class="list-inline-item"><a  href="https://www.linkedin.com/in/denispastory/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+				<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+			</ul><!--//social-list--> 
+		</div><!--//col-->
+	</div><!--//row-->
+</div>
+<div class="desc p-4 p-lg-5">
+	<p>Denis is at the forefront to lead data-driven business/research initiatives in industries that impact thousands of people. 
+		Serving as an applied data scientist and technical advisor in several industries
+		His innovative problem-solving skills with a see-through capability have been witnessed in A.I, geospatial, emerging technology, and agri-tech and their integration into Agriculture, Environment, Rural Community, and responsible AI. </p>
+	<p class="mb-0">He is a seasoned co-founder, a true activist serving as a team lead and mentor for tech innovations in health, agriculture, biotechnology, the-future-for-work. 
+		Learn <a href="https://www.linkedin.com/in/denispastory/">more</a> about him.</a></p>
+</div>
+</div><!--//modal-body-->
+</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-2" id="modal-speaker-2" tabindex="-1" role="dialog" aria-labelledby="speaker-2-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 id="speaker-2-ModalLabel" class="modal-title sr-only">Jumanne Mtambalike</h4>
+</div>
+<div class="modal-body p-0">
+<div class="theme-bg-light p-5">
+	<div class="row">
+		<div class="col-12 col-md-auto text-center">
+			<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/jumanne.jpeg' %}" alt="" />
+		</div>
+		
+		<div class="col text-center text-md-start mx-auto">
+			<h2 class="name mb-2">Jumanne Mtambalike</h2>
+			<div class="meta">Co-Founder & CEO</div>
+			<div class="meta mb-2">Sahara Ventures</div>
+			<ul class="social-list list-inline mb-0">								
+				<li class="list-inline-item"><a  href="https://twitter.com/Afruturist"><i class="fab fa-twitter fa-fw"></i></a></li>
+				<li class="list-inline-item"><a  href="https://www.linkedin.com/in/jumannerajabu/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+				<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+			</ul><!--//social-list--> 
+		</div><!--//col-->
+	</div><!--//row-->
+</div>
+<div class="desc p-4 p-lg-5">
+	<p>Jumanne Mtambalike is an innovator, entrepreneur, and technology enthusiast who is optimistic about the future of Africa.</p>
+	<p class="mb-0">He cofounded Sahara Ventures with a vision to build Africa's Innovation and Technology Entrepreneurship Ecosystem - <a href="https://saharaventures.com/">Lean More</a></p>
+</div>
+</div><!--//modal-body-->
+</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-3" id="modal-speaker-3" tabindex="-1" role="dialog" aria-labelledby="speaker-3-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 id="speaker-3-ModalLabel" class="modal-title sr-only">Dr. Nick Bradshaw</h4>
+	</div>
+	<div class="modal-body p-0">
+		<div class="theme-bg-light p-5">
+			<div class="row">
+				<div class="col-12 col-md-auto text-center">
+					<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/nick.png' %}" alt="" />
+				</div>
+				
+				<div class="col text-center text-md-start mx-auto">
+					<h2 class="name mb-2">Dr. Nick Bradshaw</h2>
+					<div class="meta">African AI Ecosystem Builder</div>
+					<div class="meta mb-2">AI Media Group</div>
+					<ul class="social-list list-inline mb-0">								
+						<li class="list-inline-item"><a  href="https://twitter.com/Afruturist"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a  href="https://www.linkedin.com/in/jumannerajabu/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+					</ul><!--//social-list--> 
+				</div><!--//col-->
+			</div><!--//row-->
+		</div>
+		<div class="desc p-4 p-lg-5">
+			<p>Nick is a 20+ year tech veteran having worked in Europe, North America & Africa with a diverse set of Multi $bn global clients helping customers deploy and mature complex Enterprise platforms and systems.  Having been based in South Africa for 10+ years and is founder and CEO of the AI Media Group, a boutique market analysis, consulting, publishing & events company.  AI Media offer clients insights into the growing 4IR trade & investment opportunity in Africa.  They are also creators of Africa's largest B2B 4IR trade focused event (AI Expo Africa), Africa's first 4IR trade magazine (Synapse) and Africa’s first dedicated AI focused streaming channel (AI TV). Nick also serves on the Board of The Swedish AI Fund and AI Centre of Excellence, Kenya.</p>
+			<p class="mb-0">With 20K+ practitioners, AI Expo Africa is the largest B2B Artificial Intelligence & 4IR Smart Tech trade community in Africa uniting 100s buyers and suppliers locally, regionally and globally. The community is made up of decision makers, investors, buyers, suppliers, innovators, SMBs and global brands focusing on real world 4IR business applications you can deploy TODAY. Learn more at www.aiexpoafrica.com <br><br>
+				The AI Media Group are the de facto regional trade body focusing solely on B2B trade (inward and outward) in this category in Africa.  Over the last 4+ years the AI Media Group  have become a trusted advisory partner and soft-landing entry point into the African 4IR market. The group focuses on both commercial and AI4Good applications and routinely works with software companies, Embassies, trade missions, NGOS and Governments as a trusted partner in the region. Learn more at www.aimediagroup.co.za 
+			</p>
+		</div>
+	</div><!--//modal-body-->
+</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-4" id="modal-speaker-4" tabindex="-1" role="dialog" aria-labelledby="speaker-4-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 id="speaker-3-ModalLabel" class="modal-title sr-only">Dr. Thomas Basikolo</h4>
+	</div>
+	<div class="modal-body p-0">
+		<div class="theme-bg-light p-5">
+			<div class="row">
+				<div class="col-12 col-md-auto text-center">
+					<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/thomas.png' %}" alt="" />
+				</div>
+				
+				<div class="col text-center text-md-start mx-auto">
+					<h2 class="name mb-2">Dr. Thomas Basikolo</h2>
+					<div class="meta">Programme Officer | AI for Good</div>
+					<div class="meta mb-2">ITU</div>
+					<ul class="social-list list-inline mb-0">								
+						<li class="list-inline-item"><a  href="https://twitter.com/thombyk"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a  href="https://www.linkedin.com/in/thomas-basikolo-752ab038/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+					</ul><!--//social-list--> 
+				</div><!--//col-->
+			</div><!--//row-->
+		</div>
+		<div class="desc p-4 p-lg-5">
+			<p>Thomas Basikolo works with the ITU coordinating and managing the AI for Good’s ML5G activities and as an advisor of the ITU-T Focus Group on Autonomous Networks. He received a PhD in Electrical and Computer Engineering from Yokohama National University, Japan. During his studies, he was awarded the Japanese Government (Monbukagakushō) scholarship. He was also a recipient of grants for Non-Japanese Researchers from the NEC C&C Foundation, and a visiting researcher at the NEC Data Science Research Laboratories. Prior to joining ITU, he worked as a Research Engineer in the Engineering Department of Microwave Factory Co., Ltd, Tokyo, Japan.</p>
+			<p>
+				He is recipient of multiple Best Paper Awards, the IEEE AP–S Japan Student Award and the Young Engineer of the year award by IEEE AP–S Japan in 2018. He has co-authored peer-reviewed journal and conference papers, predominantly in the areas wireless communications and antenna engineering. He serves as a Reviewer of IEEE and IEICE Journals. His interests includes, machine learning, deep learning and network science, and their applications in wireless networks. 
+			</p>
+		</div>
+	</div><!--//modal-body-->
+</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-5" id="modal-speaker-5" tabindex="-1" role="dialog" aria-labelledby="speaker-5-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+		<h4 id="speaker-3-ModalLabel" class="modal-title sr-only">Prof. Mpho Raborife</h4>
+	</div>
+	<div class="modal-body p-0">
+		<div class="theme-bg-light p-5">
+			<div class="row">
+				<div class="col-12 col-md-auto text-center">
+					<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/mpho.jpg' %}" alt="" />
+				</div>
+				
+				<div class="col text-center text-md-start mx-auto">
+					<h2 class="name mb-2">Prof. Mpho Raborife</h2>
+					<div class="meta">Computational Linguistics Researcher</div>
+					<div class="meta mb-2">University of Johannesburg</div>
+					<ul class="social-list list-inline mb-0">								
+						<li class="list-inline-item"><a  href="https://twitter.com/mphoraborife"><i class="fab fa-twitter fa-fw"></i></a></li>
+						<li class="list-inline-item"><a  href="https://www.linkedin.com/in/mpho-raborife-3a274116/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+						<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+					</ul><!--//social-list--> 
+				</div><!--//col-->
+			</div><!--//row-->
+		</div>
+		<div class="desc p-4 p-lg-5">
+			<p>Prof. Mpho Raborife is an NRF-rated researcher specialising in computational linguistics. She is an associate professor and the deputy director at the Institute for Intelligent Systems, University of Johannesburg. Amongst numerous awards she has received, she is a L’Oréal-UNESCO Women in Science sub-Saharan Regional fellow as well as the DST Women in Science alumni. </p>
+			<p>
+				Prof. Raborife has worked in numerous projects (multidisciplinary) with project partners across three continents. She currently serves on the IDEMIA Black Women’s Ownership Trust board of trustees as well as on the advisory board for the Pan African Information Communication Technology Association. 
+			</p>
+		</div>
+	</div><!--//modal-body-->
+</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-6" id="modal-speaker-6" tabindex="-1" role="dialog" aria-labelledby="speaker-6-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 id="speaker-6-ModalLabel" class="modal-title sr-only">Dr. Kadeghe Fue</h4>
+		</div>
+		<div class="modal-body p-0">
+			<div class="theme-bg-light p-5">
+				<div class="row">
+					<div class="col-12 col-md-auto text-center">
+						<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/kadeghe.png' %}" alt="" />
+					</div>
+					
+					<div class="col text-center text-md-start mx-auto">
+						<h2 class="name mb-2">Dr. Kadeghe Fue</h2>
+						<div class="meta">Acting Coordinator, AIMS Unit</div>
+						<div class="meta mb-2">Sokoine University of Agriculture</div>
+						<ul class="social-list list-inline mb-0">								
+							<li class="list-inline-item"><a  href="https://twitter.com/kadefue"><i class="fab fa-twitter fa-fw"></i></a></li>
+							<li class="list-inline-item"><a  href="https://www.linkedin.com/in/kadefue/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+							<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+						</ul><!--//social-list--> 
+					</div><!--//col-->
+				</div><!--//row-->
+			</div>
+			<div class="desc p-4 p-lg-5">
+				<p>Dr. Kadeghe Goodluck Fue (Member of SUASA, IET, IEEE, ASABE, AAAS, and AUVSI) is a Researcher, Founder, Developer, and Consulting Engineer in Digital and Data-Driven Agriculture (concentrating in Precision Agriculture, Artificial Intelligence, Machine Vision, Agricultural Robotics, and Agricultural Data Science). He is a seasoned tech-savvy engineer with more than 11 years of actively building moderate to complex tech systems for agriculture and natural resources. He is a trained full-stack developer capable of integrating hardware-software systems and developing innovative algorithms to challenging problems in autonomy and AI. He is the co-Founder and CEO of the Mifumo Developers Lab, a full-stack software development firm. Kadeghe studied at the University of Dar es Salaam, the University of Florida and the University of Georgia in USA for his Bachelor, Masters and PhD respectively.</p>
+				<p>
+					He works for the Department of Agricultural Engineering at the School of Engineering and Technology - Sokoine University of Agriculture (SUA) as a Lecturer and Researcher.  He is a Principal Investigator of the extramural funded Electronics and Precision Agriculture Lab (EPAL) at SUA. Administratively, He is the Acting Coordinator for the Academic Information Management and Support (AIMS) Unit at the office of the Deputy Vice-Chancellor (Academic, Research and Consultancy). Read more at <a href="http://www.kadefue.com"></a>
+				</p>
+			</div>
+		</div><!--//modal-body-->
+	</div><!--//modal-content-->
+</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-7" id="modal-speaker-7" tabindex="-1" role="dialog" aria-labelledby="speaker-7-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-6-ModalLabel" class="modal-title sr-only">Alex Berryhill </h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/alex.png' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Alex Berryhill</h2>
+							<div class="meta">Gender Policy Specialist</div>
+							<div class="meta mb-2">Ladysmith</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/AlexTBerryhill"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/alex-berryhill/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+					<p>Alex Berryhill is a Gender Policy Specialist at Ladysmith, a feminist research collective that helps organizations collect, analyze, and take action on gender data. She is also the Director of Digital Operations for Ladysmith’s Cosas de Mujeres project, which leverages WhatsApp to connect Colombian and Venezuelan women to the services they need, while collecting actionable data on gender-based violence in a safe and dignified way. Alex lives in Cartagena, Colombia, where she has worked alongside community-based women's rights organisations over the last seven years.</p>
+					<p>
+						Alex holds a Master of International Affairs, with a specialization in Gender and Public Policy, from Columbia University.    
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-8" id="modal-speaker-8" tabindex="-1" role="dialog" aria-labelledby="speaker-8-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-6-ModalLabel" class="modal-title sr-only">Dr. Alcardo Alex Barakabitze</h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/baraka.png' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Dr. Alcardo Alex Barakabitze</h2>
+							<div class="meta">Co-Founder and CEO</div>
+							<div class="meta mb-2">SmartHEA</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/AlcardoA"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="https://www.linkedin.com/in/alex-berryhill/"><i class="fab fa-linkedin-in fa-fw"></i></a></li> -->
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+					<p>Dr. Barakabitze is a Co-Founder and CEO of SmartHEA and  an ELITE - S MSCA Fellow. He completed PhD in Computing and Communications from the University of Plymouth, UK in 2019. He received Master Degree of Electronics and Communication Engineering with first class from Chongqing University, PR China, in May 2015 and BSc. in Computer Science with Honours from the University of Dar es Salaam, Tanzania in 2010. Dr. Barakabitze is recognised as the BEST Male ICT Researcher of 2021, an award that is awarded by the ICT Commission of Tanzania. Dr. Barakabitze is also recognised as the 2015 outstanding International Graduate Student of Chongqing University, China due to his excellent performance. He was a visiting researcher in the Department of Electrical and Electronics Engineering, University of Cagliari, Italy and the ITU-T-Standardization Department in 2016 and 2017 respectively. He has led/participated in a number of national and international research projects, funded by the EU, UK, Ireland and the Government of Tanzania.  Dr. Barakabitze has more than 40 publications in international peer-reviewed conferences and journals with a total of 936 Google scholar citations and H-index of 17. Dr. Barakabitze has served as session chair of Future Internet and NGN Architectures during the IEEE Communication Conference in Kansas City, USA.</p>
+					<p>
+						He was also the Keynote and Panel Chairs at the International Young Researcher Summit on Quality of Experience in Emerging Multimedia Services (QEEMS 2017), which was held from May 29–30, 2017 in Erfurt, Germany. Dr. Barakabitze is a Reviewer for various journals and serves on technical program committees of leading conferences focusing on his research areas. His research interests are artificial intelligence, machine learning, data science, digital and data-driven agriculture, Telecommunication systems and network management and customer's quality of experience and video streaming services.   
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-9" id="modal-speaker-9" tabindex="-1" role="dialog" aria-labelledby="speaker-9-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-9-ModalLabel" class="modal-title sr-only">Lavina Ramkissoon</h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/lavina.jpg' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Lavina Ramkissoon</h2>
+							<div class="meta">Conscious Creator & Chairperson</div>
+							<div class="meta mb-2">aiMOM</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/lavina_rr/ "><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/lavina-ramkissoon/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+					<p>An AI leader standing for the unification of the African tech space. She is a conscious tech proponent with expertise in psychology, technology and economics and their integration into AI, blockchain and ethics. A tech catalyst that has served as chairperson, director and founder across multiple industries, sectors, and technologies - aiming to unlock the potential of the African arena. Humanizing technology and actively serving as a growth enabler for tech talent across the globe.</p>
+					<p>
+						Often referred to as someone trailblazing through the continent accompanied with her inspirational-ally iconic outlook to unlock and be the consciousness for Africa's. #shespeaksafrica with a harvested blend between multidisciplinary, multi sector and multi technologies. Currently holds the position as Chairperson, Non-Executive Director, and Advisor.
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-10" id="modal-speaker-10" tabindex="-1" role="dialog" aria-labelledby="speaker-10-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-10-ModalLabel" class="modal-title sr-only">Eng. Dr Zaipuna Obedi Yonah</h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/zaipuna.png' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Eng. Dr Zaipuna Obedi Yonah</h2>
+							<div class="meta">Researcher/Expert on ICTs/Communications Sector</div>
+							<div class="meta mb-2">Applied Engineering & ByteWorks (T) Ltd</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/yonah_o "><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/zaipuna-yonah-a0973716/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+					<p>He holds a B.Sc. Degree (1 st Class with Honors-1985) in Electrical Engineering from University of Dar
+						es Salaam - Tanzania; and M.Sc. (1988) and PhD (1994) degrees in Computer-Based Instrumentation
+						and Control Engineering from the University of Saskatchewan, Saskatoon, Canada. In Tanzania, he is
+						a Researcher, Practitioner, Mentor and registered Consulting Engineer in ICTs/Telecoms. He is
+						currently associated with The Nelson Mandela Institution of Science and Technology (NM-AIST), The
+						Institute of Electrical and Electronics Engineers Inc, (IEEE) and Applied Engineering & ByteWorks
+						(T) Ltd.</p>
+					<p>
+						He has over 38 years of practice and his work spans the academia, industry and policy-making fields.
+						Published over 50 papers on international journals, and supervised 21 postgraduate students. His
+						passion is in creating and delivering value through ICT-enabled services in the shortest times possible.
+						His research interests include: ICT4D, Mobile and Web applications, Big Data, Data Mining, AI4D,
+						high-capacity Broadband networks, Intelligent Instrumentation and Control Engineering, Embedded
+						and Mobile systems, ICT enabled 21 st Century Education delivery (ICT4E); and Agri-business for
+						fighting poverty from the roots.
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-11" id="modal-speaker-11" tabindex="-1" role="dialog" aria-labelledby="speaker-11-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-11-ModalLabel" class="modal-title sr-only">Mahadia Tunga</h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/mahadia.jpg' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Mahadia Tunga</h2>
+							<div class="meta">Director of Data Science</div>
+							<div class="meta mb-2">DLAB</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/TungaMahadia"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/mahadiatunga/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+					<p>Mahadia  is a Director of Data Sciences at the dLab. As a Data Scientist she oversees the dLab's data science, research and capacity development section, Mahadia has been instrumental in dLab’s ability to leverage partnerships with various Universities to spearhead collaborative research, consulting, gender-based programs and training on data science. As a consultant, she has developed an online and face-to-face data science curriculum for dLab and trained over 3000 individuals and 100 organizations in Tanzania, Uganda, Congo, South Africa, Cairo, Kenya, Ethiopia, Zambia, Somalia, Djibouti, etc. She is also actively involved in dLab's partnership with the National Bureau of Statistics to strengthen Tanzania’s national data ecosystem. </p>
+					<p>
+						Mahdia's exemplary research skills, data science expertise, and management have helped dLab successfully develop over 240 data science products and services generated over 70,000 data points and manage 14 data-driven innovation projects. She has delivered strategic consultancies with various organizations such as Cambridge Education, International Research & Exchanges Board (IREX), UNFPA/Community Systems Foundation (CSF), World Bank, and Open Data Institute (ODI) African Monitor, IntraHealth International, and Web Foundation.
+
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+<!-- Modal Speaker -->
+<div class="modal modal-speaker modal-speaker-12" id="modal-speaker-12" tabindex="-1" role="dialog" aria-labelledby="speaker-12-ModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 id="speaker-12-ModalLabel" class="modal-title sr-only">Dr. Jamal Banzi</h4>
+			</div>
+			<div class="modal-body p-0">
+				<div class="theme-bg-light p-5">
+					<div class="row">
+						<div class="col-12 col-md-auto text-center">
+							<img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto" src="{% static 'work22/assets/images/speakers/banzi.png' %}" alt="" />
+						</div>
+						
+						<div class="col text-center text-md-start mx-auto">
+							<h2 class="name mb-2">Dr. Jamal Banzi</h2>
+							<div class="meta">Lecturer of Computer Science specializing in Artificial Intelligence</div>
+							<div class="meta mb-2">Sokoine University of Agriculture</div>
+							<ul class="social-list list-inline mb-0">								
+								<li class="list-inline-item"><a  href="https://twitter.com/JamalBanzi"><i class="fab fa-twitter fa-fw"></i></a></li>
+								<li class="list-inline-item"><a  href="https://www.linkedin.com/in/dr-jamal-banzi-04437b63/"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+								<!-- <li class="list-inline-item"><a  href="#"><i class="fab fa-github fa-fw"></i></a></li> -->
+							</ul><!--//social-list--> 
+						</div><!--//col-->
+					</div><!--//row-->
+				</div>
+				<div class="desc p-4 p-lg-5">
+
+					<p>Dr. Jamal Banzi is the Lecturer of Computer Science specializing in Artificial Intelligence at the Sokoine University of Agriculture. Dr. Banzi obtained his BSc. degree in Information Systems from the University of Dodoma, Tanzania in 2011. He then went for a Master's study and obtained an MSc. in Signal and Information Processing Engineering, at Tianjin University of Technology and Education in 2015. He joined the Sokoine University of Agriculture in the same year 2015 as an Assistant lecturer. In the year 2019, he obtained Ph.D. in Information and Communication Engineering majoring in Artificial Intelligence from the University of Science and Technology of China(USTC).</p>
+					<p>
+						Dr. Banzi’s current research interests include; Cognitively Inspired AI, AI+ healthcare, Computer Vision, Deep Learning, Computer Assisted Sign Language Recognition for hearing disabled communication, AI+ Agriculture (Intelligent Agriculture Systems), and Signal detection and analysis for fault diagnosis of the operational Machines.
+					</p>
+				</div>
+			</div><!--//modal-body-->
+		</div><!--//modal-content-->
+	</div><!--//modal-dialog-->
+</div><!--//modal-->
+
+
+
+	<!-- Javascript -->          
+	<script src="{% static 'work22/assets/plugins/popper.min.js' %}"></script>
+	<script src="{% static 'work22/assets/plugins/bootstrap/js/bootstrap.min.js' %}"></script>  
+	<script src="{% static 'work22/assets/plugins/smoothscroll.min.js' %}"></script>
+	<script src="{% static 'work22/assets/plugins/gumshoe/gumshoe.polyfills.min.js' %}"></script> 
+	<script src="{% static 'work22/assets/js/main.js' %}"></script>  
+
+</body>
+</html> 
+
