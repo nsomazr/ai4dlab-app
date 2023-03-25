@@ -35,9 +35,10 @@ class SponsorAPIView(APIView):
             if sponsor_form.is_valid():
                 sponsor_name  = request.POST['sponsor_name']
                 website_url = request.POST['website_url']
+                description = request.POST['description']
                 logo = request.FILES['logo']
                 status = 1
-                new_sponsor = Sponsor(sponsor_name=sponsor_name, website_url=website_url, logo=logo, status=status)
+                new_sponsor = Sponsor(sponsor_name=sponsor_name, website_url=website_url,description=description, logo=logo, status=status)
 
                 get_objects = Sponsor.objects.filter(sponsor_name=sponsor_name, status=1)
                 if get_objects:

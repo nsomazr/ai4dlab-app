@@ -35,9 +35,10 @@ class ColabAPIView(APIView):
             if colab_form.is_valid():
                 colab_name  = request.POST['colab_name']
                 website_url = request.POST['website_url']
+                description = request.POST['description']
                 logo = request.FILES['logo']
                 status = 1
-                new_colab = Colab(colab_name=colab_name, website_url=website_url, logo=logo, status=status)
+                new_colab = Colab(colab_name=colab_name, website_url=website_url,description=description, logo=logo, status=status)
 
                 get_objects = Colab.objects.filter(colab_name=colab_name, status=1)
                 if get_objects:
