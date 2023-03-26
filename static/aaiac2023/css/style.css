@@ -313,7 +313,7 @@ li {
     left: 0;
     font-family: "Font Awesome 5 Free";
     content: "\f00c";
-    color: #9b6a01;
+    color: #db9b4b;
     font-weight: 900;
     font-size: 16px;
 }
@@ -387,7 +387,7 @@ li {
     width: 40px;
     line-height: 40px;
     text-align: center;
-    background-color: #00082e;
+    background-color: #2a83b5;
     border-radius: 0 0 50% 50%;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -476,7 +476,7 @@ li {
     width: 28px;
     line-height: 34px;
     text-align: center;
-    background-color: #00082e;
+    background-color: #2a83b5;
     -webkit-transition: all 500ms ease;
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
@@ -641,7 +641,7 @@ Theme Btn
     color: #ffffff;
     padding: 10px 30px;
     font-weight: 600;
-    background: #001376;
+    background: #287cac;
     overflow: hidden;
     min-width: 180px;
 }
@@ -687,7 +687,7 @@ Theme Btn
     color: #ffffff;
     padding: 10px 30px;
     font-weight: 600;
-    background: #001376;
+    background: #287cac;
     overflow: hidden;
     min-width: 180px;
     background: #ffc600;
@@ -891,7 +891,7 @@ Owl Carousel Arrows
   text-align: center;
   margin: 0 auto;
   margin-top: 80px;
-  color: #001376;
+  color: #287cac;
   font-size: 1em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1350,7 +1350,7 @@ hr {
     top: 0;
     bottom: 30px;
     width: 100%;
-    background-color: #00082e;
+    background-color: #2a83b5;
     content: "";
 }
 
@@ -1727,7 +1727,7 @@ hr {
 }
 
 .main-menu .navigation>li>ul>li:hover>a {
-    color: #1b0a3f;
+    color: #1e5d81;
 }
 
 .main-menu .navigation>li>ul>li>ul {
@@ -1788,7 +1788,7 @@ hr {
 }
 
 .main-menu .navigation>li>ul>li>ul>li:hover>a {
-    color: #1b0a3f;
+    color: #1e5d81;
 }
 
 .main-menu .navigation>li.dropdown:hover>ul {
@@ -1952,7 +1952,7 @@ hr {
 
 .main-menu .navigation > li .mega-menu-bar h3{
     position:relative;
-    color: #00082e;
+    color: #2a83b5;
     font-size:18px;
     font-weight:500;
     padding-bottom:10px;
@@ -2047,7 +2047,7 @@ hr {
     -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
     transform: translateY(-100%);
-    background-color: #00082e;
+    background-color: #2a83b5;
     z-index: 99999;
     visibility: hidden;
     -webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
@@ -2305,8 +2305,8 @@ hr {
     -ms-transform: translateX(100%);
     transform: translateX(100%);
     visibility: hidden;
-    background: -o-linear-gradient(45deg, #000b46 0%, #001166 100%);
-    background: linear-gradient(45deg, #000b46 0%, #001166 100%);
+    background: -o-linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
+    background: linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -3382,7 +3382,7 @@ Page Title
 }
 
 .page-breadcrumb li a:hover {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 
@@ -3402,7 +3402,7 @@ Page Title
 .sec-title .sub-title {
     display: block;
     font-size: 16px;
-    color: #fe00c5;
+    color: #db9b4b;
     font-weight: 700;
     font-family: 'Exo', sans-serif;
     margin-bottom: 15px;
@@ -3473,7 +3473,7 @@ Page Title
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 700;
-    color: #001376;
+    color: #287cac;
 }
 
 
@@ -3515,7 +3515,7 @@ Page Title
     position: relative;
     display: inline-block;
     font-size: 24px;
-    color: #9b6a01;
+    color: #db9b4b;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.2em;
@@ -3959,8 +3959,8 @@ Page Title
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-    background: -o-linear-gradient(45deg, #000b46 0%, #001166 100%);
-    background: linear-gradient(45deg, #000b46 0%, #001166 100%);
+    background: -o-linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
+    background: linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
     border-color: #1c73ea;
 }
 
@@ -3983,10 +3983,10 @@ a.ui-button:active,
     max-width: 170px;
     padding: 20px 30px 30px;
     border-radius: 0 0 30px 0;
-    background: #ff00c6;
+    background: #db9b4b;
     overflow: hidden;
-    background: -o-linear-gradient(45deg, #ff00c6 0%, #610062 100%);
-    background: linear-gradient(45deg, #ff00c6 0%, #610062 100%);
+    background: -o-linear-gradient(45deg, #db9b4b 0%, #ffae00 100%);
+    background: linear-gradient(45deg, #db9b4b 0%, #ffae00 100%);
 }
 
 .time-counter-one:before {
@@ -4005,7 +4005,7 @@ a.ui-button:active,
 .time-counter-one h6 {
     position: relative;
     font-size: 18px;
-    color: #ffae00;
+    color: #fff;
     font-weight: 400;
     margin-bottom: 20px;
     text-align: center;
@@ -4261,7 +4261,7 @@ a.ui-button:active,
     position: relative;
     text-align: center;
     font-size: 18px;
-    color: #001376;
+    color: #287cac;
     font-weight: 600;
     margin-right: 50px;
     padding-right: 50px;
@@ -4401,7 +4401,7 @@ a.ui-button:active,
     position: absolute;
     height: 110px;
     width: 110px;
-    border: 2px dashed #001376;
+    border: 2px dashed #287cac;
     border-radius: 50%;
     left: 16px;
     top: 16px;
@@ -4423,7 +4423,7 @@ a.ui-button:active,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-color: #001376;
+    background-color: #287cac;
     padding-left: 5px;
     color: #ffffff;
     font-size: 22px;
@@ -4522,10 +4522,10 @@ a.ui-button:active,
     position: relative;
     padding: 30px;
     text-align: center;
-    background: #000b46;
+    background: #12384e;
     color: #ffffff;
-    background: -o-linear-gradient(45deg, #000b46 0%, #001166 100%);
-    background: linear-gradient(45deg, #000b46 0%, #001166 100%);
+    background: -o-linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
+    background: linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
     max-width: 200px;
     height: 100%;
 }
@@ -4583,7 +4583,7 @@ a.ui-button:active,
 }
 
 .date-box-one.bg_yellow .title:before {
-    background: #000b46;
+    background: #12384e;
 }
 
 .about-section-two .fact-counter-two {
@@ -4693,7 +4693,7 @@ a.ui-button:active,
     height: 100%;
     width: 100%;
     content: "";
-    background-color: #000934;
+    background-color: #12384e;
     opacity: .50;
     z-index: 1;
 }
@@ -4736,7 +4736,7 @@ a.ui-button:active,
 .info-box-one .inner-box {
     position: relative;
     max-width: 470px;
-    background: #001166;
+    background: #1e5d81;
     padding: 40px 50px;
 }
 
@@ -4800,10 +4800,10 @@ a.ui-button:active,
     right: 0;
     top: 40px;
     min-width: 200px;
-    background: #000b46;
+    background: #12384e;
     color: #ffffff;
-    background: -o-linear-gradient(45deg, #000b46 0%, #001166 100%);
-    background: linear-gradient(45deg, #000b46 0%, #001166 100%);
+    background: -o-linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
+    background: linear-gradient(45deg, #12384e 0%, #1e5d81 100%);
     z-index: 11;
     text-align: center;
     padding: 30px 20px;
@@ -4814,7 +4814,7 @@ a.ui-button:active,
     left: -30px;
     top: 0;
     border-bottom: 30px solid transparent;
-    border-right: 30px solid #000b46;
+    border-right: 30px solid #12384e;
     content: "";
 }
 
@@ -4833,7 +4833,7 @@ a.ui-button:active,
     width: 100%;
     font-size: 16px;
     line-height: 1em;
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .about-section-three .info-box h4 {
@@ -4893,12 +4893,12 @@ a.ui-button:active,
     position: relative;
     font-size: 58px;
     line-height: 1em;
-    color: #fe00c5;
+    color: #db9b4b;
 }
 
 .feature-block-four h4 {
     font-size: 22px;
-    color: #001376;
+    color: #287cac;
     font-weight: 700;
     margin-bottom: 10px;
 }
@@ -4973,7 +4973,7 @@ a.ui-button:active,
     position: relative;
     font-size: 62px;
     line-height: 1em;
-    color: #fe00c5;
+    color: #db9b4b;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -5106,7 +5106,7 @@ a.ui-button:active,
     position: relative;
     font-size: 62px;
     line-height: 1em;
-    color: #fe00c5;
+    color: #db9b4b;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -5144,7 +5144,7 @@ a.ui-button:active,
 }
 
 .feature-block-two:hover {
-    background-color: #001166;
+    background-color: #7ebde1;
     border-radius: 0 50px 0 50px;
 }
 
@@ -5173,7 +5173,7 @@ a.ui-button:active,
 
 .feature-block-three {
     position: relative;
-    background: #001166;
+    background: #7ebde1;
     padding: 50px;
     max-width: 570px;
     border-radius: 0 50px 0 50px;
@@ -5292,7 +5292,7 @@ a.ui-button:active,
     position: relative;
     font-size: 68px;
     line-height: 1em;
-    color: #fe00c5;
+    color: #db9b4b;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -5361,7 +5361,7 @@ a.ui-button:active,
 }
 
 .feature-block-five .inner-box:hover {
-    background-color: #001376;
+    background-color: #287cac;
 }
 
 .feature-block-five .inner-box:hover .icon-box:before {
@@ -5390,7 +5390,7 @@ a.ui-button:active,
 .fun-fact-section {
     position: relative;
     padding: 100px 0 60px;
-    background-color: #000f5a;
+    background-color: #4aa2d5;
     overflow: hidden;
 }
 
@@ -5614,7 +5614,7 @@ a.ui-button:active,
     font-size: 20px;
     color: #287cac;
     border-radius: 50%;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -5634,7 +5634,7 @@ a.ui-button:active,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     border-radius: 50px;
     -webkit-transform: scaleY(0);
     -ms-transform: scaleY(0);
@@ -5667,7 +5667,7 @@ a.ui-button:active,
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     color: #287cac;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -5687,11 +5687,11 @@ a.ui-button:active,
 .speaker-block h4 {
     display: block;
     font-size: 24px;
-    color: #001376;
+    color: #287cac;
 }
 
 .speaker-block h4 a {
-    color: #001376;
+    color: #287cac;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -5822,7 +5822,7 @@ a.ui-button:active,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     border-radius: 50px;
     -webkit-transform: scaleY(0);
     -ms-transform: scaleY(0);
@@ -5855,7 +5855,7 @@ a.ui-button:active,
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     color: #287cac;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -6059,7 +6059,7 @@ a.ui-button:active,
 .speaker-block-three h4 {
     display: block;
     font-size: 24px;
-    color: #001376;
+    color: #287cac;
     font-weight: 600;
     margin-bottom: 5px;
     -webkit-transition: all 300ms ease;
@@ -6068,7 +6068,7 @@ a.ui-button:active,
 }
 
 .speaker-block-three h4 a {
-    color: #001376;
+    color: #287cac;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -6214,18 +6214,18 @@ a.ui-button:active,
 .speaker-details .name {
     font-size: 30px;
     line-height: 1em;
-    color: #001376;
+    color: #287cac;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .speaker-details .name a {
-    color: #001376;
+    color: #287cac;
 }
 
 .speaker-details .designation {
     font-size: 14px;
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .speaker-info-list {
@@ -6250,14 +6250,14 @@ a.ui-button:active,
 .speaker-info-list li strong {
     display: block;
     font-weight: 600;
-    color: #001376;
+    color: #287cac;
     min-width: 140px;
 }
 
 .speaker-detail-section .info-column h3 {
     font-size: 30px;
     line-height: 1.2em;
-    color: #001376;
+    color: #287cac;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -6271,7 +6271,7 @@ a.ui-button:active,
 .speaker-detail-section .other-info h2 {
     font-size: 36px;
     line-height: 1.2em;
-    color: #001376;
+    color: #287cac;
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -6293,7 +6293,7 @@ a.ui-button:active,
 .speaker-session-info h4 {
     position: relative;
     font-size: 24px;
-    color: #fe00c5;
+    color: #db9b4b;
     font-weight: 600;
     margin-bottom: 15px;
 }
@@ -6303,7 +6303,7 @@ a.ui-button:active,
     display: block;
     font-size: 18px;
     line-height: 30px;
-    color: #9b6a01;
+    color: #db9b4b;
     font-weight: 600;
     margin-bottom: 25px;
 }
@@ -6321,7 +6321,7 @@ a.ui-button:active,
 
 .speaker-session-info .place {
     font-weight: 600;
-    color: #001376;
+    color: #287cac;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -6332,7 +6332,7 @@ a.ui-button:active,
 }
 
 .speaker-session-info .inner-box:hover .place {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .speaker-session-info .inner-box:before {
@@ -6343,7 +6343,7 @@ a.ui-button:active,
     height: 0;
     content: "";
     background-color: #071248;
-    border-bottom: 3px solid #9b6a01;
+    border-bottom: 3px solid #db9b4b;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -6475,7 +6475,7 @@ a.ui-button:active,
     font-size: 48px;
     line-height: 40px;
     font-weight: 700;
-    color: #9b6a01;
+    color: #db9b4b;
     font-family: 'Exo', sans-serif;
 }
 
@@ -6493,7 +6493,7 @@ a.ui-button:active,
     display: block;
     font-size: 24px;
     line-height: 1em;
-    color: #fe00c5;
+    color: #db9b4b;
 }
 
 .schedule-timeline {
@@ -6689,7 +6689,7 @@ a.ui-button:active,
 
 .schedule-block .speaker-info .icon {
     font-size: 27px;
-    color: #9b6a01;
+    color: #db9b4b;
     line-height: 1em;
     margin-bottom: 10px;
 }
@@ -6928,7 +6928,7 @@ a.ui-button:active,
 }
 
 .schedule-block-two h3 a:hover {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .schedule-block-two .speaker-info {
@@ -6949,7 +6949,7 @@ a.ui-button:active,
 
 .schedule-block-two .speaker-info .icon {
     font-size: 27px;
-    color: #9b6a01;
+    color: #db9b4b;
     line-height: 1em;
     margin-bottom: 10px;
 }
@@ -7196,7 +7196,7 @@ a.ui-button:active,
 }
 
 .schedule-block-three .speaker-info h3 a:hover {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .schedule-block-three .speaker-info .location {
@@ -7339,7 +7339,7 @@ a.ui-button:active,
 
 .schedule-detail .speaker-info .icon {
     font-size: 27px;
-    color: #9b6a01;
+    color: #db9b4b;
     line-height: 1em;
     margin-bottom: 15px;
 }
@@ -7379,7 +7379,7 @@ a.ui-button:active,
     top: 0;
     font-size: 16px;
     line-height: 24px;
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .schedule-detail .upper-box .theme-btn {
@@ -7492,7 +7492,7 @@ Accordian Box
     padding: 15px 20px;
     padding-left: 90px;
     line-height: 30px;
-    color: #001376;
+    color: #287cac;
     font-weight: 600;
     cursor: pointer;
     background: #ffffff;
@@ -7524,7 +7524,7 @@ Accordian Box
     justify-content: center;
     text-align: center;
     color: #ffffff;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     font-size: 14px;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -7670,9 +7670,9 @@ Accordian Box
     top: 0;
     height: 100%;
     width: 100%;
-    background: #00082e;
-    background: -o-linear-gradient(45deg, #00082e 0%, #287cac 100%);
-    background: linear-gradient(45deg, #00082e 0%, #287cac 100%);
+    background: #2a83b5;
+    background: -o-linear-gradient(45deg, #2a83b5 0%, #287cac 100%);
+    background: linear-gradient(45deg, #2a83b5 0%, #287cac 100%);
     opacity: .90;
     content: "";
 }
@@ -7810,8 +7810,8 @@ Accordian Box
 .pricing-block .inner-box {
     position: relative;
     background: #287cac;
-    background: -o-linear-gradient(45deg, #287cac 0%, #001376 100%);
-    background: linear-gradient(45deg, #287cac 0%, #001376 100%);
+    background: -o-linear-gradient(45deg, #287cac 0%, #287cac 100%);
+    background: linear-gradient(45deg, #287cac 0%, #287cac 100%);
     max-width: 370px;
     margin: 0 auto;
     padding: 50px 55px 50px;
@@ -7900,7 +7900,7 @@ Accordian Box
 
 .pricing-block .price sup {
     font-size: 24px;
-    color: #9b6a01;
+    color: #db9b4b;
     font-weight: 400;
     top: -20px;
     font-family: 'Archivo', sans-serif;
@@ -7975,7 +7975,7 @@ Accordian Box
 }
 
 .pricing-block.tagged .price sub {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .pricing-block .inner-box:hover:after {
@@ -8010,8 +8010,8 @@ Accordian Box
 .pricing-block-two .inner-box {
     position: relative;
     background: #287cac;
-    background: -o-linear-gradient(45deg, #287cac 0%, #001376 100%);
-    background: linear-gradient(45deg, #287cac 0%, #001376 100%);
+    background: -o-linear-gradient(45deg, #287cac 0%, #287cac 100%);
+    background: linear-gradient(45deg, #287cac 0%, #287cac 100%);
     -webkit-box-shadow: 0 6px 28px rgba(0, 0, 0, .13);
     box-shadow: 0 6px 28px rgba(0, 0, 0, .13);
     max-width: 350px;
@@ -8238,7 +8238,7 @@ Accordian Box
 
 .pricing-block-two .inner-box:hover .price sub,
 .pricing-block-two.tagged .price sub {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .pricing-block-two .inner-box:hover:after {
@@ -8371,7 +8371,7 @@ Accordian Box
     top: -20px;
     text-align: left;
     font-size: 24px;
-    color: #9b6a01;
+    color: #db9b4b;
     font-weight: 400;
     font-family: 'Archivo', sans-serif;
 }
@@ -8524,7 +8524,7 @@ Accordian Box
     align-items: center;
     font-size: 18px;
     line-height: 20px;
-    color: #9b6a01;
+    color: #db9b4b;
     margin-bottom: 15px;
 }
 
@@ -8723,7 +8723,7 @@ Accordian Box
 }
 
 .news-block h4 a:hover {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .news-block .text {
@@ -9188,7 +9188,7 @@ Accordian Box
     bottom: 0;
     height: 2px;
     width: 40px;
-    background-color: #9b6a01;
+    background-color: #db9b4b;
     content: "";
 }
 
@@ -9428,7 +9428,7 @@ Accordian Box
 }
 
 .sidebar .popular-posts .post a:hover {
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .sidebar .popular-posts .post-info {
@@ -9575,7 +9575,7 @@ Accordian Box
     font-size: 14px;
     line-height: 30px;
     font-weight: 500;
-    color: #9b6a01;
+    color: #db9b4b;
 }
 
 .comments-area .comment-box .text {
@@ -10157,7 +10157,7 @@ Accordian Box
     font-size: 30px;
     line-height: 58px;
     background-color: #f5f5f5;
-    border-bottom: 2px solid #001376;
+    border-bottom: 2px solid #287cac;
     color: #287cac;
 }
 
@@ -10173,8 +10173,8 @@ Accordian Box
 }
 
 .map-section .contact-info li:nth-child(2) .icon {
-    color: #fe00c5;
-    border-color: #fe00c5;
+    color: #db9b4b;
+    border-color: #db9b4b;
 }
 
 .map-section .contact-info li:nth-child(3) .icon {
@@ -10952,7 +10952,7 @@ Accordian Box
     top: 7px;
     height: 6px;
     width: 6px;
-    background-color: #001376;
+    background-color: #287cac;
     content: '';
 }
 
