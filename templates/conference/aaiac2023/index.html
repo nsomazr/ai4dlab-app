@@ -34,39 +34,14 @@
     <!-- Main Header-->
     <header class="main-header header-style-one">
 
-        <!-- Header top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="top-left">
-                        <ul class="social-icon-one">
-                            <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
-                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                        </ul>
-                    </div>
-                    <div class="top-right">
-                        <ul class="contact-list-one">
-                            <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
-                            <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timeing</strong></li>
-                            <li><i class="flaticon-email-1"></i> <a href="mailto:conference2023@ai4dlab.or.tz">conference2023@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
-                        </ul>
-
-                        <button class="nav-toggler"><i class="flaticon flaticon-menu-2"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Top -->
         
         <!-- Header Lower -->
-        <div class="header-lower">
+        <div class="header">
             <div class="auto-container">    
                 <!-- Main box -->
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="#"><img src="{% static 'aaiac2023/images/logo-colored.png' %}" alt="" title=""></a></div>
+                        <div class="logo"><a href="#"><img src="{% static 'aaiac2023/images/logo-colored-home.png' %}" alt="" title=""></a></div>
                     </div>
 
                     <div class="nav-outer">
@@ -85,7 +60,6 @@
                         <!-- Main Menu End-->
                         <div class="outer-box clearfix">
                             <!-- Search Btn -->
-                            <div class="search-box-btn search-btn search-box-outer"><span class="icon fa fa-search"></span></div>
                             
                             <!-- Quote Btn -->
                             <div class="btn-box">
@@ -153,7 +127,7 @@
                 <ul class="contact-list-one">
                     <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
                     <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timeing</strong></li>
-                    <li><i class="flaticon-email-1"></i> <a href="mailto:conference2023@ai4dlab.or.tz">conference2023@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="mailto:conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
                 </ul>
 
                 <ul class="social-links">
@@ -194,7 +168,7 @@
             <ul class="contact-list-one">
                 <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma <strong>Address</strong></li>
                 <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timeing</strong></li>
-                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference2023@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
             </ul>
         </div>
     </section>
@@ -375,8 +349,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <ul class="event-info">
-                                <li><i class="fa fa-map-marker"></i> Arusha, Tanzania</li>
-                                <li><i class="fa fa-calendar"></i> November 15 To 16, 2023</li>
+                                <li><i class="fa fa-map-marker"></i>AICC, Arusha, Tanzania</li>
+                                <li><i class="fa fa-calendar"></i> November 15 - 16, 2023</li>
                             </ul>
                         </div>
                         
@@ -397,8 +371,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <div class="btn-box">
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
-                                <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Submit Paper</span></a>
+                                <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
+                                <a href="{% url 'conference:aaiac-23-call-for-paper'%}" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
                             </div>
                         </div>
 
@@ -594,8 +568,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <ul class="event-info">
-                                <li><i class="fa fa-map-marker"></i> Arusha, Tanzania</li>
-                                <li><i class="fa fa-calendar"></i> November 15 To 16, 2023</li>
+                                <li><i class="fa fa-map-marker"></i>AICC, Arusha, Tanzania</li>
+                                <li><i class="fa fa-calendar"></i> November 15 - 16, 2023</li>
                             </ul>
                         </div>
                         
@@ -616,8 +590,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <div class="btn-box">
-                                <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
-                                <a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="theme-btn btn-style-two lightbox-image"><span class="btn-title">Submit Paper</span></a>
+                                <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
+                                <a href="{% url 'conference:aaiac-23-call-for-paper'%}" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
                             </div>
                         </div>
 
@@ -753,450 +727,9 @@
     </section>
     <!-- End Feature Section -->
 
-    <!-- Fun Fact Section -->
-    <section class="fun-fact-section">
-        <div class="auto-container">
-            <div class="fact-counter">
-                <div class="row clearfix">
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow zoomIn">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="icon bg-1"></span>
-                                <span class="count-text" data-speed="3000" data-stop="94">0</span>
-                            </div>
-                            <span class="counter-title">Meeting Tickets Affirmed </span>
-                        </div>
-                    </div>
-
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow zoomIn" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="icon bg-2"></span>
-                                <span class="count-text" data-speed="3000" data-stop="28">0</span>
-                            </div>
-                            <span class="counter-title">Universally Capable Speakers </span>
-                        </div>
-                    </div>
-
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow zoomIn" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="icon bg-3"></span>
-                                <span class="count-text" data-speed="3000" data-stop="35">0</span>
-                            </div>
-                            <span class="counter-title">Food Espresso and Studio Breaks </span>
-                        </div>
-                    </div>
-
-                    <!--Column-->
-                    <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow zoomIn" data-wow-delay="900ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="icon bg-4"></span>
-                                <span class="count-text" data-speed="3000" data-stop="65">0</span>
-                            </div>
-                            <span class="counter-title">Supporters Prepared To Take an interest</span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Fun Fact Section -->
-
     <!-- Speakers Section -->
-    <section class="speakers-section">
-        <div class="anim-icons full-width">
-            <span class="icon icon-dotted-circle"></span>
-        </div>
 
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <span class="sub-title">Our SPEAKERS</span>
-                <h2>Speakers Who Are Exparts <br>in Their Fields</h2>
-                <span class="divider"></span>
-            </div>
-
-            <div class="row">
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-1.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Patrick Spencer</a></h4>
-                            <span class="designation">S&P Analyzer</span>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Speaker block -->
-                 <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-2.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Matthew White</a></h4>
-                            <span class="designation">Facebook's Co-Founder</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-3.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Michael Dover</a></h4>
-                            <span class="designation">Starbuck's CEO</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-4.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Angelina Holy</a></h4>
-                            <span class="designation">Maxii's Manager</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-5.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Janet Jones</a></h4>
-                            <span class="designation">Newyork Post's GM</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-6.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Michael Dover</a></h4>
-                            <span class="designation"> Starbuck's CEO</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <figure class="image"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-7.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Jonathan Elves</a></h4>
-                            <span class="designation"> Maxii's Manager</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Speaker block -->
-                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
-                    <div class="inner-box">
-                        <div class=" image-box">
-                            <figure class="image image-2"><a href="speaker-detail.html"><img src="{% static 'aaiac2023/images/resource/speaker-2.jpg' %}" alt=""></a></figure>
-                            <span class="plus-icon fa fa-plus"></span>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-dribbble"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                        <div class="info-box">
-                            <h4 class="name"><a href="speaker-detail.html">Mike Michael</a></h4>
-                            <span class="designation">Softer Manager</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- End Speakers Section -->
-
-    <!-- Schedule Section -->
-    <section class="schedule-section">
-        <div class="anim-icons full-width">
-            <span class="icon icon-circle-2"></span>
-        </div>
-
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <span class="sub-title">Thought leadership</span>
-                <h2>Join the world's leading companies <br>at Technology Conference</h2>
-                <span class="divider"></span>
-            </div>
-
-            <div class="schedule-tabs tabs-box">
-                <div class="btns-box">
-                    <!--Tabs Box-->
-                    <ul class="tab-buttons clearfix">
-                        <li class="tab-btn active-btn" data-tab="#tab-1">
-                            <span class="day">1st Day</span>
-                            <div class="date-box">
-                                <span class="date">15</span>
-                                <span class="month"><span class="colored">Nov</span> 2023</span>
-                            </div>
-                        </li>
-
-                        <li class="tab-btn" data-tab="#tab-2">
-                            <span class="day">2nd Day</span>
-                            <div class="date-box">
-                                <span class="date">16</span>
-                                <span class="month"><span class="colored">Nov</span> 2023</span>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <div class="tabs-content">
-                    <!--Tab-->
-                    <div class="tab active-tab" id="tab-1">
-                        <div class="schedule-timeline">
-                            <!-- schedule Block -->
-                            <div class="schedule-block">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>8.00 AM <br> 10.00 AM</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-1.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Tripp Mckay</h5>
-                                            <span class="designation">Historian</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Social Profit from Venture (SROI) Gathering</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block even">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>10:00 am <br>11:00 am</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-2.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Milana Myles</h5>
-                                            <span class="designation">Art Critic</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Marine and Oceanic Government Workers</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>10:00 am <br>11:00 am</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-3.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Gabrielle Winn</h5>
-                                            <span class="designation">Insurance consultant</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Home Life Open Entryway Open Occasion of 21</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block even">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>12:00 pm <br>01:00 pm</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-4.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Rene Wells</h5>
-                                            <span class="designation">Art Critic</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Developing Force Legislative issues of Arctics Motivation</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--Tab-->
-                    <div class="tab" id="tab-2">
-                        <div class="schedule-timeline">
-                            <!-- schedule Block -->
-                            <div class="schedule-block">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>8.00 AM <br> 10.00 AM</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-1.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Tripp Mckay</h5>
-                                            <span class="designation">Historian</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Social Profit from Venture (SROI) Gathering</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block even">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>10:00 am <br>11:00 am</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-2.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Milana Myles</h5>
-                                            <span class="designation">Art Critic</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Marine and Oceanic Government Workers</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>10:00 am <br>11:00 am</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-3.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Gabrielle Winn</h5>
-                                            <span class="designation">Insurance consultant</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Home Life Open Entryway Open Occasion of 21</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- schedule Block -->
-                            <div class="schedule-block even">
-                                <div class="inner-box">
-                                    <div class="inner">
-                                        <div class="date">
-                                            <span>12:00 pm <br>01:00 pm</span>
-                                        </div>
-                                        <div class="speaker-info">
-                                            <figure class="thumb">
-                                                <img src="{% static 'aaiac2023/images/resource/thumb-4.jpg' %}" alt="">
-                                            </figure>
-                                            <span class="icon fa fa-microphone"></span>
-                                            <h5 class="name">Rene Wells</h5>
-                                            <span class="designation">Art Critic</span>
-                                        </div>
-                                        <h4><a href="schedule-detail.html">Developing Force Legislative issues of Arctics Motivation</a></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End schedule Section -->
 
     <!-- Call to Action -->
     <section class="call-to-action" style="background-image: url(aaiac2023/images/background/1.jpg);">
@@ -1214,6 +747,10 @@
         </div>
     </section>
     <!-- End Call to Action -->
+
+    <!-- Schedule Section -->
+
+    <!--End schedule Section -->
 
     <!-- Pricing Section -->
     <section class="pricing-section">
@@ -1365,7 +902,6 @@
                         <span class="sub-title">Clients</span>
                         <h2>Our Official <br>Sponsors</h2>
                         <div class="divider"></div>
-                        <div class="text">We have dedicated tracks for every industry Whether you want to hire tech’s top talent.</div> 
                         <a href="contact.html" class="theme-btn btn-style-one mt-4"><span class="btn-title">Buy Ticket</span></a>
                     </div>
                 </div>
@@ -1446,7 +982,7 @@
                     </ul>
                     
                     <div class="copyright-text">
-                        <p>Copyright © 2023 All Rights Reserved by <a href="https://nsoma.me">Nsoma</a></p>
+                        <p>Copyright © 2023 All Rights Reserved. Developed by <a href="https://nsoma.me">Nsoma</a></p>
                     </div>
                 </div>
             </div>
