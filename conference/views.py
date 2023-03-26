@@ -23,3 +23,8 @@ class ConferenceAPIView(APIView):
 
     def aaiac_23(request):
         return render(request, template_name='conference/aaiac2023/index.html', context={})
+    
+    
+    
+    def aaiac_23_call_for_paper(request):
+        return render(request, template_name='conference/aaiac2023/call_for_paper.html', context={})
