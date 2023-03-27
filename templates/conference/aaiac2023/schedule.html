@@ -1,17 +1,21 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Volia | Event & Conference HTML Template | Schedule</title>
+<title>AAIAC 2023 | Home</title>
 <!-- Stylesheets -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="{% static 'aaiac2023/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static 'aaiac2023/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static 'aaiac2023/plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static 'aaiac2023/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/css/responsive.css' %}" rel="stylesheet">
 
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="{% static 'aaiac2023/images/icon-colored.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'aaiac2023/images/icon-light.png' %}" type="image/x-icon">
 <!--Color Switcher Mockup-->
-<link href="css/color-switcher-design.css" rel="stylesheet">
+<link href="{% static 'aaiac2023/css/color-switcher-design.css' %}" rel="stylesheet">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,160 +32,30 @@
     <div class="preloader"></div>
 
     <!-- Main Header-->
-    <header class="main-header header-style-two">
+    <header class="main-header header-style-one">
 
-        <!-- Header top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="top-left">
-                        <ul class="contact-list-two">
-                            <li><strong>Address</strong> 203 Madison Ave, NY, USA </li>
-                            <li><strong>Timeing</strong> Monday - Friday 9am - 6pm </li>
-                        </ul>
-                    </div>
-
-                    <div class="top-right">
-                        <ul class="social-icon-three">
-                            <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
-                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Header Top -->
         
         <!-- Header Lower -->
-        <div class="header-lower">
-            <div class="auto-container">    
+        <div class="header">
+            <div class="" >    
                 <!-- Main box -->
                 <div class="main-box">
-                    <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
-                    </div>
+
 
                     <div class="nav-outer">
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md">
-                            <div class="navbar-header">
-                                <!-- Toggle Button -->      
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            </div>
-                            
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li class="dropdown"><a href="#">Home</a>
-                                        <ul>
-                                            <li><a href="index.html">Home Page 01</a></li>
-                                            <li><a href="index-2.html">Home Page 02</a></li>
-                                            <li><a href="index-3.html">Home Page 03</a></li>
-                                            <li class="dropdown"><a href="#">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index.html">Header Style 01</a></li>
-                                                    <li><a href="index-2.html">Header Style 02</a></li>
-                                                    <li><a href="index-3.html">Header Style 03</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">About</a>
-                                        <ul>
-                                            <li><a href="about.html">About Us</a></li>
-                                            <li><a href="buy-ticket.html">Buy Ticket</a></li>
-                                            <li><a href="faq.html">Faq</a></li>
-                                            <li><a href="gallery.html">Gallery</a></li>
-                                            <li><a href="testimonial.html">Testimonials</a></li>
-                                            <li><a href="comming-soon.html">Comming Soon</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown current has-mega-menu"><a href="#">Pages</a>
-                                        <div class="mega-menu">
-                                            <div class="mega-menu-bar row clearfix">
-                                                <div class="column col-lg-3 col-md-3 col-sm-12">
-                                                    <h3>About</h3>
-                                                    <ul>
-                                                        <li><a href="about.html">About Us</a></li>
-                                                        <li><a href="buy-ticket.html">Buy Ticket</a></li>
-                                                        <li><a href="gallery.html">Gallery</a></li>
-                                                        <li><a href="testimonial.html">Testimonials</a></li>
-                                                        <li><a href="comming-soon.html">Comming Soon</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="column col-lg-3 col-md-3 col-sm-12">
-                                                    <h3>Schedule</h3>
-                                                    <ul>
-                                                        <li><a href="schedule.html">Schedule 01</a></li>
-                                                        <li><a href="schedule-2.html">Schedule 02</a></li>
-                                                        <li><a href="schedule-3.html">Schedule 03</a></li>
-                                                        <li><a href="schedule-detail.html">Schedule Detail</a></li>
-                                                        <li><a href="faq.html">FAQ's</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="column col-lg-3 col-md-3 col-sm-12">
-                                                    <h3>Speaker</h3>
-                                                    <ul>
-                                                        <li><a href="speaker.html">Speaker</a></li>
-                                                        <li><a href="speaker-detail.html">Speaker Detail</a></li>
-                                                        <li><a href="testimonial.html">Testimonials</a></li>
-                                                        <li><a href="comming-soon.html">Comming Soon</a></li>
-                                                        <li><a href="contact.html">Contact us</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="column col-lg-3 col-md-3 col-sm-12">
-                                                    <h3>Blog</h3>
-                                                    <ul>
-                                                        <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                                        <li><a href="not-found.html">Error 404</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Shop</a>
-                                        <ul>
-                                            <li><a href="shop.html">Shop</a></li>
-                                            <li><a href="shop-detail.html">Product Details</a></li>
-                                            <li><a href="shoping-cart.html">Cart Page</a></li>
-                                            <li><a href="checkout.html">Checkout Page</a></li>
-                                            <li><a href="login.html">Registration Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown"><a href="#">Blog</a>
-                                        <ul>
-                                            <li><a href="blog-classic.html">Blog Classic</a></li>
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
-                                            <li><a href="not-found.html">Error 404</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="{% url 'home:home'%}">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Contact us</a></li>
                                 </ul>
                             </div>
                         </nav>
                         
-                        <!-- Main Menu End-->
-                        <div class="outer-box clearfix">
-                            <!-- Search Btn -->
-                            <div class="search-box-btn search-btn search-box-outer"><span class="icon fa fa-search"></span></div>
-                            
-                            <!-- Quote Btn -->
-                            <div class="btn-box">
-                                <a href="schedule.html" class="theme-btn btn-style-one"><span class="btn-title"><i class="flaticon-chair"></i> Book Ticket</span></a>
-                            </div>
-                            
-                            <button class="nav-toggler"><i class="flaticon flaticon-menu-2"></i></button>
 
-                        </div>
                     </div>
                 </div>
             </div>
@@ -193,7 +67,7 @@
 
                 <div class="main-box">
                     <div class="logo-box">
-                        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+                        <div class="logo"><a href="index.html"><img src="{% static 'aaiac2023/images/logo-colored.png' %}" alt="" title=""></a></div>
                         <div class="upper-right">
                             <div class="search-box">
                                 <button class="search-btn mobile-search-btn"><i class="flaticon-search-2"></i></button>
@@ -202,14 +76,16 @@
                         </div>
                     </div>
                     
-                    <!--Keep This Empty / Menu will come through Javascript-->
+                    <nav class="main-menu navbar-expand-md">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
                 </div>
             </div>
         </div><!-- End Sticky Menu -->
 
         <!-- Mobile Header -->
         <div class="mobile-header">
-            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+            <div class="logo"><a href="index.html"><img src="{% static 'aaiac2023/images/logo-colored.png' %}" alt="" title=""></a></div>
 
             <!--Nav Box-->
             <div class="nav-outer clearfix">
@@ -231,16 +107,16 @@
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
             <nav class="menu-box">
                 <div class="upper-box">
-                    <div class="nav-logo"><a href="index.html"><img src="images/logo.png" alt="" title=""></a></div>
+                    <div class="nav-logo"><a href="index.html"><img src="{% static 'aaiac2023/images/logo-colored.png' %}" alt="" title=""></a></div>
                     <div class="close-btn"><i class="icon flaticon-close"></i></div>
                 </div>
 
                 <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
 
                 <ul class="contact-list-one">
-                    <li><i class="flaticon-location"></i> 203 Madison Ave, NY, USA <strong>Address</strong></li>
-                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 6pm <strong>Timeing</strong></li>
-                    <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">envato@gmail.com</a> <strong>Mail to us</strong></li>
+                    <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timeing</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="mailto:conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
                 </ul>
 
                 <ul class="social-links">
@@ -276,33 +152,12 @@
             <div class="title-box">
                 <h2>Contact Us</h2>
                 <div class="cross-icon"><span class="fa fa-times"></span></div>
-            </div>
-            
-            <!--Appointment Form-->
-            <div class="form-style-one">
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <input type="text" name="username" class="username" placeholder="Your Name *">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="email" placeholder="Your Email *">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone" class="phone" value="" placeholder="Your Phone*" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="contact_message" class="message" placeholder="Text Message"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <button class="theme-btn btn-style-one" type="button" id="submit" name="submit-form"><span class="btn-title">Submit Now</span> </button>
-                    </div>
-                </form>
-            </div>
+            </div>  
 
             <ul class="contact-list-one">
-                <li><i class="flaticon-location"></i> 203 Madison Ave, NY, USA <strong>Address</strong></li>
-                <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 6pm <strong>Timeing</strong></li>
-                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">envato@gmail.com</a> <strong>Mail to us</strong></li>
+                <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma <strong>Address</strong></li>
+                <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timeing</strong></li>
+                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
             </ul>
         </div>
     </section>
