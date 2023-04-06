@@ -26,6 +26,11 @@
           <div class="col-12 col-xl-12 "> 
             <div class="posts-grid horizontal">
               <div class="row">
+                {% if not calls %}
+                <div class="col-12">
+                  <p>No calls available.</p>
+                </div>
+                {% endif %}
                 {% for call in calls %}
                 <div class="col-12 ">         
                   <div class="post-box">     <a class="post-link" href="call/{{call.slug}}" title="give your website a new look and feel with themes"> 
@@ -58,7 +63,7 @@
                 {% endfor %}
                 <div class="col-12">
                   <!--Start pagination-->
-                  <nav class="ma-pagination">
+                  {% comment %} <nav class="ma-pagination">
                     <ul class="pagination justify-content-center">
                       <li class="ma-page-item deactive-page-item"><a class="ma-page-link " href="#" title="Previous Page"><i class="bi bi-chevron-left icon "></i></a></li>
                       <li class="ma-page-item active"><a class="ma-page-link " href="#">1 </a></li>
@@ -66,7 +71,7 @@
                       <li class="ma-page-item  "><a class="ma-page-link " href="#">3 </a></li>
                       <li class="ma-page-item"><a class="ma-page-link" href="#" title="Next Page"><i class="bi bi-chevron-right icon "></i></a></li>
                     </ul>
-                  </nav>
+                  </nav> {% endcomment %}
                 </div>
               </div>
             </div>

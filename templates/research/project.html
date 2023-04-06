@@ -32,6 +32,11 @@
         <div class="portfolio-wrapper  ">
           <div class="portfolio-group wow fadeIn" data-wow-delay=".4s">
             <div class="row ">
+              {% if not projects %}
+              <div class="col-12">
+                <p>No projects available.</p>
+              </div>
+              {% endif %}
               {% for project in projects %}
               <div class="col-12  col-md-6  col-lg-4  portfolio-item mobile ">
                 <div class="item"><a class="portfolio-img-link" href="project/{{ project.slug }}"><img class="portfolio-img   img-fluid " loading="lazy" src="{{ project.thumbnail.url }}" alt="portfolio item photo"/></a>

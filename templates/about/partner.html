@@ -42,7 +42,7 @@
                           </div>
                           <div class="customer-info ">
                             <div class="customer-details">
-                              <p class="customer-name">{{ partner.description }}</p>
+                              <p class="customer-name">{{ partner.description | safe  }}</p>
                             </div>
                           </div>
                         </div>
@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-          <div class="loading-screen" id="loading-screen"><span class="bar top-bar"></span><span class="bar down-bar"></span></span></div>
+          {% comment %} <div class="loading-screen" id="loading-screen"><span class="bar top-bar"></span><span class="bar down-bar"></span></span></div> {% endcomment %}
 
         </section>
         
