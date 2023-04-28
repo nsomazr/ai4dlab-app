@@ -29,7 +29,7 @@
 <div class="page-wrapper">
 
     <!-- Preloader -->
-    <div class="preloader"></div>
+    {% comment %} <div class="preloader"></div> {% endcomment %}
 
     <!-- Main Header-->
     <header class="main-header header-style-one">
@@ -48,7 +48,7 @@
                         <nav class="main-menu navbar-expand-md">
                             <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="{% url 'home:home'%}">Home</a></li>
+                                    <li style="margin-left:100px;"><a href="{% url 'home:home'%}">Home</a></li>
                                     <li><a href="#">About</a></li>
                                     <li><a href="#">Contact us</a></li>
                                 </ul>
@@ -115,7 +115,7 @@
 
                 <ul class="contact-list-one">
                     <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
-                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timeing</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timing</strong></li>
                     <li><i class="flaticon-email-1"></i> <a href="mailto:conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
                 </ul>
 
@@ -156,7 +156,7 @@
 
             <ul class="contact-list-one">
                 <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma <strong>Address</strong></li>
-                <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timeing</strong></li>
+                <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timing</strong></li>
                 <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
             </ul>
         </div>
@@ -360,8 +360,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <div class="btn-box">
-                                <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
-                                <a href="{% url 'conference:aaiac-23-call-for-paper'%}" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
+                                {% comment %} <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a> {% endcomment %}
+                                <a href="https://easychair.org/cfp/ConAAIAC2023" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
                             </div>
                         </div>
 
@@ -579,8 +579,8 @@
                         data-textalign="['top','top','top','top']"
                         data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                             <div class="btn-box">
-                                <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
-                                <a href="{% url 'conference:aaiac-23-call-for-paper'%}" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
+                                {% comment %} <a href="" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a> {% endcomment %}
+                                <a href="https://easychair.org/cfp/ConAAIAC2023" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
                             </div>
                         </div>
 
@@ -646,7 +646,7 @@
                             multidisciplinary, responsible AI research and teaching by sharing their innovations, use cases,
                             papers, and patents, to name a few.</p>
                         <div class="btn-box">
-                            <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a>
+                            {% comment %} <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a> {% endcomment %}
                         </div>
                     </div>
                 </div>
@@ -729,9 +729,9 @@
 
         <div class="auto-container">
             <div class="content-box wow fadeInUp">
-                <h2>Get Ticket Now! </h2>
+                <h2>Register Now! </h2>
                 <span class="text">Experience the conference wherever you are. Register now for online access. Tune in live for the keynotes and watch sessions on demand. Also be sure to join our event</span>
-                <a href="buy-ticket.html" class="theme-btn btn-style-two"><span class="btn-title">Book Ticket</span></a>
+                <a href="#" class="theme-btn btn-style-two"><span class="btn-title">Register Here</span></a>
             </div>
         </div>
     </section>
@@ -757,12 +757,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Physical Presenter</h3><br><br>
                         <div class="price"> <sup>$</sup>100<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -770,12 +770,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Physical Non Presenter</h3><br>
                         <div class="price"> <sup>$</sup>80<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -784,12 +784,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Physical Student Presenter</h3><br>
                         <div class="price"> <sup>$</sup>50<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -799,12 +799,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Physical Student Non Presenter</h3><br>
                         <div class="price"> <sup>$</sup>30<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -812,12 +812,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Online  Presenter</h3><br><br>
                         <div class="price"> <sup>$</sup>80<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -825,12 +825,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Online Non Presenter</h3><br>
                         <div class="price"> <sup>$</sup>50<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -838,12 +838,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Online Student Presenter</h3><br>
                         <div class="price"> <sup>$</sup>30<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -851,12 +851,12 @@
                     <div class="inner-box">
                         <h3 class="text-center">Online Student Non Presenter</h3>
                         <div class="price"> <sup>$</sup>20<sub>USD</sub></div>
-                        <ul class="features">
+                        {% comment %} <ul class="features">
                             <li>Value 1</li>
                             <li>Value 2</li>
                             <li>Value 3</li>
                         </ul>
-                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button>
+                        <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> {% endcomment %}
                     </div>
                 </div>
 
@@ -891,7 +891,7 @@
                         <span class="sub-title">Clients</span>
                         <h2>Our Official <br>Sponsors</h2>
                         <div class="divider"></div>
-                        <a href="contact.html" class="theme-btn btn-style-one mt-4"><span class="btn-title">Buy Ticket</span></a>
+                        {% comment %} <a href="contact.html" class="theme-btn btn-style-one mt-4"><span class="btn-title">Buy Ticket</span></a> {% endcomment %}
                     </div>
                 </div>
 
@@ -910,9 +910,9 @@
                             </div>
 
                             <!-- Client Block -->
-                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
+                            {% comment %} <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
                                 <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/images/clients/GoogleAI.jpg' %}" alt=""></a></figure>
-                            </div>
+                            </div> {% endcomment %}
 
                             <!-- Client Block -->
                             <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="900ms">
