@@ -30,8 +30,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-if not DEBUG:
-    CSRF_TRUSTED_ORIGINS = ['https://ai4dlab.up.railway.app']
+# if not DEBUG:
+#     CSRF_TRUSTED_ORIGINS = ['https://ai4dlab.up.railway.app']
+
+CSRF_TRUSTED_ORIGINS=['https://ai4dlab.up.railway.app','https://ai4dlab.or.tz']
 
 # Application definition
 

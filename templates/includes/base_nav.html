@@ -119,9 +119,9 @@
                             <a href="{% url 'dportal:data-list'%}">Data Portal</a>
                         </li>
                         
-                        <li>
+                        {% comment %} <li>
                             <a href="#">Notebook</a>
-                        </li>
+                        </li> {% endcomment %}
                         
                         
                     </ul>
@@ -175,25 +175,6 @@
                     
                 </li>
 
-                <li class="sidebar-item  has-sub">
-                    <a href="#" class='sidebar-link'>
-                        <i data-feather="book" width="20"></i> 
-                        <span>Events</span>
-                    </a>
-                    
-                    <ul class="submenu ">
-
-                        <li>
-                            <a href="{% url 'workshop:workshop-list' %}">Workshops</a>
-                        </li>
-                        
-                        <li>
-                            {% comment %} <a href="">Conferences</a> {% endcomment %}
-                        </li> 
-                        
-                    </ul>
-                    
-                </li>
 
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
@@ -203,9 +184,9 @@
                     
                     <ul class="submenu ">
                         
-                        <li>
+                        {% comment %} <li>
                             <a href="{% url 'community:ai4d-members' %}">AI4D Members</a>
-                        </li>
+                        </li> {% endcomment %}
                         
                         <li>
                             <a href="{% url 'community:udomai-members' %}">UDOM AI Members</a>
