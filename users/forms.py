@@ -26,8 +26,8 @@ class NewUserForm(UserCreationForm):
     company = forms.CharField(required=True, max_length=30, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Company/Institution', 'id':'company'})))
     email = forms.EmailField(required=True, max_length=100, widget=(forms.TextInput(attrs={'class':'form-control','placeholder':'Type Email', 'id':'email'})))
     country = forms.ChoiceField(choices=sorted(COUNTRIES.items()), widget=(forms.Select(attrs={'class':'form-control','placeholder':'Select Country', 'id':'country'})))
-    password1 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'password'})))
-    password2 = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Re-Type Password', 'id':'cpassword'})))
+    password1 = forms.CharField(max_length=500, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'password'})))
+    password2 = forms.CharField(max_length=500, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Re-Type Password', 'id':'cpassword'})))
 
     class Meta:
 
