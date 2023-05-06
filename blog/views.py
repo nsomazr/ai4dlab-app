@@ -48,12 +48,13 @@ class BlogAPIView(APIView):
                 title  = request.POST['title']
                 description = request.POST['description']
                 body = request.POST['body']
+                file= request.FILES['file']
                 thumbnail = request.FILES['thumbnail']
                 header_image = request.FILES['header_image']
                 thematic_area= request.POST['thematic_area']
                 status = 1
                 slug = title.replace(' ','-').lower()
-                new_blog = Blog(title=title, description=description, body=body, thumbnail=thumbnail,thematic_area=thematic_area, header_image=header_image, status=status,author_id=request.session['user_id'], slug=slug)
+                new_blog = Blog(title=title, description=description, body=body, thumbnail=thumbnail,thematic_area=thematic_area, header_image=header_image,file=file, status=status,author_id=request.session['user_id'], slug=slug)
                 get_objects = Blog.objects.filter(title=title, status=1)
                 if get_objects:
                     messages.success(request, "Blog already exist." )
