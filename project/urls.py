@@ -3,7 +3,6 @@ from .views import ProjectAPIView
 from django.conf import settings
 from django.conf.urls.static import static
 app_name = "project"  
-
 urlpatterns = [path('', ProjectAPIView.project, name="project"),
                path('add-project/', ProjectAPIView.add_project, name="add-project"),
                path('add-project/', ProjectAPIView.add_project, name="add-project"),
