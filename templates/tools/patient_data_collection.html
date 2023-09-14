@@ -1,0 +1,244 @@
+{% extends "../includes/base_nav.html" %}
+{% load static %}
+{% block content %}
+        <div id="main">
+            <nav class="navbar navbar-header navbar-expand navbar-light">
+                <a class="sidebar-toggler" href="#"><span class="navbar-toggler-icon"></span></a>
+                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav d-flex align-items-center navbar-light ml-auto">
+                        <li class="dropdown">
+                            <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                                <div class="avatar mr-1">
+                                    <img src="{% static 'dashboards/assets/images/avatar/avatar-s-1.png' %}" alt="" srcset="">
+                                </div>
+                                <div class="d-none d-md-block d-lg-inline-block">Hi, <span class="text-capitalize">{{user.username}}</span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><i data-feather="user"></i> My Profile</a>
+                                <!-- <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a>
+                                <a class="dropdown-item" href="#"><i data-feather="settings"></i> Settings</a> -->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="{% url 'users:logout'%}"><i data-feather="log-out"></i> Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            
+<div class="main-content container-fluid">
+    <div class="page-title">
+        <div class="row">
+            <div class="col-12 col-md-6 order-md-1 order-last">
+                <!-- <h3>Add Member</h3> -->
+                <!-- <p class="text-subtitle text-muted">There's a lot of form layout that you can use</p> -->
+            </div>
+            <div class="col-12 col-md-6 order-md-2 order-first">
+                <nav aria-label="breadcrumb" class='breadcrumb-header'>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="btn btn-primary" href="{% url 'dportal:patient-data-list' %}">View Patient Data</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+    <!-- // Basic multiple Column Form section start -->
+    <section id="multiple-column-form">
+        <div class="row match-height">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Add patient Data </h4>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-body">
+                            <form class="form" method="POST" action="{% url 'dportal:add-patient-data' %}" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6 col-12">
+                                        <label for="patient-id">Patient ID</label>
+                                        <div class="form-group">
+                                            {{ form.patient_id }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <label for="age">Age</label>
+                                        <div class="form-group">
+                                            {{ form.age }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <label for="country">Country</label>
+                                        <div class="form-group">
+                                            {{ form.country }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <label for="district">District</label>
+                                        <div class="form-group">
+                                            {{ form.district }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="region">Region</label>
+                                        <div class="form-group">
+                                            {{ form.region }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="main-complaint">Main Complaint</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.main_complaint }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="history-of-present-illness">History of Present Illness</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.history_of_present_illness }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="review-of-other-systems">Review of Other Systems</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.review_of_other_systems }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="past-medical-history">Past Medical History</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.past_medical_history }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="gynaecological-history">Gynaecological History</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.gynaecological_history }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="family-social-history">Family Social History</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.family_social_history }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="dietary-history">Dietary History</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.dietary_history }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="general-examination">General Examination</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.general_examination }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="local-examination">Local Examination</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.local_examination }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="systemic-examination">Systemic Examination</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.systemic_examination }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="provisional-diagnosis">Provisional Diagnosis</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.provisional_diagnosis }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="differential-diagnosis">Differential Diagnosis</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.differential_diagnosis }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="final-diagnosis">Final Diagnosis</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.final_diagnosis }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="radiological">Radiological</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.radiological }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="laboratory">Laboratory</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.laboratory }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="doctors-remarks">Doctor's Remarks</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.doctors_remarks }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="medicines">Medicines</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.medicines }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="treatment-regime">Treatment Regime</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.treatment_regime }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <label for="recommendation">Recommendation</label>
+                                        <div class="form-group">
+                                            {{ form.media }}
+                                            {{ form.recommendation }}
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary mr-1 mb-1">Add</button>
+                                        <button type="reset" class="btn btn-outline-warning mr-1 mb-1">Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // Basic multiple Column Form section end -->
+</div>
+
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

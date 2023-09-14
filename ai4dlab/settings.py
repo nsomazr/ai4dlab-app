@@ -80,6 +80,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google', #for google auth
     'tinymce', # rich text editor
     'ckeditor'
+    
 
 ]
 
