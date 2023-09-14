@@ -24,7 +24,39 @@ class DPortal(models.Model):
         
 
     def __str__(self):
-        return self.name
+        return self.id
 
     def get_absolute_url(self):
         return reverse("data_detail", kwargs={"slug": self.slug}) 
+
+class PatientData(models.Model):
+    patient_id = models.CharField(max_length=500)
+    age = models.CharField(max_length=500)
+    country = models.CharField(max_length=500)
+    district = models.CharField(max_length=500)
+    region = models.CharField(max_length=500)
+    main_complaint = RichTextUploadingField()
+    history_of_present_illness = RichTextUploadingField()
+    review_of_other_systems = RichTextUploadingField()
+    past_medical_history = RichTextUploadingField()
+    gynaecological_history = RichTextUploadingField()
+    family_social_history = RichTextUploadingField()
+    dietary_history = RichTextUploadingField()
+    general_examination = RichTextUploadingField()
+    local_examination = RichTextUploadingField()
+    systemic_examination = RichTextUploadingField()
+    provisional_diagnosis = RichTextUploadingField()
+    differential_diagnosis = RichTextUploadingField()
+    final_diagnosis = RichTextUploadingField()
+    radiological = RichTextUploadingField()
+    laboratory = RichTextUploadingField()
+    doctors_remarks = RichTextUploadingField()
+    medicines = RichTextUploadingField()
+    treatment_regime = RichTextUploadingField()
+    recommendation = RichTextUploadingField()
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.patient_id  # Display the patient's ID in the admin panel
+
