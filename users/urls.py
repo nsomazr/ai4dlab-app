@@ -14,6 +14,8 @@ urlpatterns = [
     path("dashboard/", views.dashboard, name="dashboard"),
     path("logout/", views.logout_request, name= "logout"),
     path("login/", views.login_request, name="login"),
+    path("add_staff/", views.add_staff, name="add-staff"),
+        path("staffs/", views.staffs, name="staffs"),
     path("register/", views.register_request, name="register"),
     path("password_reset/", views.password_reset_request, name="password_reset"),
     
