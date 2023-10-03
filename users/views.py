@@ -23,8 +23,7 @@ from django.utils.encoding import force_bytes
 from django.core.mail import EmailMultiAlternatives
 from django import template
 from .forms import UserLoginForm, ResetPasswordForm
-
-
+from .forms import StaffForm
 
 class UsersAPIView(APIView):
 
@@ -73,17 +72,22 @@ def login_request(request):
 	if request.method == "POST":
 		form = AuthenticationForm(request, data=request.POST)
 		if form.is_valid():
+			print("Get in")
 			username = form.cleaned_data.get('username')
 			password = form.cleaned_data.get('password')
 			user = authenticate(username=username, password=password)
+			print("Here")
 			if user is not None:
 				login(request, user)
 				messages.info(request, f"You are now logged in as {username}.")
-				if user.is_superuser or user.is_staff:
-					request.session['user_id'] = user.id
-					return redirect("users:dashboard")
-				else:
-					return redirect("home:home")
+				print("Login")
+				# if user.is_superuser or user.is_staff:
+				# 	request.session['user_id'] = user.id
+				# 	return redirect("users:dashboard")
+				# else:
+				# 	return redirect("home:home")
+				request.session['user_id'] = user.id
+				return redirect("users:dashboard")
 			else:
 				messages.error(request,"Invalid username or password.")
 		else:
@@ -167,3 +171,26 @@ def password_reset_request(request):
 	password_reset_form = ResetPasswordForm()
 	return render(request=request, template_name="users/password/password_reset.html", context={"password_reset_form":password_reset_form})
 
+
+def add_staff(request):
+    if request.method == 'POST':
+       staff_form = StaffForm(request.POST)
+       if staff_form.is_valid():
+          user = staff_form.save()
+          username = staff_form.cleaned_data.get('username')
+          messages.success(request, "Registration successful." )
+        #   login(request, user)
+        #   login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+          return redirect("users:staffs")
+       else:
+          messages.error(request,"Account creation failed")
+          print(staff_form.errors.as_data()) 
+          return redirect("users:add-staff")
+
+    staff_form = StaffForm()
+    return render (request=request, template_name="users/add_staff.html", context={"staff_form":staff_form})
+
+def staffs(request):
+	staffs = User.objects.all()
+	context = {'staffs':staffs}
+	return render(request, template_name='users/staffs.html', context=context)

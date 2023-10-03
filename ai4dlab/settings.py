@@ -99,6 +99,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'ai4dlab.urls'
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'users.backends.CustomUserBackend',
+]
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

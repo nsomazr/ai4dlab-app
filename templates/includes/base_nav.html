@@ -31,7 +31,7 @@
                        </a>
                        
                    </li>
-   
+                   {% if user.is_superuser %}
                    <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="user" width="20"></i> 
@@ -40,21 +40,25 @@
                     
                     <ul class="submenu ">
                         
-                        <li>
-                            <a href="ui-chatbox.html">My Profile</a>
+                        {% comment %} <li>
+                            <a href="#">My Profile</a>
                         </li>
                         
                         <li>
-                            <a href="ui-pricing.html">Update Profile</a>
+                            <a href="#">Update Profile</a>
                         </li>
                         
                         <li>
-                            <a href="ui-todolist.html">Change Password</a>
+                            <a href="#">Change Password</a>
+                        </li> {% endcomment %}
+                        <li>
+                            <a href="{% url 'users:add-staff' %}">Add Staff</a>
                         </li>
                         
                     </ul>
                     
                 </li>
+        
 
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
@@ -85,8 +89,7 @@
                     </ul>
                     
                 </li>
-
-
+                {% endif %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="book" width="20"></i> 
