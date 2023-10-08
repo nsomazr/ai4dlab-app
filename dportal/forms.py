@@ -29,6 +29,7 @@ class PatientDataForm(forms.Form):
     country  = forms.CharField(max_length=500, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'title', 'placeholder':'Country'})))
     district = forms.CharField(max_length=500, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'affiliation', 'placeholder':'District'})))
     region = forms.CharField(max_length=500, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'affiliation', 'placeholder':'Region'})))
+    facility = forms.CharField(max_length=500, widget=(forms.TextInput(attrs={'class': 'form-control', 'id':'affiliation', 'placeholder':'Facility'})))
     main_complaint  = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','required': True, 'cols': 150, 'rows': 10, 'id':'main_complaint'}))
     history_of_present_illness  = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','required': True, 'cols': 50, 'rows': 10, 'id':'history_of_present_illness'}))
     review_of_other_systems  = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','required': True, 'cols': 50, 'rows': 10, 'id':'review_of_other_systems'}))
