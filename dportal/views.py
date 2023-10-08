@@ -152,6 +152,7 @@ class PatientDataAPIView(APIView):
                 country = form.cleaned_data['country']
                 district = form.cleaned_data['district']
                 region = form.cleaned_data['region']
+                facility = form.cleaned_data['facility']
                 main_complaint = form.cleaned_data['main_complaint']
                 history_of_present_illness = form.cleaned_data['history_of_present_illness']
                 review_of_other_systems = form.cleaned_data['review_of_other_systems']
@@ -179,6 +180,7 @@ class PatientDataAPIView(APIView):
                     country=country,
                     district=district,
                     region=region,
+                    facility=facility,
                     main_complaint=main_complaint,
                     history_of_present_illness=history_of_present_illness,
                     review_of_other_systems=review_of_other_systems,
