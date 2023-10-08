@@ -35,6 +35,7 @@ class PatientData(models.Model):
     country = models.CharField(max_length=500)
     district = models.CharField(max_length=500)
     region = models.CharField(max_length=500)
+    facility = models.CharField(max_length=500)
     main_complaint = RichTextUploadingField()
     history_of_present_illness = RichTextUploadingField()
     review_of_other_systems = RichTextUploadingField()
