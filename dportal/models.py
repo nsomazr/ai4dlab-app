@@ -57,7 +57,7 @@ class PatientData(models.Model):
     recommendation = RichTextUploadingField()
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(default=timezone.now)
-
+    user_id = models.IntegerField(default=0)
     def __str__(self):
         return self.patient_id  # Display the patient's ID in the admin panel
 

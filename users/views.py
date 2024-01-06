@@ -24,6 +24,7 @@ from django.core.mail import EmailMultiAlternatives
 from django import template
 from .forms import UserLoginForm, ResetPasswordForm
 from .forms import StaffForm
+from .models import UserProfile
 
 class UsersAPIView(APIView):
 
@@ -68,38 +69,54 @@ def update_user(request,id):
 		return render(request, 'users/update_user.html',{'update_form': update_form})
 
 
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import AuthenticationForm
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import UserLoginForm
+
 def login_request(request):
-	if request.method == "POST":
-		form = AuthenticationForm(request, data=request.POST)
-		if form.is_valid():
-			print("Get in")
-			username = form.cleaned_data.get('username')
-			password = form.cleaned_data.get('password')
-			user = authenticate(username=username, password=password)
-			print("Here")
-			if user is not None:
-				login(request, user)
-				messages.info(request, f"You are now logged in as {username}.")
-				print("Login")
-				# if user.is_superuser or user.is_staff:
-				# 	request.session['user_id'] = user.id
-				# 	return redirect("users:dashboard")
-				# else:
-				# 	return redirect("home:home")
-				request.session['user_id'] = user.id
-				return redirect("users:dashboard")
-			else:
-				messages.error(request,"Invalid username or password.")
-		else:
-			messages.error(request,"Invalid username or password.")
-	login_form = UserLoginForm()
-	return render(request=request, template_name="users/login.html", context={"login_form":login_form})
+    if request.method == "POST":
+        try:
+            form = UserLoginForm(request, data=request.POST)
+            if form.is_valid():
+                username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password')
+                print("Form in", password)
+                user = authenticate(username=username, password=password)
+                print("Auth good")
+                if user is not None:
+                    login(request, user)
+                    messages.info(request, f"You are now logged in as {username}.")
+                    request.session['user_id'] = user.id
+                    return redirect("users:dashboard")
+                elif UserProfile.objects.filter(username=username).exists():
+                    print("From UserProfile")
+                    user = UserProfile.objects.get(username=username, password=password)
+                    login(request, user)
+                    messages.info(request, f"You are now logged in as {username}.")
+                    request.session['user_id'] = user.id
+                    return redirect("users:dashboard")
+                else:
+                    print("User not found")
+                    messages.error(request, "Invalid username or password.")
+            else:
+                messages.error(request, "Invalid username or password.")
+        except Exception as e:
+            print("Error: ", e)
+            messages.error(request, f"An error occurred: {str(e)}")
+
+    login_form = UserLoginForm()
+    return render(request=request, template_name="users/login.html", context={"login_form": login_form})
+
 
 def dashboard(request):
 
     return render(request, template_name = 'dashboards/admin.html', context={})
 
 def logout_request(request):
+	request.session.clear()  # Clears all session data for the current sessio
+    # request.session.flush()  # Same as clear(), but also deletes the session cookie
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
 	return redirect("home:home")
@@ -174,23 +191,31 @@ def password_reset_request(request):
 
 def add_staff(request):
     if request.method == 'POST':
-       staff_form = StaffForm(request.POST)
-       if staff_form.is_valid():
-          user = staff_form.save()
-          username = staff_form.cleaned_data.get('username')
-          messages.success(request, "Registration successful." )
-        #   login(request, user)
-        #   login(request, user, backend='django.contrib.auth.backends.ModelBackend')
-          return redirect("users:staffs")
-       else:
-          messages.error(request,"Account creation failed")
-          print(staff_form.errors.as_data()) 
-          return redirect("users:add-staff")
+        staff_form = StaffForm(request.POST)
+        try:
+            if staff_form.is_valid():
+                user = staff_form.save()
+                username = staff_form.cleaned_data.get('username')
+                messages.success(request, "Registration successful.")
+                # Uncomment the following lines if you want to log in the user after registration
+                # login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+                # messages.success(request, f"Welcome, {username}!")
+                return redirect("users:staffs")
+            else:
+                messages.error(request, "Account creation failed")
+                print(staff_form.errors.as_data())
+                return redirect("users:add-staff")
+        except Exception as e:
+            # Print the error message to identify the issue
+            print(f"An error occurred: {e}")
+            messages.error(request, "An error occurred during account creation.")
+            return redirect("users:add-staff")
 
     staff_form = StaffForm()
-    return render (request=request, template_name="users/add_staff.html", context={"staff_form":staff_form})
+    return render(request=request, template_name="users/add_staff.html", context={"staff_form": staff_form})
+
 
 def staffs(request):
-	staffs = User.objects.all()
+	staffs = UserProfile.objects.all()
 	context = {'staffs':staffs}
 	return render(request, template_name='users/staffs.html', context=context)

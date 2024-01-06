@@ -135,7 +135,7 @@ class PatientDataAPIView(APIView):
         return Response(serializer.errors, status = 400)
 
     def patient_data_list(request):
-        data = PatientData.objects.all()
+        data = PatientData.objects.filter(user_id=request.session['user_id'])
         context = {'data':data}
         return render(request, template_name='tools/patient_data_list.html', context=context)
 
@@ -172,7 +172,6 @@ class PatientDataAPIView(APIView):
                 medicines = form.cleaned_data['medicines']
                 treatment_regime = form.cleaned_data['treatment_regime']
                 recommendation = form.cleaned_data['recommendation']
-
                 # Create and save a new PatientData object
                 patient_data = PatientData(
                     patient_id=patient_id,
@@ -200,6 +199,7 @@ class PatientDataAPIView(APIView):
                     medicines=medicines,
                     treatment_regime=treatment_regime,
                     recommendation=recommendation,
+                    user_id = request.session['user_id']
                 )
 
                 get_objects = PatientData.objects.filter(patient_id=patient_id)

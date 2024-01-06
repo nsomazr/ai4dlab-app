@@ -58,10 +58,16 @@
                             <form class="form" method="POST" action="{% url 'users:add-staff' %}" enctype="multipart/form-data">
                                 {% csrf_token %}
                                 <div class="row">
-                                    <div class="col-md-12 col-12">
+                                    <div class="col-md-6 col-12">
                                         <div class="form-group">
-                                            <label for="first-name">Role</label>
-                                                {{ staff_form.role }} 
+                                            <label for="first-name">First Name</label>
+                                                {{ staff_form.first_name }} 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name">Last Name</label>
+                                                {{ staff_form.last_name }} 
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">
@@ -75,6 +81,12 @@
                                         <div class="form-group">
                                             <label for="email">Email</label>
                                             {{ staff_form.email }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-12">
+                                        <div class="form-group">
+                                            <label for="first-name">Role</label>
+                                                {{ staff_form.role }} 
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-12">

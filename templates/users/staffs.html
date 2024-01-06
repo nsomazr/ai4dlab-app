@@ -56,8 +56,7 @@
                             <th>No.</th>
                             <th>Username</th>
                             <th>Email</th>
-                            <th>Super User</th>
-                            <th>Status</th>
+                            <th>Role</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -67,15 +66,7 @@
                             <td>{{ forloop.counter }}</td>
                             <td>{{ staff.username }}</td>
                             <td>{{ staff.email }}</td>
-                            <td>{{ staff.is_superuser }}</td>
-                            <td>
-                                {% if staff.status == 1%}
-                                <span class="badge bg-success">Active</span>
-                                {% endif %}
-                                {% if staff.status == 0 %}
-                                <span class="badge bg-danger">Not Active</span>
-                                {% endif %}
-                            </td>
+                            <td>{{ staff.role }}</td>
                             <td>
                                 <a class="btn btn-primary btn-xs" href="">View</a>
                                 <a class="btn btn-success btn-xs" href="">Edit</a>
