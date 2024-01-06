@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AAIAC 2023 | Organizers</title>
+<!-- Stylesheets -->
+<link href="{% static 'aaiac2023/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static 'aaiac2023/assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/assets/css/responsive.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href="{% static 'aaiac2023/assets/images/icon-colored.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'aaiac2023/assets/images/icon-light.png' %}" type="image/x-icon">
+<!--Color Switcher Mockup-->
+<link href="{% static 'aaiac2023/assets/css/color-switcher-design.css' %}" rel="stylesheet">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one">
+
+        
+        <!-- Header Lower -->
+        <div class="header">
+            <div class="" >    
+                <!-- Main box -->
+                <div class="main-box">
+
+
+                    <div class="nav-outer">
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li style="margin-left:100px;"><a href="{% url 'conference:aaiac-23' %}" >Home</a></li>
+                                    <li><a href="{% url 'conference:aaiac-23' }#about">About</a></li>
+                                    <li><a href="{% url 'conference:aaiac-23' %}">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container">            
+
+                <div class="main-box">
+                    <div class="logo-box">
+                        <div class="logo"><a href="{% url 'conference:aaiac-23' %}"><img src="{% static 'aaiac2023/assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+                        <div class="upper-right">
+                            <div class="search-box">
+                                <button class="search-btn mobile-search-btn"><i class="flaticon-search-2"></i></button>
+                            </div>
+                            <a href="#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                        </div>
+                    </div>
+                    
+                    <nav class="main-menu navbar-expand-md">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="logo"><a href="#"><img src="{% static 'aaiac2023/assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+
+            <!--Nav Box-->
+            <div class="nav-outer clearfix">
+                <div class="outer-box">
+                    <!-- Search Btn -->
+                    <div class="search-box">
+                        <button class="search-btn mobile-search-btn"><i class="flaticon-search-2"></i></button>
+                    </div>
+
+                    <a href="#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            <nav class="menu-box">
+                <div class="upper-box">
+                    <div class="nav-logo"><a href="{% url 'conference:aaiac-23' %}"><img src="{% static 'aaiac2023assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+                    <div class="close-btn"><i class="icon flaticon-close"></i></div>
+                </div>
+
+                <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+
+                <ul class="contact-list-one">
+                    <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timing</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="mailto:conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+                </ul>
+
+                <ul class="social-links">
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                </ul>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+        <!-- Header Search -->
+        <div class="search-popup">
+            <button class="close-search"><i class="flaticon-close"></i></button>
+            <form method="post" action="blog.html">
+                <div class="form-group">
+                    <input type="search" name="search-field" value="" placeholder="Search" required="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <!-- End Header Search -->
+
+    </header>
+    <!--End Main Header -->
+
+    <!-- Hidden bar back drop -->
+    <div class="form-back-drop"></div>
+
+    <!-- Hidden Bar -->
+    <section class="hidden-bar">
+        <div class="inner-box">
+            <div class="title-box">
+                <h2>Contact Us</h2>
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+            </div>  
+
+            <ul class="contact-list-one">
+                <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma <strong>Address</strong></li>
+                <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timeing</strong></li>
+                <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+            </ul>
+        </div>
+    </section>
+    <!--End Hidden Bar -->
+
+    <!--Page Title-->
+    <section class="page-title" style="background-image: url(aaiac23/assets/images/background/11.jpg);">
+        <div class="anim-icons full-width">
+            <span class="icon icon-bull-eye"></span>
+            <span class="icon icon-dotted-circle"></span>
+        </div>
+        <div class="auto-container">
+            <div class="title-outer">
+                <h1>Organizers</h1>
+                <ul class="page-breadcrumb">
+                    <li><a href="{% url 'conference:aaiac-23' %}">Home</a></li>
+                    <li>Conference Committee</li>
+                </ul> 
+            </div>
+        </div>
+    </section>
+    <!--End Page Title-->
+
+    <!-- Speakers Section -->
+    <section class="speakers-section">
+        <div class="anim-icons full-width">
+            <span class="icon icon-dotted-circle"></span>
+        </div>
+
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">Steering Committee</span>
+                    <span class="divider"></span>
+                </div>
+            
+              <section id="main-content">
+                    <section class="wrapper">
+              
+                        <!-- row -->
+                      <div class="row mt">
+                        <div class="col-md-12">
+                          <div class="content-panel">
+                            <table class="table table-striped table-advance table-hover">
+                              <thead>
+                                <tr>
+                                 <th><i class=""></i> Name</th>
+                                  <th><i class=""></i> Role</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Ally Nyamawe</td>
+                                  <td>Conference Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Shubi Kaijage</td>
+                                  <td>Organising Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Devotha Nyambo</td>
+                                  <td>Technical and Program Committee Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Jabhera Matogoro</td>
+                                  <td>Publicity, Public Relations and Local Arrangements Committee Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Judith Leo</td>
+                                  <td>Key Notes, Industry and Sponsorships Committee Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Mohamedi M. Mjahidi</td>
+                                  <td>Finance & Registration Committee Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Deo Shao</td>
+                                  <td>Publication Committee Chair</td>
+                                </tr>
+                                <tr>
+                                  <td>Neema Mduma</td>
+                                  <td>Technical Workshop Committee Chair</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /content-panel -->
+                        </div>
+                        <!-- /col-md-12 -->
+                      </div>
+              
+                    </section>
+                  </section>
+
+            </div>
+
+            <br><br>
+
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">Organizing Committee</span>
+                    <span class="divider"></span>
+                </div>
+            
+                <section id="main-content">
+                    <section class="wrapper">
+              
+                        <!-- row -->
+                      <div class="row mt">
+                        <div class="col-md-12">
+                          <div class="content-panel">
+                            <table class="table table-striped table-advance table-hover">
+                                <thead>
+                                    <tr>
+                                      <th>Committee</th>
+                                      <th>Name</th>
+                                      <th>Role</th>
+                                      <th>Institution</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                        <td>Organizing Committee</td>
+                                        <td>Shubi Kaijage</td>
+                                        <td>Chair</td>
+                                        <td>Organizing Chair</td>
+                                      </tr>
+                                    <tr>
+                                      <td rowspan="6">Technical and Program Committee</td>
+                                      <td>Devotha Nyambo</td>
+                                      <td>Chair</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Ramadhani S. Sinde</td>
+                                      <td>Member</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Salim Diwani</td>
+                                      <td>Member</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Elsie Kaaya</td>
+                                      <td>Member</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Abdoulaye Diack</td>
+                                      <td>Member</td>
+                                      <td>Google AI Ghana</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Ashutoshi Dutta</td>
+                                      <td>Member</td>
+                                      <td>IEEE</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="4">Publicity, Public Relations and Local Arrangements Committee</td>
+                                      <td>Jabhera Matogoro</td>
+                                      <td>Chair</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                     
+                                      <td>Fereji Hamis</td>
+                                      <td>Member</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Adam Mawenya</td>
+                                      <td>Member</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Gloriana Monko</td>
+                                      <td>Member</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="4">Key Notes, Industry and Sponsorships Committee</td>
+                                      <td>Judith Leo</td>
+                                      <td>Chair</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Sarbani Banerjee</td>
+                                      <td>Member</td>
+                                      <td>IIT Bombay</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Michael Zimba</td>
+                                      <td>Member</td>
+                                      <td>Malawi University of Science and Technology</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Agapit Manday</td>
+                                      <td>Member</td>
+                                      <td>DLab</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="3">Finance & Registration Committee</td>
+                                      <td>Mohamedi M. Mjahidi</td>
+                                      <td>Chair</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Noel Elisa</td>
+                                      <td>Member</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Moses Martin</td>
+                                      <td>Member</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="3">Publication Committee</td>
+                                      <td>Deo Shao</td>
+                                      <td>Chair</td>
+                                      <td>UDOM</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Dennis Mwighusa</td>
+                                      <td>Member</td>
+                                      <td>IEEE Tanzania Chapter</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Luzango Mfupe</td>
+                                      <td>Member</td>
+                                      <td>CSIR</td>
+                                    </tr>
+                                    <tr>
+                                      <td rowspan="3">Technical Workshop Committee</td>
+                                      <td>Neema Mduma</td>
+                                      <td>Chair</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Loyani Loyani</td>
+                                      <td>Member</td>
+                                      <td>NM-AIST</td>
+                                    </tr>
+                                    <tr>
+                                      
+                                      <td>Marco Zennaro</td>
+                                      <td>Member</td>
+                                      <td>ICTP Itally</td>
+                                    </tr>
+                                  </tbody>
+
+                            </table>
+                          </div>
+                          <!-- /content-panel -->
+                        </div>
+                        <!-- /col-md-12 -->
+                      </div>
+              
+                    </section>
+                  </section>
+
+            </div>
+
+            <br><br>
+
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">Technical Program Committee (TPC)</span>
+                    <span class="divider"></span>
+
+                </div>
+            
+                <section id="main-content">
+                    <section class="wrapper">
+              
+                        <!-- row -->
+                      <div class="row mt">
+                        <div class="col-md-12">
+                          <div class="content-panel">
+                            <table class="table table-striped table-advance table-hover">
+                              <thead>
+                                <tr>
+                                    <th>Name of the Member</th>
+                                    <th>Institution</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Devotha Nyambo</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Kisangiri Michael</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Shubi Kaijage</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Anael Sam</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Mussa Ally</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Joseph Matiko</td>
+                                  <td>Dar es Salaam Institute of Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Cleverence Kombe</td>
+                                  <td>University of Botswana</td>
+                                </tr>
+                                <tr>
+                                  <td>Shaban Habibu</td>
+                                  <td>Muni University, Uganda</td>
+                                </tr>
+                                <tr>
+                                  <td>Noe Elisa</td>
+                                  <td>University of Dodoma</td>
+                                </tr>
+                                <tr>
+                                  <td>Basikolo Thomas</td>
+                                  <td>ITU</td>
+                                </tr>
+                                <tr>
+                                  <td>Idy Diop</td>
+                                  <td>Ecole Supérieures Polytechnique (ESP) - Senegal</td>
+                                </tr>
+                                <tr>
+                                  <td>Charles Tarimo</td>
+                                  <td>University of Dar es Salaam</td>
+                                </tr>
+                                <tr>
+                                  <td>Mohamed Mjahid</td>
+                                  <td>The University of Dodoma</td>
+                                </tr>
+                                <tr>
+                                  <td>Sanket Pandhare</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Zeeshan Khan</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Elizabeth Mkoba</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Jabhera Matogoro</td>
+                                  <td>University of Dodoma</td>
+                                </tr>
+                                <tr>
+                                  <td>Jema Ndibwile</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Godfrey Justo</td>
+                                  <td>University of Dar es Salaam</td>
+                                </tr>
+                                <tr>
+                                  <td>Hassan Kilavo</td>
+                                  <td>The University of Dodoma</td>
+                                </tr>
+                                <tr>
+                                  <td>Dina Machuve</td>
+                                  <td>DevData Analytics</td>
+                                </tr>
+                                <tr>
+                                  <td>Jean Greyling</td>
+                                  <td>Mandela University, SA</td>
+                                </tr>
+                                <tr>
+                                  <td>Dan Nukpezah</td>
+                                  <td>University of Ghana</td>
+                                </tr>
+                                <tr>
+                                  <td>Benjamin Ofori</td>
+                                  <td>University of Ghana</td>
+                                </tr>
+                                <tr>
+                                  <td>Uranio Stefane Mahanjane</td>
+                                  <td>Mozambique</td>
+                                </tr>
+                                <tr>
+                                  <td>Karoli Njau</td>
+                                  <td>Nelson Mandela African Institution of Science and Technology</td>
+                                </tr>
+                                <tr>
+                                  <td>Kauna Mufeti</td>
+                                  <td>Namibia</td>
+                                </tr>
+                                <tr>
+                                  <td>André Calitz</td>
+                                  <td>Mandela University, SA</td>
+                                </tr>
+                                <tr>
+                                  <td>Sven Rosinger</td>
+                                  <td>German</td>
+                                </tr>
+                                <tr>
+                                  <td>Jan Reinkensmeier</td>
+                                  <td>German</td>
+                                </tr>
+                                <tr>
+                                  <td>Fayez Salma</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Mohamad Hamed</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Andreas Solsbach</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Gerrit Schumann</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Jan-Hendrik Witte</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>René Kessler</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Felix Kruse</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Sven von Höveling</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Johannes Schering</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Harish Moturu</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Dirk Bendlin</td>
+                                  <td>Denmark</td>
+                                </tr>
+                                <tr>
+                                  <td>Onur Polat</td>
+                                  <td>Gazi University, Ankara, Turkey</td>
+                                </tr>
+                                <tr>
+                                  <td>Steffen Wehkamp</td>
+                                  <td>German</td>
+                                </tr>
+                                <tr>
+                                  <td>Daniel Alvarez</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Johann Schütz</td>
+                                  <td>German</td>
+                                </tr>
+                                <tr>
+                                  <td>Ali Akyol</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Bettina Steden</td>
+                                  <td>University of Oldenburg</td>
+                                </tr>
+                                <tr>
+                                  <td>Nuru Jingili</td>
+                                  <td>Luleå University of Technology, Sweden</td>
+                                </tr>
+                                <tr>
+                                  <td>Arshad Ahmad</td>
+                                  <td>Department of IT and Computer Science, Pak Austria Fachhochschule: Institute of Applied Sciences & Technology, Mang, Haripur, 21620, Pakistan</td>
+                                </tr>
+                                <tr>
+                                  <td>Solomon S. Oyelere</td>
+                                  <td>Department of Computer Science, Electrical and Space Engineering Luleå University of Technology, Sweden</td>
+                                </tr>
+                                <tr>
+                                  <td>Tegawendé F. Bissyandé</td>
+                                  <td>University of Luxembourg and Director of the CITADEL Center of Excellence in AI4D of Burkina Faso</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <!-- /content-panel -->
+                        </div>
+                        <!-- /col-md-12 -->
+                      </div>
+              
+                    </section>
+                  </section>
+
+            </div>
+
+
+         </div>
+    </section>
+    <!-- End Speakers Section -->
+    
+
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer" id="contact">
+      <div class="auto-container">
+          <!-- Footer Content -->
+          <div class="footer-content wow fadeInUp">
+              <div class="text-center">
+                  <div class="footer-logo"><a href="#"><img src="{% static 'aaiac2023/assets/images/logo-light.png' %}" alt=""></a></div>
+                  <div class="text">Artificial Intelligence for Development AI4D - Lab A unique collaboration between UDOM & NM-AIST to foster Research, Training and Innovation in AI. The Lab is funded by IDRC and Sida through the AI4D Africa Program.</div> 
+                  <hr>
+                  <div class="row">
+                      <div class="col-md-4">
+                          <figure class="image-box"><a href="#" ><img src="{% static 'aaiac2023/assets/images/clients/idrc.jpg' %}" alt="" width="150" height="100"></a></figure>
+                      </div>
+                      <div class="col-md-4">
+                          <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/Sida.jpg' %}" alt="" width="150" height="100"></a></figure>
+                      </div>
+                      <div class="col-md-4">
+                          <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/ai4d.jpg' %}" alt="" width="150" height="100"></a></figure>
+                      </div>
+                  </div>
+              </div>
+              <hr>
+              <ul class="social-icon-two">
+                  <li><a href="https://twitter.com/ai4dlab_Tz"><span class="fab fa-twitter"></span></a></li>
+                  <li><a href="https://www.linkedin.com/company/ai4d-anglophone/mycompany/"><span class="fab fa-linkedin"></span></a></li>
+              </ul>
+              <ul class="contact-list-one">
+                  <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
+                  <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timing</strong></li>
+                  <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          <div class="auto-container">
+              <div class="inner-container">
+                  <ul class="footer-nav">
+                     <li><a href="#">Terms of Service</a></li> 
+                     <li><a href="#">Privacy Policy</a></li> 
+                  </ul>
+                  
+                  <div class="copyright-text">
+                      <p>Copyright © 2023 All Rights Reserved. Developed by <a href="https://nsoma.me">Nsoma</a></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- End Footer -->
+
+</div>
+<!-- End Page Wrapper -->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+<script src="{% static 'aaiac2023/assets/js/jquery.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/popper.min.js' %}"></script>
+<!--Revolution Slider-->
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/main-slider-script.js' %}"></script>
+<!--Revolution Slider-->
+<script src="{% static 'aaiac2023/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/jquery.countdown.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/appear.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/owl.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/wow.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/script.js' %}"></script>
+</body>
+</html>

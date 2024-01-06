@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AAIAC 2023 | Home</title>
+<!-- Stylesheets -->
+<link href="{% static 'aaiac2023/assets/css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static 'aaiac2023/assets/plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static 'aaiac2023/assets/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'aaiac2023/assets/css/responsive.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href="{% static 'aaiac2023/assets/images/icon-colored.png' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'aaiac2023/assets/images/icon-light.png' %}" type="image/x-icon">
+<!--Color Switcher Mockup-->
+<link href="{% static 'aaiac2023/assets/css/color-switcher-design.css' %}" rel="stylesheet">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+    <!-- Main Header-->
+    <header class="main-header header-style-one">
+
+        
+        <!-- Header Lower -->
+        <div class="header">
+            <div class="" >    
+                <!-- Main box -->
+                <div class="main-box">
+
+
+                    <div class="nav-outer">
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md">
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li style="margin-left:100px;"><a href="{% url 'home:home' %}" >Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="{% url 'conference:aaiac-23-contacts' %}">Contact us</a></li>
+                                    <li><a href="{% url 'conference:aaiac-23-organizers' %}">Organizers</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Header  -->
+        <div class="sticky-header">
+            <div class="auto-container">            
+
+                <div class="main-box">
+                    <div class="logo-box">
+                        <div class="logo"><a href="{% url 'conference:aaiac-23' %}"><img src="{% static 'aaiac2023/assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+                        <div class="upper-right">
+                            <div class="search-box">
+                                <button class="search-btn mobile-search-btn"><i class="flaticon-search-2"></i></button>
+                            </div>
+                            <a href="#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                        </div>
+                    </div>
+                    
+                    <nav class="main-menu navbar-expand-md">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav>
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+
+        <!-- Mobile Header -->
+        <div class="mobile-header">
+            <div class="logo"><a href="{% url 'conference:aaiac-23' %}"><img src="{% static 'aaiac2023/assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+
+            <!--Nav Box-->
+            <div class="nav-outer clearfix">
+                <div class="outer-box">
+                    <!-- Search Btn -->
+                    <div class="search-box">
+                        <button class="search-btn mobile-search-btn"><i class="flaticon-search-2"></i></button>
+                    </div>
+
+                    <a href="#nav-mobile" class="mobile-nav-toggler navbar-trigger"><i class="flaticon-menu"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            
+            <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            <nav class="menu-box">
+                <div class="upper-box">
+                    <div class="nav-logo"><a href="{% url 'conference:aaiac-23' %}"><img src="{% static 'aaiac2023/assets/images/logo-colored.png' %}" alt="" title=""></a></div>
+                    <div class="close-btn"><i class="icon flaticon-close"></i></div>
+                </div>
+
+                <ul class="navigation clearfix"><!--Keep This Empty / Menu will come through Javascript--></ul>
+
+                <ul class="contact-list-one">
+                    <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timing</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="mailto:conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+                </ul>
+
+                <ul class="social-links">
+                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                    <li><a href="#"><span class="fab fa-pinterest"></span></a></li>
+                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="#"><span class="fab fa-dribbble"></span></a></li>
+                </ul>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+        <!-- Header Search -->
+        <div class="search-popup">
+            <button class="close-search"><i class="flaticon-close"></i></button>
+            <form method="post" action="#!">
+                <div class="form-group">
+                    <input type="search" name="search-field" value="" placeholder="Search" required="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+        <!-- End Header Search -->
+
+    </header>
+    <!--End Main Header -->
+
+    <!-- Hidden bar back drop -->
+    <div class="form-back-drop"></div>
+
+    <!-- Hidden Bar -->
+    <section class="hidden-bar">
+        <div class="inner-box">
+            <div class="title-box">
+                <h2>Contact Us</h2>
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+            </div>  
+
+            <ul class="contact-list-one">
+                <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma <strong>Address</strong></li>
+                <li><i class="flaticon-alarm-clock-1"></i>Wednesday - Thursday 9am - 6pm <strong>Timeing</strong></li>
+                <li><i class="flaticon-email-1"></i> <a href="conference@ai4dlab.or.tz">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+            </ul>
+        </div>
+    </section>
+    <!--End Hidden Bar -->
+
+    <!--Main Slider-->
+    <section class="main-slider">
+        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                <ul>
+                    <li data-index="rs-1" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        
+                        <!-- MAIN IMAGE -->
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'aaiac2023/assets/images/main-slider/bg-1.jpg' %}">
+
+
+                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden rs-parallaxlevel-4" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="auto"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-150','-150','-150','-150']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-1.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-1 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-100','-100','-100','-100']"
+                        data-voffset="['60','60','60','60']"
+                        data-x="['left','left','left','left']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-2.png' %}" alt=""></figure>
+                        </div>
+                        
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-60','-60','-60','-60']"
+                        data-voffset="['100','100','100','100']"
+                        data-x="['right','right','right','right']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-4.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-90','-90','-90','-90']"
+                        data-voffset="['170','170','170','100']"
+                        data-x="['right','right','right','right']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-3.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-150','-150','-150','-150']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['bottom','bottom','bottom','bottom']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-5.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-30','-30','-30','-30']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['bottom','bottom','bottom','bottom']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-6.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['750','750','750','650']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-190','-190','-190','-190']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <span class="title"><span>2 Days</span>  -  <span>10 Talks</span>  
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['750','750','750','650']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-50','-80','-80','-80']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <h2>AAIAC <br>  2023</h2>
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['700','750','700','450']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['90','30','30','40']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <ul class="event-info">
+                                <li><i class="fa fa-map-marker"></i>AICC, Arusha, Tanzania</li>
+                                <li><i class="fa fa-calendar"></i> November 15 - 16, 2023</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tp-caption tp-resizeme" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['650','650','700','300']"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['180','120','120','140']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <div class="btn-box">
+                                <a href="./ticket.php" class="theme-btn btn-style-one"><span class="btn-title">Register</span></a>
+                                <a href="https://easychair.org/cfp/ConAAIAC2023" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
+                            </div>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,0]"
+                        data-paddingright="[15,15,15,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['auto','auto','auto','100%']"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['0','0','0','0']"
+                        data-x="['right','right','right','left']"
+                        data-y="['middle','middle','middle','bottom']"
+                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <div class="time-counter-one">
+                                <h6>Starting in:</h6>
+                                <div class="time-countdown" data-countdown="11/15/2023"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li data-index="rs-2" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-thumb=""  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                        
+                        <!-- MAIN IMAGE -->
+                        <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="20" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="assets/images/main-slider/bg-2.jpg">
+
+
+                        <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme big-ipad-hidden rs-parallaxlevel-4" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="auto"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-150','-150','-150','-150']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-1.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-1 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-100','-100','-100','-100']"
+                        data-voffset="['60','60','60','60']"
+                        data-x="['left','left','left','left']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1500,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-2.png' %}" alt=""></figure>
+                        </div>
+                        
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-60','-60','-60','-60']"
+                        data-voffset="['100','100','100','100']"
+                        data-x="['right','right','right','right']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-4.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-90','-90','-90','-90']"
+                        data-voffset="['170','170','170','100']"
+                        data-x="['right','right','right','right']"
+                        data-y="['top','top','top','top']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-3.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-2 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-150','-150','-150','-150']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['bottom','bottom','bottom','bottom']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-5.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-3 ipad-hidden" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[0,0,0,0]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="shape"
+                        data-height="none"
+                        data-whitespace="nowrap"
+                        data-width="none"
+                        data-hoffset="['-30','-30','-30','-30']"
+                        data-voffset="['50','50','50','50']"
+                        data-x="['left','left','left','left']"
+                        data-y="['bottom','bottom','bottom','bottom']"
+                        data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":2000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":3000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                            <figure><img src="{% static 'aaiac2023/assets/images/main-slider/icon/object-6.png' %}" alt=""></figure>
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[0,0,0,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['750','750','750','650']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-190','-190','-190','-190']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <span class="title"><span>2 Days</span>  -  <span>10 Talks</span> 
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['750','750','750','650']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['-50','-80','-80','-80']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <h2>AAIAC <br>2023</h2>
+                        </div>
+
+                        <div class="tp-caption" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-width="['700','750','700','450']"
+                        data-whitespace="normal"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['90','30','30','40']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <ul class="event-info">
+                                <li><i class="fa fa-map-marker"></i>AICC, Arusha, Tanzania</li>
+                                <li><i class="fa fa-calendar"></i> November 15 - 16, 2023</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tp-caption tp-resizeme" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,15]"
+                        data-paddingright="[15,15,15,15]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['650','650','700','300']"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['180','120','120','140']"
+                        data-x="['left','left','left','left']"
+                        data-y="['middle','middle','middle','middle']"
+                        data-textalign="['top','top','top','top']"
+                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <div class="btn-box">
+                                <a href="./ticket.php" class="theme-btn btn-style-one"><span class="btn-title">Register</span></a>
+                                <a href="https://easychair.org/cfp/ConAAIAC2023" class="theme-btn btn-style-two"><span class="btn-title">Call for Paper</span></a>
+                            </div>
+                        </div>
+
+                        <div class="tp-caption tp-resizeme" 
+                        data-paddingbottom="[0,0,0,0]"
+                        data-paddingleft="[15,15,15,0]"
+                        data-paddingright="[15,15,15,0]"
+                        data-paddingtop="[0,0,0,0]"
+                        data-responsive_offset="on"
+                        data-type="text"
+                        data-height="none"
+                        data-whitespace="normal"
+                        data-width="['auto','auto','auto','100%']"
+                        data-hoffset="['0','0','0','0']"
+                        data-voffset="['0','0','0','0']"
+                        data-x="['right','right','right','left']"
+                        data-y="['middle','middle','middle','bottom']"
+                        data-frames='[{"delay":1000,"speed":2000,"frame":"0","from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                            <div class="time-counter-one">
+                                <h6>Starting in:</h6>
+                                <div class="time-countdown" data-countdown="11/15/2023"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- End Main Slider-->
+    
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Image Column -->
+                <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-image-wrapper">
+                        <figure class="image-3 wow zoomIn" data-wow-delay="900ms"><img src="{% static 'aaiac2023/assets/images/resource/circle-2.png' %}" alt=""/></figure>
+                        <figure class="image-2 wow zoomIn" data-wow-delay="600ms"><img src="{% static 'aaiac2023/assets/images/resource/circle-1.png' %}" alt=""/></figure>
+                        <figure class="image-1 wow zoomIn" data-wow-delay="300ms"><img src="{% static 'aaiac2023/assets/images/resource/vector.png' %}" alt=""/></figure>
+                        <a href="" class="lightbox-image play-btn wow zoomIn" data-wow-delay="1200ms"><span class="icon fa fa-play"></span></a>
+                    </div>
+                </div>
+
+                <!-- Content Column -->
+                <div class="content-column col-lg-6 col-md-12 col-sm-12" id="about">
+                    <div class="inner-column">
+                        <div class="sec-title">
+                            <span class="sub-title">WELCOME TO AAIAC 2023</span>
+                            <h2>The 1st International Conference <br>on the Advancements of Artificial Intelligence in
+                                African Context (AAIAC)</h2>
+                            <span class="divider"></span>
+                        </div>
+                        <p> The overall objective of the 1st International Conference on the Advancements of AI in African
+                            Context, with this year's theme being the role of Artificial Intelligence towards the realization of
+                            the 4th and 5th Industrial Revolutions (4IR & 5IR), is to strengthen capacity through a bigger
+                            network of researchers, academicians, and industrial practitioners working to realize the role of
+                            AI on the continent's industrial revolution, which spans from automation, food production, smart
+                            and strong economies, and enhanced healthcare, to name a few.</p>
+                        <p> The conference will also provide
+                            a platform that will strengthen the capacity of African public universities to conduct high-quality,
+                            multidisciplinary, responsible AI research and teaching by sharing their innovations, use cases,
+                            papers, and patents, to name a few.</p>
+                        <div class="btn-box">
+                            <!-- <a href="buy-ticket.html" class="theme-btn btn-style-one"><span class="btn-title">Book Ticket</span></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Feature Section -->
+    <section class="feature-section pt-0">
+        <div class="anim-icons full-width">
+            <span class="icon icon-circle-1 wow fadeIn"></span>
+        </div>
+
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <span class="sub-title">AAIAC Specific Feature</span>
+                <h2>AAIAC <br />specific objectives of the conference</h2>
+                <span class="divider"></span>
+            </div>
+
+            <div class="row">
+                <!--Feature Block-->
+                <div class="feature-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon flaticon-meeting"></i></div>
+                        <h4>Responsible AI</h4>
+                        <p>To strengthen research in responsible AI across Africa through mentorship, community
+                            building and the equitable distribution of high-quality teaching and training materials
+                            relevant to the 5th industrial revolution.</p>
+                    </div>
+                </div>
+
+                <!--Feature Block-->
+                <div class="feature-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon flaticon-idea"></i></div>
+                        <h4>Capacity Building</h4>
+                        <p>To broaden capacity and increase understanding of advancing responsible,
+                            multidisciplinary and gender-inclusive African AI research methodologies and training
+                            capacity for new and experienced researchers through mentoring and exploratory
+                            research.</p>
+                    </div>
+                </div>
+
+                <!--Feature Block-->
+                <div class="feature-block col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="inner-box">
+                        <div class="icon-box"><i class="icon flaticon-certificate-1"></i></div>
+                        <h4>AI Deployment and Commercialization</h4>
+                        <p>To explore how to support AI deployment and commercialization from academia to
+                            industrial applications in the era of the 5th Industrial Revolution.</p>
+                    </div>
+                </div>
+
+                <!--Feature Block-->
+            </div>
+        </div>
+    </section>
+    <!-- End Feature Section -->
+
+
+         <!-- News Section -->
+         <section class="news-section">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <span class="sub-title">Special Guests</span>
+                    <h2>Guest of Honor</h2>
+                    <span class="divider"></span>
+                </div>
+    
+                <div class="row">
+                    <!-- News Block -->
+                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <span class="tag">Guest of Honor</span>
+                                <figure class="image"><a href="#"><img src="{% static 'aaiac2023/assets/images/resource/gh.jpg' %}" alt=""></a></figure>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="news-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <span class="tag">Special Guest</span>
+                                <figure class="image"><a href="#"><img src="{% static 'aaiac2023/assets/images/resource/caro.jpeg' %}" alt=""></a></figure>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <!-- <div class="sec-bottom-text"><div class="text">if you want to more Updates <a href="#">click here</a> now.</div></div> -->
+            </div>
+        </section>
+        <!--End News Section -->
+
+    <!-- Speakers Section -->
+    <section class="speakers-section">
+        <div class="anim-icons full-width">
+            <span class="icon icon-dotted-circle"></span>
+        </div>
+
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <span class="sub-title">Our SPEAKERS</span>
+                <h2>Conference Speakers</h2>
+                <span class="divider"></span>
+            </div>
+
+            <div class="row">
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-malanga' %}"><img src="{% static 'aaiac2023/assets/images/resource/malanga.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-malanga' %}">Dr. Malanga Ndega</a></h4>
+                            <span class="designation">Senior Lecturer - kirinyaga University</span><br>
+                            <span class="designation text-center">KENYA</span>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Speaker block -->
+                 <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-mahadia' %}"><img src="{% static 'aaiac2023/assets/images/resource/mahadia.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-mahadia' %}">Dr. Mahadia Tunga</a></h4>
+                            <span class="designation">Director of Data Science- dLab</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-gomez' %}"><img src="{% static 'aaiac2023/assets/images/resource/gomez.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-gomez' %}">Pof.Dr. Mark Gomez </a></h4>
+                            <span class="designation">Professor - Carl Von Ossietzky University of Oldenburg</span><br>
+                            <span class="designation text-center">GERMAN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-linder' %}"><img src="{% static 'aaiac2023/assets/images/resource/linder.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-linder' %}">Dr. Nina Linder</a></h4>
+                            <span class="designation">Associate Professor - Uppsala University, Sweden and FIMM - University of Helsinki</span><br>
+                            <span class="designation text-center">SWEDEN</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-andre' %}"><img src="{% static 'aaiac2023/assets/images/resource/andre.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-andre' %}">Andre Biener</a></h4>
+                            <span class="designation">Director for global SAP University Alliances program</span><br>
+                            <span class="designation text-center">GERMAN</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="900ms">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-jumanne' %}"><img src="{% static 'aaiac2023/assets/images/resource/jumanne.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-jumanne' %}">Mr. Jumanne Mtambalike</a></h4>
+                            <span class="designation">CEO - Sahara Ventures</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-deo' %}"><img src="{% static 'aaiac2023/assets/images/resource/deo.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-deo' %}">Dr. Deogratias Mzurikwao</a></h4>
+                            <span class="designation">AI Sector Lead - Villgro Africa</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-mboni' %}"><img src="{% static 'aaiac2023/assets/images/resource/mboni.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-mboni' %}">Dr. Mboni Kibelloh</a></h4>
+                            <span class="designation">Founder - DarasaTech</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-msanjila' %}"><img src="{% static 'aaiac2023/assets/images/resource/msanjila.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-msanjila' %}">Prof. Simon S. Msanjila</a></h4>
+                            <span class="designation">Associate Professor of Computer Science:  The University of Dodoma</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-lee' %}"><img src="{% static 'aaiac2023/assets/images/resource/lee.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-lee' %}">Dr. Lee Iny</a></h4>
+                            <span class="designation">Augmented Intelligence Committee - American Academy of Dermatology</span><br>
+                            <span class="designation text-center">USA</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-essa' %}"><img src="{% static 'aaiac2023/assets/images/resource/essa.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-essa' %}">Essa Mohamedali</a></h4>
+                            <span class="designation">Co-Founder - Tanzania AI Lab & Community</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-dina' %}"><img src="{% static 'aaiac2023/assets/images/resource/dina.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-dina' %}">Dr. Dina Machuve</a></h4>
+                            <span class="designation">Co-Founder & CTO - DevData Analytics</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-mussa' %}"><img src="{% static 'aaiac2023/assets/images/resource/mussa.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-mussa' %}">Dr. Mussa Ally</a></h4>
+                            <span class="designation">Dean Of School - Computational and Communication Sciences at NM-AIST</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-denhere' %}"><img src="{% static 'aaiac2023/assets/images/resource/denhere.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-denhere' %}">Dr. Varaidzo Denhere</a></h4>
+                            <span class="designation">Senior Postdoctoral Research Fellow: The University of Johannesburg</span><br>
+                            <span class="designation text-center">SOUTH AFRICA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-kadeghe' %}"><img src="{% static 'aaiac2023/assets/images/resource/kadeghe.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-kadeghe' %}">D.r Kadeghe Fue</a></h4>
+                            <span class="designation">CEO & Co-Founder : Mifumo Developers Lab</span><br>
+                            <span class="designation text-center">TANZANIA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-mpho' %}"><img src="{% static 'aaiac2023/assets/images/resource/mpho.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-mpho' %}">Prof. Mpho Primus</a></h4>
+                            <span class="designation">NRF-rated researcher specialising in computational linguistics</span><br>
+                            <span class="designation text-center">SOUTH AFRICA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-thomas' %}"><img src="{% static 'aaiac2023/assets/images/resource/thomas.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-thomas' %}">Dr. Thomas Basikolo</a></h4>
+                            <span class="designation">Lead of AI for Good at ITU</span><br>
+                            <span class="designation text-center">JAPAN</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-juma' %}"><img src="{% static 'aaiac2023/assets/images/resource/juma.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-juma' %}">Juma Saleita</a></h4>
+                            <span class="designation">CEO of Transcend Tech</span><br>
+                            <span class="designation text-center">SOUTH AFRICA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-chao' %}"><img src="{% static 'aaiac2023/assets/images/resource/chao.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-chao' %}">Dr. Chao Mbogho</a></h4>
+                            <span class="designation">Founder of KamiLimu, a social enterprise</span><br>
+                            <span class="designation text-center">KENYA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Speaker block -->
+                <div class="speaker-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" >
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image"><a href="{% url 'conference:speaker-sokhela' %}"><img src="{% static 'aaiac2023/assets/images/resource/sokhela.png' %}" alt=""></a></figure>
+                            <span class="plus-icon fa fa-plus"></span>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h4 class="name"><a href="{% url 'conference:speaker-sokhela' %}">Philasande Sokhela</a></h4>
+                            <span class="designation">Entrepreneur</span><br>
+                            <span class="designation text-center">SOUTH AFRICA</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Speakers Section -->
+
+    <!-- Call to Action -->
+    <section class="call-to-action" style="background-image: url(aaiac2023/assets/images/background/1.jpg);">
+        <div class="anim-icons full-width">
+            <span class="icon icon-dotted-world left"></span>
+            <span class="icon icon-dotted-world right"></span>
+        </div>
+
+        <div class="auto-container">
+            <div class="content-box wow fadeInUp">
+                <h2>Registration </h2>
+                <span class="text">Experience the conference wherever you are. Register now for online access. Tune in live for the keynotes and watch sessions on demand. Also be sure to join our event</span>
+                <a href="./ticket.php" class="theme-btn btn-style-two"><span class="btn-title">Register Now</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- End Call to Action -->
+
+    <!-- Schedule Section -->
+    <section class="schedule-section">
+        <div class="anim-icons full-width">
+            <span class="icon icon-circle-2"></span>
+        </div>
+
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <span class="sub-title">Thought leadership</span>
+                <h2>Conference Schedule</h2>
+                <span class="divider"></span>
+            </div>
+
+            <div class="schedule-tabs tabs-box">
+                <div class="btns-box">
+                    <!--Tabs Box-->
+                    <ul class="tab-buttons clearfix">
+                        <li class="tab-btn active-btn" data-tab="#tab-1">
+                            <span class="day">1st Day</span>
+                            <div class="date-box">
+                                <span class="date">15</span>
+                                <span class="month"><span class="colored">Nov</span> 2023</span>
+                            </div>
+                        </li>
+
+                        <li class="tab-btn" data-tab="#tab-2">
+                            <span class="day">2nd Day</span>
+                            <div class="date-box">
+                                <span class="date">16</span>
+                                <span class="month"><span class="colored">Nov</span> 2023</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="tabs-content">
+                    <!--Tab-->
+                    <div class="tab active-tab" id="tab-1">
+                        <div class="schedule-timeline">
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0800 HRS <br> 0900 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <span class="designation">Conference Moderator</span>
+                                        </div>
+                                        <h4><a href="#">Arrival of the participants + Registration</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0900 HRS <br>0930 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-2.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Conference Chair, VC:UDOM, VC:NM-AIST, IEEE Tanzania</h5>
+                                            <!-- <span class="designation">Art Critic</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Welcoming Remarks:</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0930 HRS <br>1000 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-3.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Prof. Dr.-Ing. Jorge Marx
+                                                Gomez</h5>
+                                            <!-- <span class="designation">Chief Guest: TBC</span> -->
+                                        </div>
+                                        <h4><a href="#">Official Opening Session</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1000 HRS <br>1100 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-4.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <span class="designation">Tea Break</span>
+                                        </div>
+                                        <h4><a href="#">Photo Session + Sponsors recognition</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1100 HRS <br> 1130 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Dr Ivy Lee</h5>
+                                            <!-- <span class="designation">Historian</span> -->
+                                        </div>
+                                        <h4><a href="#">The Role of AI in Addressing the Healthcare
+                                            Challenges of the 21st Century</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1130 HRS <br>1200 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-2.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Mr. Juma Saleita</h5>
+                                            <!-- <span class="designation">Art Critic</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Natural Language Processing: The Next
+                                            Frontier for Business</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1300 HRS <br>1400 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-3.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Chief Guest: TBC</span> -->
+                                        </div>
+                                        <h4><a href="#">Lunch Break</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1400 HRS <br>1530 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-4.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Panel Discussion</h5>
+                                            <span class="designation">Moderator: Dr Kadeghe Fue</span>
+                                        </div>
+                                        <h4><a href="#">The Challenges and Opportunities of Using
+                                            AI in Agriculture and Environmental Conservation</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1400 HRS <br> 1530 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Panel Discussion</h5>
+                                            <span class="designation">Moderator: Makani</span> 
+                                        </div>
+                                        <h4><a href="#">AI for Sustainable Digital Economy</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1400 HRS <br>1530 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-2.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Panel Discussion</h5>
+                                            <span class="designation">Moderator: Mr. Essa Mohamedali</span> 
+                                        </div>
+                                        <h4><a href="schedule-detail.html">The Role of Policy Makers in Developing AI
+                                            Infrastructure and African Datasets</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!--Tab-->
+                    <div class="tab" id="tab-2">
+                        <div class="schedule-timeline">
+                            
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0800 HRS <br> 0900 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Historian</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Arrival of the participants + Registration</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0900 HRS <br>0930 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-2.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Andre Biener</h5>
+                                            <span class="designation">Director, SAP
+                                                University Alliancesc</span>
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Keynote</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>0940 HRS <br>1055 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-3.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Paper Presentations</h5>
+                                            <!-- <span class="designation">Insurance consultant</span> -->
+                                        </div>
+                                        <h4><a href="#">Artificial Intelligence Tools and Applications</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1055 HRS <br>1120 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-4.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Art Critic</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Health Break, Networking and Sponsors
+                                            Exhibition</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1120 HRS <br> 1210 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Venues: Themi Room, Mbayuwayu Room, Twiga Room</h5>
+                                            <!-- <span class="designation">Historian</span> -->
+                                        </div>
+                                        <h4><a href="#">Parallel Paper Presentations </a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1210 HRS <br>1310 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-3.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Insurance consultant</span> -->
+                                        </div>
+                                        <h4><a href="#">Lunch Break</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1310 HRS <br>1440 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-4.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">Venues: Themi Room, Mbayuwayu Room, Twiga Room</h5>
+                                            <!-- <span class="designation">Art Critic</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Parallel Paper Presentations</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1440 HRS <br> 1530 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-1.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Historian</span> -->
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Health Break, Networking and Sponsors
+                                            Exhibition</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1530 HRS <br>1600 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-2.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">IEEE</h5>
+                                            <span class="designation">Venue: Mbayuwayu Room</span>
+                                        </div>
+                                        <h4><a href="schedule-detail.html">Conference Closing and Awards Ceremony</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1600 HRS <br>1615 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/images/resource/thumb-3.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">DVC-ARC-UDOM</h5>
+                                            <!-- <span class="designation">Insurance consultant</span> -->
+                                        </div>
+                                        <h4><a href="#">Closing Remarks</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- schedule Block -->
+                            <div class="schedule-block even">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="date">
+                                            <span>1615 HRS<br>1830 HRS</span>
+                                        </div>
+                                        <div class="speaker-info">
+                                            <figure class="thumb">
+                                                <img src="{% static 'aaiac2023/assets/resource/thumb-4.jpg' %}" alt="">
+                                            </figure>
+                                            <span class="icon fa fa-microphone"></span>
+                                            <h5 class="name">All</h5>
+                                            <!-- <span class="designation">Art Critic</span> -->
+                                        </div>
+                                        <h4><a href="#">Cocktail Party</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End schedule Section -->
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+       <div class="auto-container">
+           <div class="sec-title text-center">
+               <span class="sub-title">GET TICKET</span>
+               <h2>Explore Flexible Pricing Plans <br />
+                Choose a Ticket</h2>
+                <!-- <span class="sub-title">IEEE members will receive a discount of 20% of the registration fee.</span> -->
+               <span class="divider"></span>
+           </div>
+
+           <div class="row">
+                <!-- Pricing block -->
+                <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"  data-wow-delay="400ms">
+                    <div class="inner-box">
+                        <h3 class="text-center">Physical Presenter</h3><br><br>
+                        <ul class="features">
+                            <li>Non IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>100<sub>USD</sub></div>
+                            <hr>
+                            <li>IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>80<sub>USD</sub></div>
+                            <!-- <li>Value 2</li>
+                            <li>Value 3</li> -->
+                        </ul>
+                        <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> --> 
+                    </div>
+                </div>
+
+                <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"  data-wow-delay="400ms">
+                    <div class="inner-box">
+                        <h3 class="text-center">Physical Non Presenter</h3><br>
+                        <ul class="features">
+                            <li>Non IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>80<sub>USD</sub></div>
+                            <hr>
+                            <li>IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>64<sub>USD</sub></div>
+                            <!-- <li>Value 2</li>
+                            <li>Value 3</li> -->
+                        </ul>
+                        <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> --> 
+                    </div>
+                </div>
+
+
+                <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="inner-box">
+                        <h3 class="text-center">Online  Presenter</h3><br><br>
+                        <ul class="features">
+                            <li>Non IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>80<sub>USD</sub></div>
+                            <hr>
+                            <li>IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>64<sub>USD</sub></div>
+                            <!-- <li>Value 2</li>
+                            <li>Value 3</li> -->
+                        </ul>
+                        <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> --> 
+                    </div>
+                </div>
+
+                <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                    <div class="inner-box">
+                        <h3 class="text-center">Online Non Presenter</h3><br>
+                        <ul class="features">
+                            <li>Non IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>50<sub>USD</sub></div>
+                            <hr>
+                            <li>IEEE Member.</li>
+                            <div class="price"> <sup>$</sup>40<sub>USD</sub></div>
+                            <!-- <li>Value 2</li>
+                            <li>Value 3</li> -->
+                        </ul>
+                        <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> --> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Pricing Section -->
+
+
+    
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <h2>Special Pricing Plan for Students
+                 <!-- <span class="sub-title">IEEE members will receive a discount of 20% of the registration fee.</span> -->
+                <span class="divider"></span>
+            </div>
+ 
+            <div class="row">
+                 <!-- Pricing block -->
+ 
+                 <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp"  data-wow-delay="400ms">
+                     <div class="inner-box">
+                         <h3 class="text-center">Physical Student Presenter</h3><br>
+                         <div class="price"> <sup>$</sup>50<sub>USD</sub></div>
+                         <!-- <ul class="features">
+                             <li>Value 1</li>
+                             <li>Value 2</li>
+                             <li>Value 3</li>
+                         </ul>
+                         <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> -->
+                     </div>
+                 </div>
+ 
+ 
+                 <!-- Pricing block -->
+                 <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                     <div class="inner-box">
+                         <h3 class="text-center">Physical Student Non Presenter</h3><br>
+                         <div class="price"> <sup>$</sup>30<sub>USD</sub></div>
+                         <!-- <ul class="features">
+                             <li>Value 1</li>
+                             <li>Value 2</li>
+                             <li>Value 3</li>
+                         </ul>
+                         <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> -->
+                     </div>
+                 </div>
+
+ 
+                 <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                     <div class="inner-box">
+                         <h3 class="text-center">Online Student Presenter</h3><br>
+                         <div class="price"> <sup>$</sup>30<sub>USD</sub></div>
+                         <!-- <ul class="features">
+                             <li>Value 1</li>
+                             <li>Value 2</li>
+                             <li>Value 3</li>
+                         </ul> -->
+                         <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> -->
+                     </div>
+                 </div>
+ 
+                 <div class="pricing-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
+                     <div class="inner-box">
+                         <h3 class="text-center">Online Student Non Presenter</h3>
+                         <div class="price"> <sup>$</sup>20<sub>USD</sub></div>
+                         <!-- <ul class="features">
+                             <li>Value 1</li>
+                             <li>Value 2</li>
+                             <li>Value 3</li>
+                         </ul> -->
+                         <!-- <button class="theme-btn btn-style-one"><span class="btn-title">Buy Ticket</span></button> -->
+                     </div>
+                 </div>
+ 
+             </div>
+         </div>
+     </section>
+     <!-- End Pricing Section -->
+
+
+     <!-- News Section -->
+    <section class="news-section">
+        <div class="auto-container">
+
+            <div class="row">
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!--End News Section -->
+
+
+    <!--Clients Section-->
+    <section class="clients-section">
+        <div class="auto-container">
+            <div class="row">
+                <!-- Title Column -->
+                <div class="title-column col-xl-3 col-lg-4 col-md-12">
+                    <div class="sec-title">
+                        <span class="sub-title">Clients</span>
+                        <h2>Our Official <br>Sponsors</h2>
+                        <div class="divider"></div>
+                        <!-- <a href="contact.html" class="theme-btn btn-style-one mt-4"><span class="btn-title">Buy Ticket</span></a> -->
+                    </div>
+                </div>
+
+                <!-- Title Column -->
+                <div class="title-column col-xl-9 col-lg-8 col-md-12">
+                    <div class="sponsors-outer">
+                        <div class="row">
+                            <!-- Client Block -->
+                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight">
+                                <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/udom.jpg' %}" alt=""></a></figure>
+                            </div>
+
+                            <!-- Client Block -->
+                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="300ms">
+                                <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/nm-aist.jpg' %}" alt=""></a></figure>
+                            </div>
+
+                            <!-- Client Block -->
+                            <div class="client-block col-lg-4 col-md-6 col-sm-12 wow fadeInRight" data-wow-delay="600ms">
+                                <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/IEEE.jpg' %}" alt=""></a></figure>
+                            </div> 
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End Clients Section-->
+
+
+ 
+
+
+    <!-- Main Footer -->
+    <footer class="main-footer" id="contact">
+        <div class="auto-container">
+            <!-- Footer Content -->
+            <div class="footer-content wow fadeInUp">
+                <div class="text-center">
+                    <div class="footer-logo"><a href="#"><img src="{% static 'aaiac2023/assets/images/logo-light.png' %}" alt=""></a></div>
+                    <div class="text">Artificial Intelligence for Development AI4D - Lab A unique collaboration between UDOM & NM-AIST to foster Research, Training and Innovation in AI. The Lab is funded by IDRC and Sida through the AI4D Africa Program.</div> 
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="image-box"><a href="#" ><img src="{% static 'aaiac2023/assets/images/clients/idrc.jpg' %}" alt="" width="150" height="100"></a></figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/Sida.jpg' %}" alt="" width="150" height="100"></a></figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="image-box"><a href="#"><img src="{% static 'aaiac2023/assets/images/clients/ai4d.jpg' %}" alt="" width="150" height="100"></a></figure>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <ul class="social-icon-two">
+                    <li><a href="https://twitter.com/ai4dlab_Tz"><span class="fab fa-twitter"></span></a></li>
+                    <li><a href="https://www.linkedin.com/company/ai4d-anglophone/mycompany/"><span class="fab fa-linkedin"></span></a></li>
+                </ul>
+                <ul class="contact-list-one">
+                    <li><i class="flaticon-location"></i> P. O. Box 490, Dodoma, Tanzania <strong>Address</strong></li>
+                    <li><i class="flaticon-alarm-clock-1"></i>Monday - Friday 9am - 4pm <strong>Timing</strong></li>
+                    <li><i class="flaticon-email-1"></i> <a href="mailto:envato@gmail.com">conference@ai4dlab.or.tz</a> <strong>Mail to us</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <ul class="footer-nav">
+                       <li><a href="#">Terms of Service</a></li> 
+                       <li><a href="#">Privacy Policy</a></li> 
+                    </ul>
+                    
+                    <div class="copyright-text">
+                        <p>Copyright © 2023 All Rights Reserved. Developed by <a href="https://nsoma.me">Nsoma</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</div>
+<!-- End Page Wrapper -->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+
+
+<script src="{% static 'aaiac2023/assets/js/jquery.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/popper.min.js' %}"></script>
+<!--Revolution Slider-->
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/main-slider-script.js' %}"></script>
+<!--Revolution Slider-->
+<script src="{% static 'aaiac2023/assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/jquery.fancybox.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/jquery.countdown.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/appear.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/owl.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/wow.js' %}"></script>
+<script src="{% static 'aaiac2023/assets/js/script.js' %}"></script>
+</body>
+</html>
