@@ -31,7 +31,6 @@
                        </a>
                        
                    </li>
-                   {% if user.is_superuser %}
                    <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="user" width="20"></i> 
@@ -40,7 +39,7 @@
                     
                     <ul class="submenu ">
                         
-                        {% comment %} <li>
+                        <li>
                             <a href="#">My Profile</a>
                         </li>
                         
@@ -50,16 +49,17 @@
                         
                         <li>
                             <a href="#">Change Password</a>
-                        </li> {% endcomment %}
+                        </li> 
+                        {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "ltc" %}
                         <li>
                             <a href="{% url 'users:add-staff' %}">Add Staff</a>
                         </li>
-                        
+                        {% endif %}
                     </ul>
                     
                 </li>
         
-
+                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "ltc" %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="info" width="20"></i> 
@@ -90,6 +90,7 @@
                     
                 </li>
                 {% endif %}
+                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "ltc" or request.session.role == "researcher" or request.session.role == "asst_researcher" or request.session.role == "coordinator" or request.session.role == "asst_coordinator"%}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="book" width="20"></i> 
@@ -109,7 +110,8 @@
                     </ul>
                     
                 </li>
-
+                {% endif %}
+                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "ltc" or request.session.role == "coordinator" or request.session.role == "asst_coordinator" %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="settings" width="20"></i> 
@@ -130,7 +132,7 @@
                     </ul>
                     
                 </li>
-                  
+                  {% endif %}
                 {% comment %} <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="folder" width="20"></i> 
@@ -152,7 +154,7 @@
                     
                 </li> {% endcomment %}
 
-
+                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "lo" or request.session.role == "ltc" or request.session.role == "coordinator" or request.session.role == "asst_coordinator" %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="star" width="20"></i> 
@@ -177,8 +179,8 @@
                     </ul>
                     
                 </li>
-
-
+                {% endif %}
+                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "lo" or request.session.role == "ltc" %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="users" width="20"></i> 
@@ -202,7 +204,7 @@
                     </ul>
                     
                 </li>
-               
+               {% endif %}
             
            </ul>
        </div>
