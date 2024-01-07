@@ -25,7 +25,7 @@ from django import template
 from .forms import UserLoginForm, ResetPasswordForm
 from .forms import StaffForm
 from .models import UserProfile
-
+from django.contrib.auth.hashers import check_password,make_password
 class UsersAPIView(APIView):
 
     def get(self, request):
@@ -69,49 +69,103 @@ def update_user(request,id):
 		return render(request, 'users/update_user.html',{'update_form': update_form})
 
 
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from .forms import UserLoginForm
+# def login_request(request):
+#     print("Am in 1")
+#     if request.method == "POST":
+#         print("Am in 2")
+#         try:
+#             print("Am in 3")
+#             form = UserLoginForm(request, data=request.POST)
+#             print("Am in 4")
+#             username = request.POST['username']
+#             password = request.POST['password']
+#             if form.is_valid():
+#                 print("Am in 5")
+#                 username = form.cleaned_data.get('username')
+#                 password = form.cleaned_data.get('password')
+#                 print("Form in", password)
+#                 user = authenticate(username=username, password=password)
+#                 print("Auth good")
+#                 if user is not None:
+#                     login(request, user)
+#                     messages.info(request, f"You are now logged in as {username}.")
+#                     request.session['user_id'] = user.id
+#                     return redirect("users:dashboard")
+#                 else:
+#                     print("User not found")
+#                     messages.error(request, "Invalid username or password.")
+#             elif UserProfile.objects.filter(username=username).exists():
+#                 print("From UserProfile")
+#                 user = UserProfile.objects.get(username=username, password=password)
+#                 login(request, user)
+#                 messages.info(request, f"You are now logged in as {username}.")
+#                 request.session['user_id'] = user.id
+#                 return redirect("users:dashboard")
+#             else:
+#                 print(form.errors.as_data())
+#                 messages.error(request, "Invalid username or password.")
+#         except Exception as e:
+#             print("Error: ", e)
+#             messages.error(request, f"An error occurred: {str(e)}")
+
+#     login_form = UserLoginForm()
+#     return render(request=request, template_name="users/login.html", context={"login_form": login_form})
 
 def login_request(request):
-    if request.method == "POST":
-        try:
-            form = UserLoginForm(request, data=request.POST)
-            if form.is_valid():
-                username = form.cleaned_data.get('username')
-                password = form.cleaned_data.get('password')
-                print("Form in", password)
-                user = authenticate(username=username, password=password)
-                print("Auth good")
-                if user is not None:
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
+
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            try:
+                user = authenticate(request, username=username, password=password)
+                custom_user_data = UserProfile.objects.filter(username=username)
+                if user and user.is_active:
                     login(request, user)
-                    messages.info(request, f"You are now logged in as {username}.")
                     request.session['user_id'] = user.id
                     return redirect("users:dashboard")
-                elif UserProfile.objects.filter(username=username).exists():
-                    print("From UserProfile")
-                    user = UserProfile.objects.get(username=username, password=password)
-                    login(request, user)
-                    messages.info(request, f"You are now logged in as {username}.")
-                    request.session['user_id'] = user.id
-                    return redirect("users:dashboard")
+                elif custom_user_data:
+                    try:
+                        custom_user = UserProfile.objects.get(username=username)
+                        if check_password(password, custom_user.password):
+                            print("Custom user password check successful")
+                            backend = 'users.backends.CustomUserBackend'
+                            login(request, custom_user, backend=backend)
+                            request.session['user_id'] = custom_user.id
+                            request.session['username'] = custom_user.username
+                            request.session['role'] = custom_user.role
+                            return redirect("users:dashboard")
+                        else:
+                            print("Password check failed")
+                    except UserProfile.DoesNotExist:
+                        print("User not found")
+                    except Exception as e:
+                        print(f"An unexpected error occurred: {e}")
+
+                    else:
+                        form.add_error(None, 'Invalid username or password.')
                 else:
-                    print("User not found")
-                    messages.error(request, "Invalid username or password.")
-            else:
-                messages.error(request, "Invalid username or password.")
-        except Exception as e:
-            print("Error: ", e)
-            messages.error(request, f"An error occurred: {str(e)}")
+                    # Authentication failed, display an error message
+                    form.add_error(None, 'Invalid username or password.')
+                    
 
-    login_form = UserLoginForm()
-    return render(request=request, template_name="users/login.html", context={"login_form": login_form})
-
+            except UserProfile.DoesNotExist:
+                # Handle the case where the custom user does not exist
+                form.add_error('username', 'User does not exist.')
+            except Exception as e:
+                # Handle other exceptions, log them, or take appropriate action
+                print(f"An unexpected error occurred: {e}")
+                form.add_error(None, 'An unexpected error occurred during authentication.')
+        else:
+            print(form.errors.as_data())
+            messages.error(request, "Invalid username or password.")
+    else:
+        login_form = UserLoginForm()
+        return render(request=request, template_name="users/login.html", context={"login_form": login_form})
 
 def dashboard(request):
-
     return render(request, template_name = 'dashboards/admin.html', context={})
 
 def logout_request(request):

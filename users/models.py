@@ -23,12 +23,7 @@ class UserProfile(AbstractUser):
         ('student', 'Student'),
     ]
     role = models.CharField(max_length=20, choices=role_choices)
-    password = models.CharField(max_length=255) 
-
-    def save(self, *args, **kwargs):
-        # Override the save method to set_password before saving
-        self.set_password(self.password)
-        super().save(*args, **kwargs)
+    password = models.CharField(max_length=500) 
 
     # Set unique related names for groups and user_permissions
 UserProfile._meta.get_field("groups").remote_field.related_name = "userprofile_groups"
