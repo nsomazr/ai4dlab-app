@@ -111,7 +111,6 @@
                     
                 </li>
                 {% endif %}
-                {% if user.is_superuser or request.session.role == "pi" or request.session.role == "co_pi" or request.session.role == "ltc" or request.session.role == "coordinator" or request.session.role == "asst_coordinator" %}
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="settings" width="20"></i> 
@@ -132,7 +131,6 @@
                     </ul>
                     
                 </li>
-                  {% endif %}
                 {% comment %} <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="folder" width="20"></i> 
