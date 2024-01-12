@@ -14,7 +14,6 @@ class UserLoginForm(forms.Form):
     password = forms.CharField(max_length=200, widget=(forms.PasswordInput(attrs={'class':'form-control','placeholder':'Type Password', 'id':'password'})))
 
     def clean(self):
-        print("Checking Validation")
         cleaned_data = super().clean()
         username = cleaned_data.get('username')
         password = cleaned_data.get('password')

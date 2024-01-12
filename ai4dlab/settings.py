@@ -100,6 +100,8 @@ ROOT_URLCONF = 'ai4dlab.urls'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'users.backends.CustomUserBackend',
+     #used for social authentications
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
 
@@ -195,16 +197,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-# Authentication
-
-AUTHENTICATION_BACKENDS = (
- #used for default signin such as loggin into admin panel
- 'django.contrib.auth.backends.ModelBackend', 
-  
- #used for social authentications
- 'allauth.account.auth_backends.AuthenticationBackend',
- )
 
 SITE_ID = 1
 
