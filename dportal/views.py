@@ -143,35 +143,35 @@ class PatientDataAPIView(APIView):
 
         if request.method == 'POST':
 
-            form = PatientDataForm(request.POST,request.FILES)# Bind the form data to the Data form
+            data_form = PatientDataForm(request.POST,request.FILES)# Bind the form data to the Data form
 
-            if form.is_valid():
+            if data_form.is_valid():
                 # Extract data from the form
-                patient_id = form.cleaned_data['patient_id']
-                age = form.cleaned_data['age']
-                country = form.cleaned_data['country']
-                district = form.cleaned_data['district']
-                region = form.cleaned_data['region']
-                facility = form.cleaned_data['facility']
-                main_complaint = form.cleaned_data['main_complaint']
-                history_of_present_illness = form.cleaned_data['history_of_present_illness']
-                review_of_other_systems = form.cleaned_data['review_of_other_systems']
-                past_medical_history = form.cleaned_data['past_medical_history']
-                gynaecological_history = form.cleaned_data['gynaecological_history']
-                family_social_history = form.cleaned_data['family_social_history']
-                dietary_history = form.cleaned_data['dietary_history']
-                general_examination = form.cleaned_data['general_examination']
-                local_examination = form.cleaned_data['local_examination']
-                systemic_examination = form.cleaned_data['systemic_examination']
-                provisional_diagnosis = form.cleaned_data['provisional_diagnosis']
-                differential_diagnosis = form.cleaned_data['differential_diagnosis']
-                final_diagnosis = form.cleaned_data['final_diagnosis']
-                radiological = form.cleaned_data['radiological']
-                laboratory = form.cleaned_data['laboratory']
-                doctors_remarks = form.cleaned_data['doctors_remarks']
-                medicines = form.cleaned_data['medicines']
-                treatment_regime = form.cleaned_data['treatment_regime']
-                recommendation = form.cleaned_data['recommendation']
+                patient_id = data_form.cleaned_data['patient_id']
+                age = data_form.cleaned_data['age']
+                country = data_form.cleaned_data['country']
+                district = data_form.cleaned_data['district']
+                region = data_form.cleaned_data['region']
+                facility = data_form.cleaned_data['facility']
+                main_complaint = data_form.cleaned_data['main_complaint']
+                history_of_present_illness = data_form.cleaned_data['history_of_present_illness']
+                review_of_other_systems = data_form.cleaned_data['review_of_other_systems']
+                past_medical_history = data_form.cleaned_data['past_medical_history']
+                gynaecological_history = data_form.cleaned_data['gynaecological_history']
+                family_social_history = data_form.cleaned_data['family_social_history']
+                dietary_history = data_form.cleaned_data['dietary_history']
+                general_examination = data_form.cleaned_data['general_examination']
+                local_examination = data_form.cleaned_data['local_examination']
+                systemic_examination = data_form.cleaned_data['systemic_examination']
+                provisional_diagnosis = data_form.cleaned_data['provisional_diagnosis']
+                differential_diagnosis = data_form.cleaned_data['differential_diagnosis']
+                final_diagnosis = data_form.cleaned_data['final_diagnosis']
+                radiological = data_form.cleaned_data['radiological']
+                laboratory = data_form.cleaned_data['laboratory']
+                doctors_remarks = data_form.cleaned_data['doctors_remarks']
+                medicines = data_form.cleaned_data['medicines']
+                treatment_regime = data_form.cleaned_data['treatment_regime']
+                recommendation = data_form.cleaned_data['recommendation']
                 # Create and save a new PatientData object
                 patient_data = PatientData(
                     patient_id=patient_id,

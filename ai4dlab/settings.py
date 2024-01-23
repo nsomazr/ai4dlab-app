@@ -99,7 +99,7 @@ ROOT_URLCONF = 'ai4dlab.urls'
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
-    'users.backends.CustomUserBackend',
+    # 'users.backends.CustomUserBackend',
      #used for social authentications
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
