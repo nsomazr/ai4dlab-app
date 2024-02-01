@@ -1,4 +1,4 @@
-,id,patient_id,age,country,district,region,facility,main_complaint,history_of_present_illness,review_of_other_systems,past_medical_history,gynaecological_history,family_social_history,dietary_history,general_examination,local_examination,systemic_examination,provisional_diagnosis,differential_diagnosis,final_diagnosis,radiological,laboratory,doctors_remarks,medicines,treatment_regime,recommendation,user_id,created_at,updated_at
+,id,patient_id,age,country,district,region,main_complaint,history_of_present_illness,review_of_other_systems,past_medical_history,gynaecological_history,family_social_history,dietary_history,general_examination,local_examination,systemic_examination,provisional_diagnosis,differential_diagnosis,final_diagnosis,radiological,laboratory,doctors_remarks,medicines,treatment_regime,recommendation,created_at,updated_at,facility,user_id
 0,1,F.A.L,24,TANZANIA,DCC,DAR ES SALAAM,PER VAGINAL WATERLY LEAKAGE - 1/7,"Seen primegravida ,LNMP 26.1.2023,EDD 21.10.2023,GA-36/40+5days admitted  LW with hx of Pv waterly leakage with no bleeding for 1/7 with no hx of LAP who was attending RCH at M/Moja Hosp having 7 visits.","CVS-NORMAL
 RESP-NORMAL
 GI-NORMAL
